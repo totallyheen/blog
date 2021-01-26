@@ -1,7 +1,7 @@
 ---
 title: "My First Post"
 description: |
-  A short description of the post.
+  A trial of git and netlify.
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
