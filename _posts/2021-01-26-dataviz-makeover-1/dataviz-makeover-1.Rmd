@@ -18,7 +18,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# 1.0 Critic the graph
+# 1 - Critique the visualization
 Identify at least three from each evaluation criterion (Clarity and aesthetics)
 
 ![](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg)
@@ -69,7 +69,7 @@ When comparing percentages across different groups and time periods, the term to
 
 Points being made on changes in percentages such as “Declined from 75% to 67%” can be rewritten as “Declined 8 percentage points from 75% to 67%”.
 
-### 1.1.6 Write up not synched up with visualization
+### 1.1.6 Write up not aligned with visualization
 
 The opening line of the write up refers to LFPR (Labour Force Participation Rate) whereas the visualization depicts the proportion of labour force. There is no data visualization to that readers can refer to while reading statements related to LFPR.
 
@@ -81,3 +81,42 @@ With all the clarity and aesthetic suggestions included. Use Table 5 on labour f
 
 
 ## 1.2 Aesthetics
+
+### 1.2.1 Missing vertical axis and gridlines
+
+Vertical axis is missing, and gridlines are not present on the vertical axis. This can make comparison across different age groups difficult. The units for the vertical axis “Per Cent” is put under the title as well. 
+
+*Suggestion* - Add in missing elements
+
+1.	Vertical axis should be added to the visualization
+2.	Gridlines and tick marks on the vertical axis should be added
+3.	Label Vertical axis title as “Resident Labour Force (‘000s)”
+
+### 1.2.2 Good use of Colours
+
+Good consistent (e.g. lines, labels, data table) use of colours to differentiate between 2009 and 2019. 
+
+
+*Suggestion* - Follow and recreate a similar aesthetic. 
+
+Ensure colours and format are replicated across both graphs.
+
+### 1.2.3 Good use of space and no need for legend
+
+Following on from point S2, the colours have already well marked out the datapoints and features relating to 2009 and 2019. It would be superfluous to add in a legend. 
+
+*Suggestion* - Follow and recreate a similar aesthetic. 
+
+Ensure colours and format are replicated across both graphs.
+
+### 1.2.4 Missing horizontal axis label
+
+Horizontal axis label is missing. Although it can be inferred based on the categories and the title of the visualization. It would be better if the axis is clearly labelled.
+
+*Suggestion* - Add in missing elements
+
+1.	Label horizontal axis title as “Age Groups”
+2.	Gridlines and tick marks will not be needed as visualization will be changed to a bar graph.
+
+# 2 - A sketch of the improved visualization
+With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome. 
