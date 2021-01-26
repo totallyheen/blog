@@ -176,6 +176,15 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
+8. Drag measure names onto color in order to add color to the grouped bar chart. The bars are now color coded by year.
+
+<center>
+
+![Getting your bar chart color coded by year](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_6.jpg){width=70%}
+
+</center>
+
+9. Hide the headers showing 2009 and 2019 at the bottom of the bar chart as they are no longer necessary. 
 
 ## 4.3 Steps taken for second Visualization 
 Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019
