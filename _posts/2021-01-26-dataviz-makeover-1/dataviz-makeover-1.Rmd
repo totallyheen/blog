@@ -168,7 +168,13 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
+7. Drag the values for **2019** on the same vertical axis where the **2009** values are plotted.
 
+<center>
+
+![Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_5.jpg){width=70%}
+
+</center>
 
 
 ## 4.3 Steps taken for second Visualization 
