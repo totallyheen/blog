@@ -1,8 +1,8 @@
 ---
-title: "Welcome to IDEA"
+title: "Hi there!"
 description: |
-  Welcome to our new blog, IDEA. We hope you enjoy 
-  reading what we have to say!
+  Welcome to my data visualization blog. I hope you enjoy 
+  reading what I share and any insights gleaned from this blog. 
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
