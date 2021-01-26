@@ -10,10 +10,10 @@
     },
     {
       "path": "index.html",
-      "title": "Yi Heen's Portfolio",
+      "title": "All Posts",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-01-26T22:08:45+08:00"
+      "last_modified": "2021-01-26T22:26:39+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

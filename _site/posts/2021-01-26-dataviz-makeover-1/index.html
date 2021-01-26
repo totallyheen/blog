@@ -84,7 +84,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Yi Heen's Portfolio: DataViz Makeover 1</title>
+<title>Yi Heen - Portfolio: DataViz Makeover 1</title>
 
 <meta property="description" itemprop="description" content="Suggesting ways for improving and reworking the original data visualisation. &#10;&#10;Highlight what works and what doesn’t. Explain why those things don’t work, and how you can make it better. Use the fields in the data set provided and improve upon the original visualisations. However, if supplementing other data sources helps to tell a better story, go for it!"/>
 
@@ -95,15 +95,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Yi Heen, Boey"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Yi Heen&#39;s Portfolio: DataViz Makeover 1"/>
+<meta property="og:title" content="Yi Heen - Portfolio: DataViz Makeover 1"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="Suggesting ways for improving and reworking the original data visualisation. &#10;&#10;Highlight what works and what doesn’t. Explain why those things don’t work, and how you can make it better. Use the fields in the data set provided and improve upon the original visualisations. However, if supplementing other data sources helps to tell a better story, go for it!"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="Yi Heen&#39;s Portfolio"/>
+<meta property="og:site_name" content="Yi Heen - Portfolio"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Yi Heen&#39;s Portfolio: DataViz Makeover 1"/>
+<meta property="twitter:title" content="Yi Heen - Portfolio: DataViz Makeover 1"/>
 <meta property="twitter:description" content="Suggesting ways for improving and reworking the original data visualisation. &#10;&#10;Highlight what works and what doesn’t. Explain why those things don’t work, and how you can make it better. Use the fields in the data set provided and improve upon the original visualisations. However, if supplementing other data sources helps to tell a better story, go for it!"/>
 
 <!--/radix_placeholder_meta_tags-->
@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"NULL"}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2019,7 +2019,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="../../index.html" class="title">Yi Heen's Portfolio</a>
+<a href="../../index.html" class="title">Yi Heen - Portfolio</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
@@ -2050,8 +2050,38 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<h1 id="critic-the-graph">1.0 Critic the graph</h1>
+<p>Identify at least three from each evaluation criterion (Clarity and aesthetics)</p>
+<p><img src="Original_Viz.jpg" /></p>
+<h2 id="clarity">1.1 Clarity</h2>
+<h3 id="unclear-title">1.1.1 Unclear title</h3>
+<p>The title “Resident Labour Force by Age” was used for the visualization. This is unclear and does not inform the reader quickly what the visualization is depicting which is the comparison of labour force by age groups between 2009 and 2019.</p>
+<p><em>Suggestion</em> - Change title</p>
+<p>Use the title “Resident Labour Force by Age Groups, June 2009 vs June 2019”</p>
+<h3 id="wrong-visualization-used-for-the-given-datatype">1.1.2 Wrong visualization used for the given datatype</h3>
+<p>Age groups are a categorical datatype instead. The line graph being used currently is better suited for continuous datatypes</p>
+<p><em>Suggestion</em> - Change Visualization Type</p>
+<ol type="1">
+<li>Switch to using a bar graph instead of a line graph.</li>
+<li>Ensure Vertical Axis starts at zero</li>
+</ol>
+<h3 id="plotting-a-median-line-on-categorical-scale">1.1.3 Plotting a median line on categorical scale</h3>
+<p>Data has already been binned into age groups. There is no way of calculating a discrete age for median like 41. If there is a median, it should be the age group of 40-44. i.e. Both groups will have the same median.</p>
+<p><em>Suggestion</em> - Remove the median lines</p>
+<p>Mark the bars for 40-44 with a label to show that the median falls within that category.</p>
+<h3 id="percentages-can-omit-context">1.1.4 Percentages can omit context</h3>
+<p>Using percentages like the Labour force participation rate can omit important contextual information like the true number of people in each age group.</p>
+<p><em>Suggestion</em> - Plot the bar graph with actual numbers instead of percentages</p>
+<p>Bar graphs should be sufficient to show the differences in proportions across different categories</p>
+<h3 id="unclear-description-of-percentages-points">1.1.5 Unclear description of percentages points</h3>
+<p>When comparing percentages across different groups and time periods, the term to be used should be percentage points. While the write up does not use the words percentage change, it can be ambiguous.</p>
+<p><em>Suggestion</em> - Clarify the changes in percentages.</p>
+<p>Points being made on changes in percentages such as “Declined from 75% to 67%” can be rewritten as “Declined 8 percentage points from 75% to 67%”.</p>
+<h3 id="write-up-not-synched-up-with-visualization">1.1.6 Write up not synched up with visualization</h3>
+<p>The opening line of the write up refers to LFPR (Labour Force Participation Rate) whereas the visualization depicts the proportion of labour force. There is no data visualization to that readers can refer to while reading statements related to LFPR.</p>
+<p><em>Suggestion</em> - Include a second visualization on Labour Force Participation</p>
+<p>With all the clarity and aesthetic suggestions included. Use Table 5 on labour force and Table 7 on participation rates to get numbers by age group for labour force participation. Together, the two graphs will give a clearer idea of how much labour force participation there is with respect to the resident labour force size.</p>
+<h2 id="aesthetics">1.2 Aesthetics</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

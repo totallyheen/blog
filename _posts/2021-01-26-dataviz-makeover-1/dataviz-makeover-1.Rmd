@@ -18,8 +18,66 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+# 1.0 Critic the graph
+Identify at least three from each evaluation criterion (Clarity and aesthetics)
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+![](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg)
+
+## 1.1 Clarity 
+
+### 1.1.1 Unclear title
+
+The title “Resident Labour Force by Age” was used for the visualization. This is unclear and does not inform the reader quickly what the visualization is depicting which is the comparison of labour force by age groups between 2009 and 2019.
+
+*Suggestion* - Change title
+
+Use the title “Resident Labour Force by Age Groups, June 2009 vs June 2019”
 
 
+### 1.1.2 Wrong visualization used for the given datatype
+
+Age groups are a categorical datatype instead. The line graph being used currently is better suited for continuous datatypes
+
+*Suggestion* - Change Visualization Type
+
+1.	Switch to using a bar graph instead of a line graph. 
+2.	Ensure Vertical Axis starts at zero
+
+### 1.1.3 Plotting a median line on categorical scale
+
+Data has already been binned into age groups. There is no way of calculating a discrete age for median like 41. If there is a median, it should be the age group of 40-44. i.e. Both groups will have the same median. 
+
+*Suggestion* - Remove the median lines
+
+Mark the bars for 40-44 with a label to show that the median falls within that category. 
+
+### 1.1.4 Percentages can omit context
+
+Using percentages like the Labour force participation rate can omit important contextual information like the true number of people in each age group.
+
+
+*Suggestion* - Plot the bar graph with actual numbers instead of percentages
+
+Bar graphs should be sufficient to show the differences in proportions across different categories
+
+### 1.1.5 Unclear description of percentages points
+
+When comparing percentages across different groups and time periods, the term to be used should be percentage points. While the write up does not use the words percentage change, it can be ambiguous.
+
+
+*Suggestion* - Clarify the changes in percentages.
+
+Points being made on changes in percentages such as “Declined from 75% to 67%” can be rewritten as “Declined 8 percentage points from 75% to 67%”.
+
+### 1.1.6 Write up not synched up with visualization
+
+The opening line of the write up refers to LFPR (Labour Force Participation Rate) whereas the visualization depicts the proportion of labour force. There is no data visualization to that readers can refer to while reading statements related to LFPR.
+
+
+
+*Suggestion* - Include a second visualization on Labour Force Participation
+
+With all the clarity and aesthetic suggestions included. Use Table 5 on labour force and Table 7 on participation rates to get numbers by age group for labour force participation. Together, the two graphs will give a clearer idea of how much labour force participation there is with respect to the resident labour force size.
+
+
+## 1.2 Aesthetics
