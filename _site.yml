@@ -1,7 +1,7 @@
 name: "blog"
-title: "IDEA"
+title: "Yi Heen's Portfolio"
 description: |
-  IDEA
+  A collection of data visualizations through my learning journey. 
 output_dir: "_site"
 navbar:
   right:
