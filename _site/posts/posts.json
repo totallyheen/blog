@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-01-26-dataviz-makeover-1/",
+    "title": "DataViz Makeover 1",
+    "description": "Suggesting ways for improving and reworking the original data visualisation. \n\nHighlight what works and what doesn’t. Explain why those things don’t work, and how you can make it better. Use the fields in the data set provided and improve upon the original visualisations. However, if supplementing other data sources helps to tell a better story, go for it!",
+    "author": [
+      {
+        "name": "Yi Heen, Boey",
+        "url": "https://www.linkedin.com/in/yiheen-boey/"
+      }
+    ],
+    "date": "2021-01-26",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-01-26T22:24:10+08:00",
+    "input_file": "dataviz-makeover-1.utf8.md"
+  },
+  {
     "path": "posts/2021-01-16-my-first-post/",
     "title": "My First Post",
     "description": "A trial of git and netlify.",
