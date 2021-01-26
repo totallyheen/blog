@@ -121,7 +121,27 @@ Horizontal axis label is missing. Although it can be inferred based on the categ
 # 2 - A sketch of the improved visualization
 With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome. 
 
-# 3 - The improved visualization 
+# 3 - The improved data visualization 
 Using Tableau, design the proposed data visualization. 
 
-https://public.tableau.com/views/TableauWorkbook-PracticeSuperstore/AdvancedInteractivity?:language=en&:display_count=y&:origin=viz_share_link
+# 4 - The data preparation process
+Provide step-by-step description on how the data visualization was prepared. 
+
+## 4.1 Data Sources Used:
+
+1. [RESIDENT  LABOUR  FORCE  PARTICIPATION  RATE  BY  AGE  AND  SEX,  2009 - 2019 (JUNE) - TABLE 5](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
+2. [RESIDENT  LABOUR  FORCE  AGED  FIFTEEN  YEARS  AND  OVER  BY  AGE  AND  SEX,  2009 - 2019  (JUNE) - Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
+
+## 4.2 Steps taken for first Visualization 
+Resident Labour Force by Age Groups, June 2009 & June 2019
+
+1. 
+
+## 4.3 Steps taken for second Visualization 
+Age-Sex Pyrramid by Labour Force Participation
+
+1. 
+
+
+# 5 - New insights
+Describe three major observations revealed by the data visualisation prepared. 
