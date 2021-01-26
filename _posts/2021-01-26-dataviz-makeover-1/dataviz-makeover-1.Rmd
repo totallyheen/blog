@@ -129,19 +129,61 @@ Provide step-by-step description on how the data visualization was prepared.
 
 ## 4.1 Data Sources Used:
 
-1. [RESIDENT  LABOUR  FORCE  PARTICIPATION  RATE  BY  AGE  AND  SEX,  2009 - 2019 (JUNE) - TABLE 5](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
-2. [RESIDENT  LABOUR  FORCE  AGED  FIFTEEN  YEARS  AND  OVER  BY  AGE  AND  SEX,  2009 - 2019  (JUNE) - Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
+1. [RESIDENT  LABOUR  FORCE  AGED  FIFTEEN  YEARS  AND  OVER  BY  AGE  AND  SEX,  2009 - 2019  (JUNE) - Table 7](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
+2. [RESIDENT  LABOUR  FORCE  PARTICIPATION  RATE  BY  AGE  AND  SEX,  2009 - 2019 (JUNE) - TABLE 5](https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx)
+
 
 ## 4.2 Steps taken for first Visualization 
-Resident Labour Force by Age Groups, June 2009 & June 2019
 
-1. 
+<center>
+
+![Original Dataset in table 7](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_1.jpg)
+
+</center>
+
+1. Using the (TOTAL) sheet in table 7, select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
+2. Rename "Age (Years)" to "Age Groups"
+
+<center>
+
+![Remaining Dataset after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_2.jpg){width=20%}
+
+</center>
+
+3. Save the excel file
+4. Create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.
+
+<center>
+
+![Data Imported into Tableau and their datatypes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_3.jpg){width=30%}
+
+</center>
+
+5. Switch to Sheet 1 in Tableau
+6. Drag **Age Groups** into columns and **2009** / **2019** into rows as seen in the screenshot below.
+
+<center>
+
+![Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_4.jpg){width=70%}
+
+</center>
+
+
+
 
 ## 4.3 Steps taken for second Visualization 
-Age-Sex Pyrramid by Labour Force Participation
-
-1. 
+Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019
+dfsdfds
+1. dfsdfsd
 
 
 # 5 - New insights
 Describe three major observations revealed by the data visualisation prepared. 
+
+## 5.1 
+
+
+
+## 5.2
+
+## 5.3

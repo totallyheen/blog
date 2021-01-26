@@ -114,7 +114,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
+  {"type":"character","attributes":{},"value":["Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1505,21 +1505,49 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Provide step-by-step description on how the data visualization was prepared.</p>
 <h2 id="data-sources-used">4.1 Data Sources Used:</h2>
 <ol type="1">
-<li><a href="https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx">RESIDENT LABOUR FORCE PARTICIPATION RATE BY AGE AND SEX, 2009 - 2019 (JUNE) - TABLE 5</a></li>
 <li><a href="https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx">RESIDENT LABOUR FORCE AGED FIFTEEN YEARS AND OVER BY AGE AND SEX, 2009 - 2019 (JUNE) - Table 7</a></li>
+<li><a href="https://stats.mom.gov.sg/Pages/Labour-Force-Tables2019.aspx">RESIDENT LABOUR FORCE PARTICIPATION RATE BY AGE AND SEX, 2009 - 2019 (JUNE) - TABLE 5</a></li>
 </ol>
 <h2 id="steps-taken-for-first-visualization">4.2 Steps taken for first Visualization</h2>
-<p>Resident Labour Force by Age Groups, June 2009 &amp; June 2019</p>
+<center>
+<figure>
+<img src="Dataprep_1.jpg" alt="Original Dataset in table 7" /><figcaption>Original Dataset in table 7</figcaption>
+</figure>
+</center>
 <ol type="1">
-<li></li>
+<li>Using the (TOTAL) sheet in table 7, select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</li>
+<li>Rename “Age (Years)” to “Age Groups”</li>
 </ol>
+<center>
+<figure>
+<img src="Dataprep_2.jpg" alt="Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Remaining Dataset after trimming</figcaption>
+</figure>
+</center>
+<ol start="3" type="1">
+<li>Save the excel file</li>
+<li>Create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.</li>
+</ol>
+<center>
+<figure>
+<img src="Dataprep_3.jpg" alt="Data Imported into Tableau and their datatypes" style="width:30.0%" /><figcaption>Data Imported into Tableau and their datatypes</figcaption>
+</figure>
+</center>
+<ol start="5" type="1">
+<li>Switch to Sheet 1 in Tableau</li>
+<li>Drag <strong>Age Groups</strong> into columns and <strong>2009</strong> / <strong>2019</strong> into rows as seen in the screenshot below.</li>
+</ol>
+<center>
+<figure>
+<img src="Dataprep_4.jpg" alt="Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Dragging fields into rows and columns</figcaption>
+</figure>
+</center>
 <h2 id="steps-taken-for-second-visualization">4.3 Steps taken for second Visualization</h2>
-<p>Age-Sex Pyrramid by Labour Force Participation</p>
-<ol type="1">
-<li></li>
-</ol>
+<p>Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019 dfsdfds 1. dfsdfsd</p>
 <h1 id="new-insights">5 - New insights</h1>
 <p>Describe three major observations revealed by the data visualisation prepared.</p>
+<h2 id="section">5.1</h2>
+<h2 id="section-1">5.2</h2>
+<h2 id="section-2">5.3</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
