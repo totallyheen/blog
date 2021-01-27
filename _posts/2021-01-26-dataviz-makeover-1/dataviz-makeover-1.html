@@ -114,7 +114,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
+  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","2Dataprep_7.jpg","2Dataprep_8.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","Dataprep_9.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1486,10 +1486,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Good consistent (e.g. lines, labels, data table) use of colours to differentiate between 2009 and 2019.</p>
 <p><em>Suggestion</em> - Follow and recreate a similar aesthetic.</p>
 <p>Ensure colours and format are replicated across both graphs.</p>
-<h3 id="good-use-of-space-and-no-need-for-legend">1.2.3 Good use of space and no need for legend</h3>
+<h3 id="good-use-of-space-and-colouring">1.2.3 Good use of space and colouring</h3>
 <p>Following on from point S2, the colours have already well marked out the datapoints and features relating to 2009 and 2019. It would be superfluous to add in a legend.</p>
 <p><em>Suggestion</em> - Follow and recreate a similar aesthetic.</p>
-<p>Ensure colours and format are replicated across both graphs.</p>
+<p>Switching to a grouped bar chart would mean the colors will be important for readers to tell the different categories apart. Ensure that a legend is included and consistent across both charts.</p>
 <h3 id="missing-horizontal-axis-label">1.2.4 Missing horizontal axis label</h3>
 <p>Horizontal axis label is missing. Although it can be inferred based on the categories and the title of the visualization. It would be better if the axis is clearly labelled.</p>
 <p><em>Suggestion</em> - Add in missing elements</p>
@@ -1569,11 +1569,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol start="13" type="1">
-<li>Finally rename the title of the legend from <em>Measure Names</em> to <em>Year</em></li>
+<li>Rename the title of the legend from <em>Measure Names</em> to <em>Year</em></li>
 </ol>
 <center>
 <figure>
 <img src="Dataprep_8.jpg" alt="Renaming the legend" style="width:60.0%" /><figcaption>Renaming the legend</figcaption>
+</figure>
+</center>
+<ol start="14" type="1">
+<li>Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.</li>
+</ol>
+<center>
+<figure>
+<img src="Dataprep_9.jpg" alt="Making the bar charts of similar size scales" style="width:60.0%" /><figcaption>Making the bar charts of similar size scales</figcaption>
 </figure>
 </center>
 <h2 id="steps-taken-for-second-visualization">4.3 Steps taken for second Visualization</h2>
@@ -1628,8 +1636,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol start="10" type="1">
-<li></li>
+<li><p>Drag measure names onto color in order to add color to the grouped bar chart. The bars are now color coded by year.</p></li>
+<li><p>Ensure that the colors are consistent with visual 1. <em>Blue</em> for <em>2009</em> and <em>Orange</em> for <em>2019</em>.</p></li>
 </ol>
+<center>
+<figure>
+<img src="2Dataprep_7.jpg" alt="Keeping colors consistent across visuals will make cross referencing intuitive" style="width:70.0%" /><figcaption>Keeping colors consistent across visuals will make cross referencing intuitive</figcaption>
+</figure>
+</center>
+<ol start="12" type="1">
+<li><p>Hide the headers showing 2009 Labour Force Participants and 2019 Labour Force Participants at the bottom of the bar chart as they are no longer necessary.</p></li>
+<li><p>Rename vertical axis and include units: “Labour Force Participants (’000s)”</p></li>
+<li><p>Rename visualization to: “Labour Force Participation by Age Groups, June of 2009 &amp; 2019”</p></li>
+<li><p>Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.</p></li>
+</ol>
+<center>
+<figure>
+<img src="2Dataprep_8.jpg" alt="Making the bar charts of similar size scales" style="width:70.0%" /><figcaption>Making the bar charts of similar size scales</figcaption>
+</figure>
+</center>
+<h2 id="pulling-it-all-into-a-dashboard">4.4 Pulling it all into a dashboard</h2>
 <h1 id="new-insights">5 - New insights</h1>
 <p>Describe three major observations revealed by the data visualisation prepared.</p>
 <h2 id="section">5.1</h2>

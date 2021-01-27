@@ -101,13 +101,13 @@ Good consistent (e.g. lines, labels, data table) use of colours to differentiate
 
 Ensure colours and format are replicated across both graphs.
 
-### 1.2.3 Good use of space and no need for legend
+### 1.2.3 Good use of space and colouring
 
 Following on from point S2, the colours have already well marked out the datapoints and features relating to 2009 and 2019. It would be superfluous to add in a legend. 
 
 *Suggestion* - Follow and recreate a similar aesthetic. 
 
-Ensure colours and format are replicated across both graphs.
+Switching to a grouped bar chart would mean the colors will be important for readers to tell the different categories apart. Ensure that a legend is included and consistent across both charts.
 
 ### 1.2.4 Missing horizontal axis label
 
@@ -201,11 +201,19 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-13. Finally rename the title of the legend from *Measure Names* to *Year*
+13. Rename the title of the legend from *Measure Names* to *Year*
 
 <center>
 
 ![Renaming the legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_8.jpg){width=60%}
+
+</center>
+
+14. Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.
+
+<center>
+
+![Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_9.jpg){width=60%}
 
 </center>
 
@@ -266,7 +274,31 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 </center>
 
-10. 
+10. Drag measure names onto color in order to add color to the grouped bar chart. The bars are now color coded by year.
+
+11. Ensure that the colors are consistent with visual 1. *Blue* for *2009* and *Orange* for *2019*. 
+
+<center>
+
+![Keeping colors consistent across visuals will make cross referencing intuitive](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_7.jpg){width=70%}
+
+</center>
+
+12. Hide the headers showing 2009 Labour Force Participants and 2019 Labour Force Participants at the bottom of the bar chart as they are no longer necessary. 
+
+13. Rename vertical axis and include units: "Labour Force Participants ('000s)"
+
+14. Rename visualization to: "Labour Force Participation by Age Groups, June of 2009 & 2019"
+
+15. Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.
+
+<center>
+
+![Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_8.jpg){width=70%}
+
+</center>
+
+## 4.4 Pulling it all into a dashboard
 
 # 5 - New insights
 Describe three major observations revealed by the data visualisation prepared. 
