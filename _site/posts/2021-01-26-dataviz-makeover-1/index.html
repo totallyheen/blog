@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","2Dataprep_7.jpg","2Dataprep_8.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","Dataprep_9.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
+  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","2Dataprep_7.jpg","2Dataprep_8.jpg","completed.png","dashboard_1.jpg","dashboard_2.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","Dataprep_9.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg","sketch.jpg","sketch1.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2052,7 +2052,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="d-article">
 <h1 id="critique-the-visualization">1 - Critique the visualization</h1>
 <p>Identify at least three from each evaluation criterion (Clarity and aesthetics)</p>
-<p><img src="Original_Viz.jpg" /></p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="Original_Viz.jpg" alt="The original data visualization" width="100%" />
+<p class="caption">
+Figure 1: The original data visualization
+</p>
+</div>
+</div>
 <h2 id="clarity">1.1 Clarity</h2>
 <h3 id="unclear-title">1.1.1 Unclear title</h3>
 <p>The title “Resident Labour Force by Age” was used for the visualization. This is unclear and does not inform the reader quickly what the visualization is depicting which is the comparison of labour force by age groups between 2009 and 2019.</p>
@@ -2107,8 +2114,24 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 <h1 id="a-sketch-of-the-improved-visualization">2 - A sketch of the improved visualization</h1>
 <p>With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="sketch1.jpg" alt="A sketch of the suggested visualizatons" width="100%" />
+<p class="caption">
+Figure 2: A sketch of the suggested visualizatons
+</p>
+</div>
+</div>
 <h1 id="the-improved-data-visualization">3 - The improved data visualization</h1>
 <p>Using Tableau, design the proposed data visualization.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="completed.png" alt="The improved data visualization" width="100%" />
+<p class="caption">
+Figure 3: The improved data visualization
+</p>
+</div>
+</div>
 <h1 id="the-data-preparation-process">4 - The data preparation process</h1>
 <p>Provide step-by-step description on how the data visualization was prepared.</p>
 <h2 id="data-sources-used">4.1 Data Sources Used:</h2>
@@ -2119,7 +2142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <h2 id="steps-taken-for-first-visualization">4.2 Steps taken for first Visualization</h2>
 <center>
 <figure>
-<img src="Dataprep_1.jpg" alt="Original (TOTAL) Dataset in table 7" /><figcaption>Original (TOTAL) Dataset in table 7</figcaption>
+<img src="Dataprep_1.jpg" alt="Figure 4: Original (TOTAL) Dataset in table 7" /><figcaption>Figure 4: Original (TOTAL) Dataset in table 7</figcaption>
 </figure>
 </center>
 <ol type="1">
@@ -2127,9 +2150,9 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><p>Rename “Age (Years)” to “Age Groups”</p></li>
 <li><p>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></p></li>
 </ol>
-<center>
+<p><centre></p>
 <figure>
-<img src="Dataprep_2.jpg" alt="Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Remaining Dataset after trimming</figcaption>
+<img src="Dataprep_2.jpg" alt="Figure 5:Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Figure 5:Remaining Dataset after trimming</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -2255,7 +2278,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <ol start="12" type="1">
 <li><p>Hide the headers showing 2009 Labour Force Participants and 2019 Labour Force Participants at the bottom of the bar chart as they are no longer necessary.</p></li>
 <li><p>Rename vertical axis and include units: “Labour Force Participants (’000s)”</p></li>
-<li><p>Rename visualization to: “Labour Force Participation by Age Groups, June of 2009 &amp; 2019”</p></li>
+<li><p>Rename visualization to: <em>“Labour Force Participants by Age Groups, June of 2009 &amp; 2019”</em></p></li>
 <li><p>Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.</p></li>
 </ol>
 <center>
@@ -2264,6 +2287,31 @@ document.addEventListener('DOMContentLoaded', function() {
 </figure>
 </center>
 <h2 id="pulling-it-all-into-a-dashboard">4.4 Pulling it all into a dashboard</h2>
+<ol type="1">
+<li><p>Create a new dashboard and name it <em>“Singapore Resident Labour Force and Participants 2009 vs 2019”</em></p></li>
+<li><p>Drag <em>Visual 1</em> and <em>Visual 2</em> onto the dashboard canvas in a top and bottom layout.</p></li>
+<li><p>Reduce font size of chart titles to <em>10</em> to give more screen space to the chart in order to convey information</p></li>
+</ol>
+<center>
+<figure>
+<img src="dashboard_1.jpg" alt="Initial Layout of the dashboard with reduced title font sizes" style="width:90.0%" /><figcaption>Initial Layout of the dashboard with reduced title font sizes</figcaption>
+</figure>
+</center>
+<ol start="4" type="1">
+<li>Remove one of the legends from the dashboard as the legend is designed to be consistent across both charts.</li>
+</ol>
+<center>
+<figure>
+<img src="dashboard_2.jpg" alt="Removing a redundant legend" style="width:40.0%" /><figcaption>Removing a redundant legend</figcaption>
+</figure>
+</center>
+<ol start="5" type="1">
+<li>Update the title of the respective charts to</li>
+</ol>
+<ul>
+<li><em>“Resident Labour Force in Singapore by Age Groups, June of of 2009 &amp; 2019”</em></li>
+<li><em>“Labour Force Participants in Singapore by Age Groups, June of 2009 &amp; 2019”</em></li>
+</ul>
 <h1 id="new-insights">5 - New insights</h1>
 <p>Describe three major observations revealed by the data visualisation prepared.</p>
 <h2 id="section">5.1</h2>

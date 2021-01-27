@@ -21,7 +21,9 @@ knitr::opts_chunk$set(echo = FALSE)
 # 1 - Critique the visualization
 Identify at least three from each evaluation criterion (Clarity and aesthetics)
 
-![](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg)
+```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="The original data visualization"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg")
+```
 
 ## 1.1 Clarity 
 
@@ -121,8 +123,18 @@ Horizontal axis label is missing. Although it can be inferred based on the categ
 # 2 - A sketch of the improved visualization
 With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome. 
 
+```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="A sketch of the suggested visualizatons"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/sketch1.jpg")
+```
+
+
 # 3 - The improved data visualization 
 Using Tableau, design the proposed data visualization. 
+
+```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="The improved data visualization"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png")
+```
+
 
 # 4 - The data preparation process
 Provide step-by-step description on how the data visualization was prepared. 
@@ -135,9 +147,10 @@ Provide step-by-step description on how the data visualization was prepared.
 
 ## 4.2 Steps taken for first Visualization 
 
+
 <center>
 
-![Original (TOTAL) Dataset in table 7](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_1.jpg)
+![Figure 4: Original (TOTAL) Dataset in table 7](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_1.jpg)
 
 </center>
 
@@ -147,9 +160,9 @@ Provide step-by-step description on how the data visualization was prepared.
 
 3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
-<center>
+<centre>
 
-![Remaining Dataset after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_2.jpg){width=20%}
+![Figure 5:Remaining Dataset after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_2.jpg){width=20%}
 
 </center>
 
@@ -288,7 +301,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 13. Rename vertical axis and include units: "Labour Force Participants ('000s)"
 
-14. Rename visualization to: "Labour Force Participation by Age Groups, June of 2009 & 2019"
+14. Rename visualization to: *"Labour Force Participants by Age Groups, June of 2009 & 2019"*
 
 15. Finally, set the axis range to be from 0 to 300 so that sizes of the bars are compararble across both visualizations.
 
@@ -299,6 +312,32 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 </center>
 
 ## 4.4 Pulling it all into a dashboard
+
+1. Create a new dashboard and name it *"Singapore Resident Labour Force and Participants 2009 vs 2019"*
+
+2. Drag *Visual 1* and *Visual 2* onto the dashboard canvas in a top and bottom layout.
+
+3. Reduce font size of chart titles to *10* to give more screen space to the chart in order to convey information
+
+<center>
+
+![Initial Layout of the dashboard with reduced title font sizes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_1.jpg){width=90%}
+
+</center>
+
+4. Remove one of the legends from the dashboard as the legend is designed to be consistent across both charts.
+
+<center>
+
+![Removing a redundant legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_2.jpg){width=40%}
+
+</center>
+
+5. Update the title of the respective charts to 
+- *"Resident Labour Force in Singapore by Age Groups, June of of 2009 & 2019"*
+- *"Labour Force Participants in Singapore by Age Groups, June of 2009 & 2019"*
+
+
 
 # 5 - New insights
 Describe three major observations revealed by the data visualisation prepared. 
