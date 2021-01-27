@@ -128,8 +128,12 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-
 ```
 
 
-# 3 - The improved data visualization 
-Using Tableau, design the proposed data visualization. 
+# 3 - The improved data visualization
+
+**More Older Residents in the Workforce**
+
+*With population ageing and sustained rise in LFPR of older residents, the share of residents aged 55 & over in the labour force rose 9 percentage points from 16% in 2009 to 25% in 2019. Meanwhile, the share of the resident labour force aged 24 to 54 declined 8 percentage points from 75% to 67% even as their LFPR increased, as the population cohorts moving into these age bands were smaller than those who moved out due to lower birth rates. While the median age of residents in the labour force stayed in the 40-44 year old age group, it is likely that the median age will shift out to the 45-49 year old age group as the population ages further. *
+
 
 ```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="The improved data visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png")
@@ -342,10 +346,32 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 # 5 - New insights
 Describe three major observations revealed by the data visualisation prepared. 
 
-## 5.1 
+## 5.1 25-54 year olds are the most active in the labour force
 
+Workforce participation for 25 to 54 year olds is the highest and consistently above 90%. These groups form the biggest part of the residential workforce and also participate the most. This is important for Singapore's economy as its biggest group of workers are consistently and actively participating in positive economic activity. This is also something to be concerned about, as this group of workers age, their workforce participation is likely to mirror that of the current older age groups. If this group of residents (the largest group) turn older and stop partcipating, it will have grave consequences for Singapore's economy and signals the need for rejuvenation.
 
+<center>
 
-## 5.2
+![Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
 
-## 5.3
+</center>
+
+## 5.2 Workforce participation changes significantly from 65
+
+The workforce participants in each age group usually account for the majority of resident workforce (i.e. >50% as seen by the orange arrows). This is true until the age group of 65-69 (as marked out by the blue arrows). From here on, the work force participation drops significantly. This is in line with what we can expect from Singapore's offcial retirement age which is currently set at 67 years old. With the retirement age expected to be raised till 70 years old in by 2030, the workforce participation picture is likely to change significantly from what we are saeeing now.
+
+<center>
+
+![The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
+
+</center>
+
+## 5.3 Insufficient young workers to replace old workers
+
+As can be clearly seen, large numbers of the workforce are growing old and retiring from the workforce. This means that a younger generation has to take over. The numbers of younger workers (15-24 year olds) have been stagnating from 2009 to 2019. This is to be expected from the low birth rates seen in Singapore, which also explains the need for influx of foreign workers to supplant the requirements of the industry. 
+
+<center>
+
+![Stagnating growth in young residential workforce and participation](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_3.jpg){width=30%}
+
+</center>
