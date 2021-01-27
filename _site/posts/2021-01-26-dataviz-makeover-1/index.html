@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
+  {"type":"character","attributes":{},"value":["Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2125,15 +2125,15 @@ document.addEventListener('DOMContentLoaded', function() {
 <ol type="1">
 <li>Using the (TOTAL) sheet in table 7, select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</li>
 <li>Rename “Age (Years)” to “Age Groups”</li>
+<li>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></li>
 </ol>
 <center>
 <figure>
 <img src="Dataprep_2.jpg" alt="Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Remaining Dataset after trimming</figcaption>
 </figure>
 </center>
-<ol start="3" type="1">
-<li>Save the excel file</li>
-<li>Create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.</li>
+<ol start="4" type="1">
+<li>Save the excel file,create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.</li>
 </ol>
 <center>
 <figure>
@@ -2142,7 +2142,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </center>
 <ol start="5" type="1">
 <li>Switch to Sheet 1 in Tableau</li>
-<li>Drag <strong>Age Groups</strong> into columns and <strong>2009</strong> / <strong>2019</strong> into rows as seen in the screenshot below.</li>
+<li>Drag <em>Age Groups</em> into columns and <em>2009</em> / <em>2019</em> into rows as seen in the screenshot below.</li>
 </ol>
 <center>
 <figure>
@@ -2150,7 +2150,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </figure>
 </center>
 <ol start="7" type="1">
-<li>Drag the values for <strong>2019</strong> on the same vertical axis where the <strong>2009</strong> values are plotted.</li>
+<li>Drag the values for <strong>2019* on the same vertical axis where the </strong>2009* values are plotted.</li>
 </ol>
 <center>
 <figure>
@@ -2166,8 +2166,24 @@ document.addEventListener('DOMContentLoaded', function() {
 </figure>
 </center>
 <ol start="9" type="1">
-<li>Hide the headers showing 2009 and 2019 at the bottom of the bar chart as they are no longer necessary.</li>
+<li><p>Hide the headers showing 2009 and 2019 at the bottom of the bar chart as they are no longer necessary.</p></li>
+<li><p>Rename vertical axis and include units: “Resident Labour Force (’000s)”</p></li>
+<li><p>Add in an annotation to indicate the median group which is <em>40-44</em> for both <em>2009</em> and <em>2019</em>.</p></li>
+<li><p>Rename visualization to: “Resident Labour Force by Age Groups, June of 2009 &amp; 2019”</p></li>
 </ol>
+<center>
+<figure>
+<img src="Dataprep_7.jpg" alt="Adding finishing touches and labels" style="width:100.0%" /><figcaption>Adding finishing touches and labels</figcaption>
+</figure>
+</center>
+<ol start="13" type="1">
+<li>Finally rename the title of the legend from <em>Measure Names</em> to <em>Year</em></li>
+</ol>
+<center>
+<figure>
+<img src="Dataprep_8.jpg" alt="Renaming the legend" style="width:60.0%" /><figcaption>Renaming the legend</figcaption>
+</figure>
+</center>
 <h2 id="steps-taken-for-second-visualization">4.3 Steps taken for second Visualization</h2>
 <p>Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019 dfsdfds 1. dfsdfsd</p>
 <h1 id="new-insights">5 - New insights</h1>

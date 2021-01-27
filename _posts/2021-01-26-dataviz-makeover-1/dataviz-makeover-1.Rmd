@@ -143,6 +143,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 1. Using the (TOTAL) sheet in table 7, select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
 2. Rename "Age (Years)" to "Age Groups"
+3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
 <center>
 
@@ -150,8 +151,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-3. Save the excel file
-4. Create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.
+4. Save the excel file,create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.
 
 <center>
 
@@ -160,7 +160,7 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 5. Switch to Sheet 1 in Tableau
-6. Drag **Age Groups** into columns and **2009** / **2019** into rows as seen in the screenshot below.
+6. Drag *Age Groups* into columns and *2009* / *2019* into rows as seen in the screenshot below.
 
 <center>
 
@@ -168,7 +168,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-7. Drag the values for **2019** on the same vertical axis where the **2009** values are plotted.
+7. Drag the values for **2019* on the same vertical axis where the **2009* values are plotted.
 
 <center>
 
@@ -185,6 +185,26 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 9. Hide the headers showing 2009 and 2019 at the bottom of the bar chart as they are no longer necessary. 
+
+10. Rename vertical axis and include units: "Resident Labour Force ('000s)"
+
+11. Add in an annotation to indicate the median group which is *40-44* for both *2009* and *2019*.
+
+12. Rename visualization to: "Resident Labour Force by Age Groups, June of 2009 & 2019"
+
+<center>
+
+![Adding finishing touches and labels](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_7.jpg){width=100%}
+
+</center>
+
+13. Finally rename the title of the legend from *Measure Names* to *Year*
+
+<center>
+
+![Renaming the legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_8.jpg){width=60%}
+
+</center>
 
 ## 4.3 Steps taken for second Visualization 
 Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019
