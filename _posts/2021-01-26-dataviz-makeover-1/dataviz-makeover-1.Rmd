@@ -137,11 +137,11 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Original Dataset in table 7](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_1.jpg)
+![Original (TOTAL) Dataset in table 7](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_1.jpg)
 
 </center>
 
-1. Using the (TOTAL) sheet in table 7, select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
+1. Using the (TOTAL) sheet in table 7 (mrsd_2019LabourForce_T7.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
 2. Rename "Age (Years)" to "Age Groups"
 3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
@@ -160,6 +160,7 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 5. Switch to Sheet 1 in Tableau
+
 6. Drag *Age Groups* into columns and *2009* / *2019* into rows as seen in the screenshot below.
 
 <center>
@@ -194,7 +195,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Adding finishing touches and labels](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_7.jpg){width=100%}
+![Adding finishing touches and labels](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_7.jpg){width=70%}
 
 </center>
 
@@ -207,9 +208,22 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 ## 4.3 Steps taken for second Visualization 
-Age-Sex Pyramid by Labour Force Participation as at June 2009 and June 2019
-dfsdfds
-1. dfsdfsd
+
+<center>
+
+![Original Dataset in table 5](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_1.jpg)
+
+</center>
+
+1. Similarly, using the (TOTAL) sheet in table 5 (mrsd_2019LabourForce_T5.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
+2. Rename "Age (Years)" to "Age Groups"
+3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
+
+<center>
+
+![Remaining Dataset of labour force participation rates (%) after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_2.jpg){width=20%}
+
+</center>
 
 
 # 5 - New insights
