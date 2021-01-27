@@ -114,7 +114,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
+  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","Original_Viz.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1515,9 +1515,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol type="1">
-<li>Using the (TOTAL) sheet in table 7 (mrsd_2019LabourForce_T7.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</li>
-<li>Rename “Age (Years)” to “Age Groups”</li>
-<li>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></li>
+<li><p>Using the (TOTAL) sheet in table 7 (mrsd_2019LabourForce_T7.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</p></li>
+<li><p>Rename “Age (Years)” to “Age Groups”</p></li>
+<li><p>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></p></li>
 </ol>
 <center>
 <figure>
@@ -1525,7 +1525,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol start="4" type="1">
-<li>Save the excel file,create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.</li>
+<li>Save the excel file,create a new Tableau workbook and load the file (mrsd_2019LabourForce_T7.xlsx) into Tableau. Ensure that the datasheet <strong>(T7_T)</strong> is loaded correctly and the datatypes are correctly identifed by tableau.</li>
 </ol>
 <center>
 <figure>
@@ -1533,7 +1533,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol start="5" type="1">
-<li><p>Switch to Sheet 1 in Tableau</p></li>
+<li><p>Switch to Sheet 1 and rename it <em>“Visual 1”</em> in Tableau</p></li>
 <li><p>Drag <em>Age Groups</em> into columns and <em>2009</em> / <em>2019</em> into rows as seen in the screenshot below.</p></li>
 </ol>
 <center>
@@ -1542,7 +1542,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol start="7" type="1">
-<li>Drag the values for <strong>2019* on the same vertical axis where the </strong>2009* values are plotted.</li>
+<li>Drag the values for <em>2019</em> on the same vertical axis where the <em>2009</em> values are plotted.</li>
 </ol>
 <center>
 <figure>
@@ -1583,15 +1583,53 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </figure>
 </center>
 <ol type="1">
-<li>Similarly, using the (TOTAL) sheet in table 5 (mrsd_2019LabourForce_T5.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</li>
-<li>Rename “Age (Years)” to “Age Groups”</li>
-<li>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></li>
+<li><p>Similarly, using the (TOTAL) sheet in table 5 (mrsd_2019LabourForce_T5.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns).</p></li>
+<li><p>Rename “Age (Years)” to “Age Groups”</p></li>
+<li><p>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></p></li>
 </ol>
 <center>
 <figure>
 <img src="2Dataprep_2.jpg" alt="Remaining Dataset of labour force participation rates (%) after trimming" style="width:20.0%" /><figcaption>Remaining Dataset of labour force participation rates (%) after trimming</figcaption>
 </figure>
 </center>
+<ol start="4" type="1">
+<li><p>Save the excel file and load it (mrsd_2019LabourForce_T5.xlsx) into the same Tableau workbook. Drag the new required datasource <strong>(T5_T)</strong> into use.</p></li>
+<li><p>Ensure that the datasheet <strong>(T5-T)</strong> is loaded correctly and the datatypes are correctly identifed by tableau.Also ensure that the relationship between <strong>T5_T and T7_T</strong> is correctly identifed. i.e. Using the <em>Age Group</em> columns in both datasets to create a relationship.</p></li>
+</ol>
+<center>
+<figure>
+<img src="2Dataprep_3.jpg" alt="Importing T5_T into the same Tableau Workbook and creating a relationship" style="width:90.0%" /><figcaption>Importing T5_T into the same Tableau Workbook and creating a relationship</figcaption>
+</figure>
+</center>
+<ol start="6" type="1">
+<li><p>Create a new sheet in the Tableau workbook and rename it <em>“Visual 2”</em>.</p></li>
+<li><p>From the data fields available. Create two new calculated field to find the number of participants in the labour force in each year. Name them as <em>“2009 Labour Force Participants”</em> and <em>“2019 Labour Force Participants”</em>. The equation is shown below.</p></li>
+</ol>
+<span class="math display">\[Resident Labour Force * Labour Force Participation Rate / 100\]</span>
+<center>
+<figure>
+<img src="2Dataprep_4.jpg" alt="Using calculated fields to find the actual number of people participating in the labour force" style="width:90.0%" /><figcaption>Using calculated fields to find the actual number of people participating in the labour force</figcaption>
+</figure>
+</center>
+<ol start="8" type="1">
+<li>Drag <em>Age Groups</em> into columns and <em>2009 Labour Force Participants</em> / <em>2019 Labour Force Participants</em> into rows as seen in the screenshot below.</li>
+</ol>
+<center>
+<figure>
+<img src="2Dataprep_5.jpg" alt="Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Dragging fields into rows and columns</figcaption>
+</figure>
+</center>
+<ol start="9" type="1">
+<li>Drag the values for <em>2019 Labour Force Participants</em> on the same vertical axis where the <em>2009 Labour Force Participants</em> values are plotted.</li>
+</ol>
+<center>
+<figure>
+<img src="2Dataprep_6.jpg" alt="Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Plotting the data for 2009 and 2019 on the same axes</figcaption>
+</figure>
+</center>
+<ol start="10" type="1">
+<li></li>
+</ol>
 <h1 id="new-insights">5 - New insights</h1>
 <p>Describe three major observations revealed by the data visualisation prepared.</p>
 <h2 id="section">5.1</h2>
@@ -1605,6 +1643,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

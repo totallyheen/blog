@@ -142,7 +142,9 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 1. Using the (TOTAL) sheet in table 7 (mrsd_2019LabourForce_T7.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
+
 2. Rename "Age (Years)" to "Age Groups"
+
 3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
 <center>
@@ -151,7 +153,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-4. Save the excel file,create a new Tableau workbook and load dataset into Tableau. Ensure that the data is loaded correctly and the datatypes are correctly identifed by tableau.
+4. Save the excel file,create a new Tableau workbook and load the file (mrsd_2019LabourForce_T7.xlsx) into Tableau. Ensure that the datasheet **(T7_T)** is loaded correctly and the datatypes are correctly identifed by tableau.
 
 <center>
 
@@ -159,7 +161,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-5. Switch to Sheet 1 in Tableau
+5. Switch to Sheet 1 and rename it *"Visual 1"* in Tableau
 
 6. Drag *Age Groups* into columns and *2009* / *2019* into rows as seen in the screenshot below.
 
@@ -169,7 +171,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
-7. Drag the values for **2019* on the same vertical axis where the **2009* values are plotted.
+7. Drag the values for *2019* on the same vertical axis where the *2009* values are plotted.
 
 <center>
 
@@ -216,7 +218,9 @@ Provide step-by-step description on how the data visualization was prepared.
 </center>
 
 1. Similarly, using the (TOTAL) sheet in table 5 (mrsd_2019LabourForce_T5.xlsx), select and preserve only the required data. i.e. Age groups, 2009 and 2019. Delete all other rows (including the total row) and columns (and blank columns). 
+
 2. Rename "Age (Years)" to "Age Groups"
+
 3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
 <center>
@@ -225,6 +229,44 @@ Provide step-by-step description on how the data visualization was prepared.
 
 </center>
 
+4. Save the excel file and load it (mrsd_2019LabourForce_T5.xlsx) into the same Tableau workbook. Drag the new required datasource **(T5_T)** into use.
+
+5. Ensure that the datasheet **(T5-T)** is loaded correctly and the datatypes are correctly identifed by tableau.Also ensure that the relationship between **T5_T and T7_T** is correctly identifed. i.e. Using the *Age Group* columns in both datasets to create a relationship.
+
+<center>
+
+![Importing T5_T into the same Tableau Workbook and creating a relationship](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_3.jpg){width=90%}
+
+</center>
+
+6. Create a new sheet in the Tableau workbook and rename it *"Visual 2"*.
+
+7. From the data fields available. Create two new calculated field to find the number of participants in the labour force in each year. Name them as *"2009 Labour Force Participants"* and *"2019 Labour Force Participants"*. The equation is shown below. 
+
+$$Resident Labour Force * Labour Force Participation Rate / 100$$
+<center>
+
+![Using calculated fields to find the actual number of people participating in the labour force](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_4.jpg){width=90%}
+
+</center>
+
+8. Drag *Age Groups* into columns and *2009 Labour Force Participants* / *2019 Labour Force Participants* into rows as seen in the screenshot below.
+
+<center>
+
+![Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_5.jpg){width=70%}
+
+</center>
+
+9. Drag the values for *2019 Labour Force Participants* on the same vertical axis where the *2009 Labour Force Participants* values are plotted.
+
+<center>
+
+![Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_6.jpg){width=70%}
+
+</center>
+
+10. 
 
 # 5 - New insights
 Describe three major observations revealed by the data visualisation prepared. 
