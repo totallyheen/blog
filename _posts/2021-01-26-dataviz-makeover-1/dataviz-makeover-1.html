@@ -1445,7 +1445,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="critique-the-visualization">1 - Critique the visualization</h1>
 <p>Identify at least three from each evaluation criterion (Clarity and aesthetics)</p>
 <div class="layout-chunk" data-layout="l-page">
-<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
 <img src="Original_Viz.jpg" alt="The original data visualization" width="100%" />
 <p class="caption">
 Figure 1: The original data visualization
@@ -1456,7 +1456,7 @@ Figure 1: The original data visualization
 <h3 id="unclear-title">1.1.1 Unclear title</h3>
 <p>The title “Resident Labour Force by Age” was used for the visualization. This is unclear and does not inform the reader quickly what the visualization is depicting which is the comparison of labour force by age groups between 2009 and 2019.</p>
 <p><em>Suggestion</em> - Change title</p>
-<p>Use the title “Resident Labour Force by Age Groups, June 2009 vs June 2019”</p>
+<p>Use the title “Resident Labour Force in Singapore by Age Groups, June of of 2009 &amp; 2019”</p>
 <h3 id="wrong-visualization-used-for-the-given-datatype">1.1.2 Wrong visualization used for the given datatype</h3>
 <p>Age groups are a categorical datatype instead. The line graph being used currently is better suited for continuous datatypes</p>
 <p><em>Suggestion</em> - Change Visualization Type</p>
@@ -1507,7 +1507,7 @@ Figure 1: The original data visualization
 <h1 id="a-sketch-of-the-improved-visualization">2 - A sketch of the improved visualization</h1>
 <p>With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome.</p>
 <div class="layout-chunk" data-layout="l-page">
-<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="sketch1.jpg" alt="A sketch of the suggested visualizatons" width="100%" />
 <p class="caption">
 Figure 2: A sketch of the suggested visualizatons
@@ -1518,13 +1518,14 @@ Figure 2: A sketch of the suggested visualizatons
 <p><strong>More Older Residents in the Workforce</strong></p>
 <p><em>With population ageing and sustained rise in LFPR of older residents, the share of residents aged 55 &amp; over in the labour force rose 9 percentage points from 16% in 2009 to 25% in 2019. Meanwhile, the share of the resident labour force aged 24 to 54 declined 8 percentage points from 75% to 67% even as their LFPR increased, as the population cohorts moving into these age bands were smaller than those who moved out due to lower birth rates. While the median age of residents in the labour force stayed in the 40-44 year old age group, it is likely that the median age will shift out to the 45-49 year old age group as the population ages further. </em></p>
 <div class="layout-chunk" data-layout="l-page">
-<div class="figure"><span id="fig:unnamed-chunk-3"></span>
-<img src="completed.png" alt="The improved data visualization" width="100%" />
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="completed.png" alt="The improved data visualization" width="100%" height="100%" />
 <p class="caption">
 Figure 3: The improved data visualization
 </p>
 </div>
 </div>
+<p>The link to the original dashboard on Tableau Public Server can be found <a href="https://public.tableau.com/views/SingaporeResidentLabourForceandParticipants2009vs2019/SingaporeResidentLabourForceandParticipants?:language=en&amp;:display_count=y&amp;:origin=viz_share_link">here.</a></p>
 <h1 id="the-data-preparation-process">4 - The data preparation process</h1>
 <p>Provide step-by-step description on how the data visualization was prepared.</p>
 <h2 id="data-sources-used">4.1 Data Sources Used:</h2>
@@ -1543,9 +1544,9 @@ Figure 3: The improved data visualization
 <li><p>Rename “Age (Years)” to “Age Groups”</p></li>
 <li><p>Remove whitespaces in data. <em>e.g. “15 - 19” to “15-19” and “70 and over” to “&gt;=70” to maximise use of space.</em></p></li>
 </ol>
-<p><centre></p>
+<center>
 <figure>
-<img src="Dataprep_2.jpg" alt="Figure 5:Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Figure 5:Remaining Dataset after trimming</figcaption>
+<img src="Dataprep_2.jpg" alt="Figure 5: Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Figure 5: Remaining Dataset after trimming</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -1553,7 +1554,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_3.jpg" alt="Data Imported into Tableau and their datatypes" style="width:30.0%" /><figcaption>Data Imported into Tableau and their datatypes</figcaption>
+<img src="Dataprep_3.jpg" alt="Figure 6: Data Imported into Tableau and their datatypes" style="width:30.0%" /><figcaption>Figure 6: Data Imported into Tableau and their datatypes</figcaption>
 </figure>
 </center>
 <ol start="5" type="1">
@@ -1562,7 +1563,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_4.jpg" alt="Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Dragging fields into rows and columns</figcaption>
+<img src="Dataprep_4.jpg" alt="Figure 7: Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Figure 7: Dragging fields into rows and columns</figcaption>
 </figure>
 </center>
 <ol start="7" type="1">
@@ -1570,7 +1571,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_5.jpg" alt="Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Plotting the data for 2009 and 2019 on the same axes</figcaption>
+<img src="Dataprep_5.jpg" alt="Figure 8: Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Figure 8: Plotting the data for 2009 and 2019 on the same axes</figcaption>
 </figure>
 </center>
 <ol start="8" type="1">
@@ -1578,7 +1579,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_6.jpg" alt="Getting your bar chart color coded by year" style="width:70.0%" /><figcaption>Getting your bar chart color coded by year</figcaption>
+<img src="Dataprep_6.jpg" alt="Figure 9: Getting your bar chart color coded by year" style="width:70.0%" /><figcaption>Figure 9: Getting your bar chart color coded by year</figcaption>
 </figure>
 </center>
 <ol start="9" type="1">
@@ -1589,7 +1590,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_7.jpg" alt="Adding finishing touches and labels" style="width:70.0%" /><figcaption>Adding finishing touches and labels</figcaption>
+<img src="Dataprep_7.jpg" alt="Figure 10: Adding finishing touches and labels" style="width:70.0%" /><figcaption>Figure 10: Adding finishing touches and labels</figcaption>
 </figure>
 </center>
 <ol start="13" type="1">
@@ -1597,7 +1598,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_8.jpg" alt="Renaming the legend" style="width:60.0%" /><figcaption>Renaming the legend</figcaption>
+<img src="Dataprep_8.jpg" alt="Figure 11: Renaming the legend" style="width:60.0%" /><figcaption>Figure 11: Renaming the legend</figcaption>
 </figure>
 </center>
 <ol start="14" type="1">
@@ -1605,13 +1606,13 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_9.jpg" alt="Making the bar charts of similar size scales" style="width:60.0%" /><figcaption>Making the bar charts of similar size scales</figcaption>
+<img src="Dataprep_9.jpg" alt="Figure 12: Making the bar charts of similar size scales" style="width:60.0%" /><figcaption>Figure 12: Making the bar charts of similar size scales</figcaption>
 </figure>
 </center>
 <h2 id="steps-taken-for-second-visualization">4.3 Steps taken for second Visualization</h2>
 <center>
 <figure>
-<img src="2Dataprep_1.jpg" alt="Original Dataset in table 5" /><figcaption>Original Dataset in table 5</figcaption>
+<img src="2Dataprep_1.jpg" alt="Figure 13: Original Dataset in table 5" /><figcaption>Figure 13: Original Dataset in table 5</figcaption>
 </figure>
 </center>
 <ol type="1">
@@ -1621,7 +1622,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_2.jpg" alt="Remaining Dataset of labour force participation rates (%) after trimming" style="width:20.0%" /><figcaption>Remaining Dataset of labour force participation rates (%) after trimming</figcaption>
+<img src="2Dataprep_2.jpg" alt="Figure 14: Remaining Dataset of labour force participation rates (%) after trimming" style="width:20.0%" /><figcaption>Figure 14: Remaining Dataset of labour force participation rates (%) after trimming</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -1630,7 +1631,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_3.jpg" alt="Importing T5_T into the same Tableau Workbook and creating a relationship" style="width:90.0%" /><figcaption>Importing T5_T into the same Tableau Workbook and creating a relationship</figcaption>
+<img src="2Dataprep_3.jpg" alt="Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship" style="width:90.0%" /><figcaption>Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship</figcaption>
 </figure>
 </center>
 <ol start="6" type="1">
@@ -1640,7 +1641,7 @@ Figure 3: The improved data visualization
 <span class="math display">\[Resident Labour Force * Labour Force Participation Rate / 100\]</span>
 <center>
 <figure>
-<img src="2Dataprep_4.jpg" alt="Using calculated fields to find the actual number of people participating in the labour force" style="width:90.0%" /><figcaption>Using calculated fields to find the actual number of people participating in the labour force</figcaption>
+<img src="2Dataprep_4.jpg" alt="Figure 16: Using calculated fields to find the actual number of people participating in the labour force" style="width:90.0%" /><figcaption>Figure 16: Using calculated fields to find the actual number of people participating in the labour force</figcaption>
 </figure>
 </center>
 <ol start="8" type="1">
@@ -1648,7 +1649,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_5.jpg" alt="Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Dragging fields into rows and columns</figcaption>
+<img src="2Dataprep_5.jpg" alt="Figure 17: Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Figure 17: Dragging fields into rows and columns</figcaption>
 </figure>
 </center>
 <ol start="9" type="1">
@@ -1656,7 +1657,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_6.jpg" alt="Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Plotting the data for 2009 and 2019 on the same axes</figcaption>
+<img src="2Dataprep_6.jpg" alt="Figure 18: Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Figure 18: Plotting the data for 2009 and 2019 on the same axes</figcaption>
 </figure>
 </center>
 <ol start="10" type="1">
@@ -1665,7 +1666,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_7.jpg" alt="Keeping colors consistent across visuals will make cross referencing intuitive" style="width:70.0%" /><figcaption>Keeping colors consistent across visuals will make cross referencing intuitive</figcaption>
+<img src="2Dataprep_7.jpg" alt="Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive" style="width:70.0%" /><figcaption>Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive</figcaption>
 </figure>
 </center>
 <ol start="12" type="1">
@@ -1676,7 +1677,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_8.jpg" alt="Making the bar charts of similar size scales" style="width:70.0%" /><figcaption>Making the bar charts of similar size scales</figcaption>
+<img src="2Dataprep_8.jpg" alt="Figure 20: Making the bar charts of similar size scales" style="width:70.0%" /><figcaption>Figure 20: Making the bar charts of similar size scales</figcaption>
 </figure>
 </center>
 <h2 id="pulling-it-all-into-a-dashboard">4.4 Pulling it all into a dashboard</h2>
@@ -1687,7 +1688,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="dashboard_1.jpg" alt="Initial Layout of the dashboard with reduced title font sizes" style="width:90.0%" /><figcaption>Initial Layout of the dashboard with reduced title font sizes</figcaption>
+<img src="dashboard_1.jpg" alt="Figure 21: Initial Layout of the dashboard with reduced title font sizes" style="width:90.0%" /><figcaption>Figure 21: Initial Layout of the dashboard with reduced title font sizes</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -1695,7 +1696,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="dashboard_2.jpg" alt="Removing a redundant legend" style="width:40.0%" /><figcaption>Removing a redundant legend</figcaption>
+<img src="dashboard_2.jpg" alt="Figure 22: Removing a redundant legend" style="width:40.0%" /><figcaption>Figure 22: Removing a redundant legend</figcaption>
 </figure>
 </center>
 <ol start="5" type="1">
@@ -1711,21 +1712,21 @@ Figure 3: The improved data visualization
 <p>Workforce participation for 25 to 54 year olds is the highest and consistently above 90%. These groups form the biggest part of the residential workforce and also participate the most. This is important for Singapore’s economy as its biggest group of workers are consistently and actively participating in positive economic activity. This is also something to be concerned about, as this group of workers age, their workforce participation is likely to mirror that of the current older age groups. If this group of residents (the largest group) turn older and stop partcipating, it will have grave consequences for Singapore’s economy and signals the need for rejuvenation.</p>
 <center>
 <figure>
-<img src="insights_1.jpg" alt="Workforce participation drops significantly after 65 years old." style="width:70.0%" /><figcaption>Workforce participation drops significantly after 65 years old.</figcaption>
+<img src="insights_1.jpg" alt="Figure 23: Workforce participation drops significantly after 65 years old." style="width:70.0%" /><figcaption>Figure 23: Workforce participation drops significantly after 65 years old.</figcaption>
 </figure>
 </center>
 <h2 id="workforce-participation-changes-significantly-from-65">5.2 Workforce participation changes significantly from 65</h2>
 <p>The workforce participants in each age group usually account for the majority of resident workforce (i.e. &gt;50% as seen by the orange arrows). This is true until the age group of 65-69 (as marked out by the blue arrows). From here on, the work force participation drops significantly. This is in line with what we can expect from Singapore’s offcial retirement age which is currently set at 67 years old. With the retirement age expected to be raised till 70 years old in by 2030, the workforce participation picture is likely to change significantly from what we are saeeing now.</p>
 <center>
 <figure>
-<img src="insights_2.jpg" alt="The biggest group of workers participate actively in the workforce" style="width:40.0%" /><figcaption>The biggest group of workers participate actively in the workforce</figcaption>
+<img src="insights_2.jpg" alt="Figure 24: The biggest group of workers participate actively in the workforce" style="width:40.0%" /><figcaption>Figure 24: The biggest group of workers participate actively in the workforce</figcaption>
 </figure>
 </center>
 <h2 id="insufficient-young-workers-to-replace-old-workers">5.3 Insufficient young workers to replace old workers</h2>
 <p>As can be clearly seen, large numbers of the workforce are growing old and retiring from the workforce. This means that a younger generation has to take over. The numbers of younger workers (15-24 year olds) have been stagnating from 2009 to 2019. This is to be expected from the low birth rates seen in Singapore, which also explains the need for influx of foreign workers to supplant the requirements of the industry.</p>
 <center>
 <figure>
-<img src="insights_3.jpg" alt="Stagnating growth in young residential workforce and participation" style="width:30.0%" /><figcaption>Stagnating growth in young residential workforce and participation</figcaption>
+<img src="insights_3.jpg" alt="Figure 25: Stagnating growth in young residential workforce and participation" style="width:30.0%" /><figcaption>Figure 25: Stagnating growth in young residential workforce and participation</figcaption>
 </figure>
 </center>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

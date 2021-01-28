@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 # 1 - Critique the visualization
 Identify at least three from each evaluation criterion (Clarity and aesthetics)
 
-```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="The original data visualization"}
+```{r, fig.align="center",echo=FALSE,layout='l-page', out.width="100%", fig.cap="The original data visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg")
 ```
 
@@ -33,7 +33,7 @@ The title “Resident Labour Force by Age” was used for the visualization. Thi
 
 *Suggestion* - Change title
 
-Use the title “Resident Labour Force by Age Groups, June 2009 vs June 2019”
+Use the title “Resident Labour Force in Singapore by Age Groups, June of of 2009 & 2019”
 
 
 ### 1.1.2 Wrong visualization used for the given datatype
@@ -123,7 +123,7 @@ Horizontal axis label is missing. Although it can be inferred based on the categ
 # 2 - A sketch of the improved visualization
 With reference to the critics above, suggest alternative graphical presentation to improve the current design. The proposed alternative data visualisation must be in static form. Sketch out the proposed design. Support your design by describing the advantages or which part of the issue(s) your alternative design tries to overcome. 
 
-```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="A sketch of the suggested visualizatons"}
+```{r, fig.align="center",echo=FALSE,layout='l-page', out.width="100%", fig.cap="A sketch of the suggested visualizatons"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/sketch1.jpg")
 ```
 
@@ -135,9 +135,11 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-
 *With population ageing and sustained rise in LFPR of older residents, the share of residents aged 55 & over in the labour force rose 9 percentage points from 16% in 2009 to 25% in 2019. Meanwhile, the share of the resident labour force aged 24 to 54 declined 8 percentage points from 75% to 67% even as their LFPR increased, as the population cohorts moving into these age bands were smaller than those who moved out due to lower birth rates. While the median age of residents in the labour force stayed in the 40-44 year old age group, it is likely that the median age will shift out to the 45-49 year old age group as the population ages further. *
 
 
-```{r, echo=FALSE,layout='l-page', out.width="100%", fig.cap="The improved data visualization"}
+```{r, fig.align="center",echo=FALSE,layout='l-page', out.width="100%",out.height="100%", fig.cap="The improved data visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png")
 ```
+
+The link to the original dashboard on Tableau Public Server can be found [here.](https://public.tableau.com/views/SingaporeResidentLabourForceandParticipants2009vs2019/SingaporeResidentLabourForceandParticipants?:language=en&:display_count=y&:origin=viz_share_link)
 
 
 # 4 - The data preparation process
@@ -164,17 +166,18 @@ Provide step-by-step description on how the data visualization was prepared.
 
 3. Remove whitespaces in data. *e.g. "15  -  19" to "15-19" and "70 and over" to ">=70" to maximise use of space.*
 
-<centre>
+<center>
 
-![Figure 5:Remaining Dataset after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_2.jpg){width=20%}
+![Figure 5: Remaining Dataset after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_2.jpg){width=20%}
 
 </center>
+
 
 4. Save the excel file,create a new Tableau workbook and load the file (mrsd_2019LabourForce_T7.xlsx) into Tableau. Ensure that the datasheet **(T7_T)** is loaded correctly and the datatypes are correctly identifed by tableau.
 
 <center>
 
-![Data Imported into Tableau and their datatypes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_3.jpg){width=30%}
+![Figure 6: Data Imported into Tableau and their datatypes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_3.jpg){width=30%}
 
 </center>
 
@@ -184,7 +187,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_4.jpg){width=70%}
+![Figure 7: Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_4.jpg){width=70%}
 
 </center>
 
@@ -192,7 +195,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_5.jpg){width=70%}
+![Figure 8: Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_5.jpg){width=70%}
 
 </center>
 
@@ -200,7 +203,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Getting your bar chart color coded by year](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_6.jpg){width=70%}
+![Figure 9: Getting your bar chart color coded by year](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_6.jpg){width=70%}
 
 </center>
 
@@ -214,7 +217,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Adding finishing touches and labels](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_7.jpg){width=70%}
+![Figure 10: Adding finishing touches and labels](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_7.jpg){width=70%}
 
 </center>
 
@@ -222,7 +225,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Renaming the legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_8.jpg){width=60%}
+![Figure 11: Renaming the legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_8.jpg){width=60%}
 
 </center>
 
@@ -230,7 +233,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_9.jpg){width=60%}
+![Figure 12: Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Dataprep_9.jpg){width=60%}
 
 </center>
 
@@ -238,7 +241,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Original Dataset in table 5](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_1.jpg)
+![Figure 13: Original Dataset in table 5](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_1.jpg)
 
 </center>
 
@@ -250,7 +253,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Remaining Dataset of labour force participation rates (%) after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_2.jpg){width=20%}
+![Figure 14: Remaining Dataset of labour force participation rates (%) after trimming](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_2.jpg){width=20%}
 
 </center>
 
@@ -260,7 +263,7 @@ Provide step-by-step description on how the data visualization was prepared.
 
 <center>
 
-![Importing T5_T into the same Tableau Workbook and creating a relationship](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_3.jpg){width=90%}
+![Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_3.jpg){width=90%}
 
 </center>
 
@@ -271,7 +274,7 @@ Provide step-by-step description on how the data visualization was prepared.
 $$Resident Labour Force * Labour Force Participation Rate / 100$$
 <center>
 
-![Using calculated fields to find the actual number of people participating in the labour force](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_4.jpg){width=90%}
+![Figure 16: Using calculated fields to find the actual number of people participating in the labour force](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_4.jpg){width=90%}
 
 </center>
 
@@ -279,7 +282,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_5.jpg){width=70%}
+![Figure 17: Dragging fields into rows and columns](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_5.jpg){width=70%}
 
 </center>
 
@@ -287,7 +290,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_6.jpg){width=70%}
+![Figure 18: Plotting the data for 2009 and 2019 on the same axes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_6.jpg){width=70%}
 
 </center>
 
@@ -297,7 +300,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Keeping colors consistent across visuals will make cross referencing intuitive](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_7.jpg){width=70%}
+![Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_7.jpg){width=70%}
 
 </center>
 
@@ -311,7 +314,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_8.jpg){width=70%}
+![Figure 20: Making the bar charts of similar size scales](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/2Dataprep_8.jpg){width=70%}
 
 </center>
 
@@ -325,7 +328,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Initial Layout of the dashboard with reduced title font sizes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_1.jpg){width=90%}
+![Figure 21: Initial Layout of the dashboard with reduced title font sizes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_1.jpg){width=90%}
 
 </center>
 
@@ -333,7 +336,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Removing a redundant legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_2.jpg){width=40%}
+![Figure 22: Removing a redundant legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_2.jpg){width=40%}
 
 </center>
 
@@ -352,7 +355,7 @@ Workforce participation for 25 to 54 year olds is the highest and consistently a
 
 <center>
 
-![Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
+![Figure 23: Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
 
 </center>
 
@@ -362,7 +365,7 @@ The workforce participants in each age group usually account for the majority of
 
 <center>
 
-![The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
+![Figure 24: The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
 
 </center>
 
@@ -372,6 +375,6 @@ As can be clearly seen, large numbers of the workforce are growing old and retir
 
 <center>
 
-![Stagnating growth in young residential workforce and participation](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_3.jpg){width=30%}
+![Figure 25: Stagnating growth in young residential workforce and participation](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_3.jpg){width=30%}
 
 </center>
