@@ -72,13 +72,13 @@ Points being made on changes in percentages such as â€œDeclined from 75% to 67%â
 
 ### 1.1.6 Write up not aligned with visualization
 
-The opening line of the write up refers to LFPR (Labour Force Participation Rate) whereas the visualization depicts the proportion of labour force. There is no data visualization that readers can refer to while reading statements related to LFPR.
+The opening line of the write up refers to LFPR (Labour Force Participation Rate) whereas the visualization depicts the proportion of labour force. There is no data visualization that readers can refer to while reading statements related to LFPR.The percentages for labour force between 25 and 54 are also not clearly shown.
 
 
 
-*Suggestion* - Include a second visualization on Labour Force Participation
+*Suggestion* - Include a more visualizations on Labour Force Participation and proportion of labour force.
 
-Use Table 5 on labour force and Table 7 on participation rates to get numbers by age group for labour force participation. Together, the two graphs will give a clearer idea of how much labour force participation there is with respect to the resident labour force size.
+Use Table 5 on labour force and Table 7 on participation rates to get numbers by age group for labour force participation. Together, the graphs will give a clearer idea of how much labour force participation there is with respect to the resident labour force size. The added visuals will also give view on what is the proportion of resident labour force across age groups. 
 
 
 ## 1.2 Aesthetics
@@ -317,7 +317,56 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 </center>
 
-## 4.4 Pulling it all into a dashboard
+## 4.4 Steps taken for third visualization
+
+1. Create a new sheet in the Tableau workbook and rename it *"Visual 3"*.
+
+2. Drag *Age Groups* into rows and resident labour force size *2009* from T7_T into Text
+
+<center>
+
+![Figure 21: Creating a data table with resident labour force size](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/3Dataprep_1.jpg){width=40%}
+
+</center>
+
+3. Change the values of 2009 labour force size into a quick table calculation as *Percentage of Total*
+
+
+<center>
+
+![Figure 22: Converting data table to percentages of total](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/3Dataprep_2.jpg){width=40%}
+
+</center>
+
+4. Group the values for *25-29,30-34,35-39,40-44,45-49,50-54* together
+
+<center>
+
+![Figure 23: Grouping data together to align with the writeup](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/3Dataprep_3.jpg){width=40%}
+
+</center>
+
+5. Edit the group name to be *25-54*
+
+<center>
+
+![Figure 24: Renaming the grouped data](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/3Dataprep_4.jpg){width=40%}
+
+</center>
+
+6. Change visual into a Highlight Table. Select Range of highlight color to be blue for 2009, aligned with the rest of the visuals.Rename column header to age group.
+
+<center>
+
+![Figure 25: Renaming the grouped data](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/3Dataprep_5.jpg){width=30%}
+
+</center>
+
+7. Rename visual to *Labour Force Proportion 2009*
+
+8. Redo all the steps to create a fourth visual for proportion of resident labour force in 2019 and using orange as the colour for the highlight table.
+
+## 4.5 Pulling it all into a dashboard
 
 1. Create a new dashboard and name it *"Singapore Resident Labour Force and Participants 2009 vs 2019"*
 
@@ -327,7 +376,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Figure 21: Initial Layout of the dashboard with reduced title font sizes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_1.jpg){width=90%}
+![Figure 26: Initial Layout of the dashboard with reduced title font sizes](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_1.jpg){width=90%}
 
 </center>
 
@@ -335,7 +384,7 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
 
 <center>
 
-![Figure 22: Removing a redundant legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_2.jpg){width=40%}
+![Figure 27: Removing a redundant legend](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_2.jpg){width=40%}
 
 </center>
 
@@ -343,6 +392,16 @@ $$Resident Labour Force * Labour Force Participation Rate / 100$$
   - *"Resident Labour Force in Singapore by Age Groups, June of of 2009 & 2019"*
   - *"Labour Force Participants in Singapore by Age Groups, June of 2009 & 2019"*
 
+6. Pull in Visuals 3 and Visuals 4 to fill in the whitespace near the legend and shift the legend downwards
+
+<center>
+
+![Figure 28: Pulling in the visual on proportions](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/dashboard_3.jpg){width=100%}
+
+</center>
+
+
+7. Publish to Tableau Public Server
 
 
 # 5 - New insights
@@ -354,7 +413,7 @@ Workforce participation for 25 to 54 year olds is the highest and consistently a
 
 <center>
 
-![Figure 23: The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
+![Figure 29: The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
 
 </center>
 
@@ -364,7 +423,7 @@ The workforce participants in each age group usually account for the majority of
 
 <center>
 
-![Figure 24: Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
+![Figure 30: Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
 
 </center>
 
@@ -374,6 +433,6 @@ As can be clearly seen, large numbers of the workforce are growing old and retir
 
 <center>
 
-![Figure 25: Stagnating growth in young residential workforce and participation](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_3.jpg){width=30%}
+![Figure 31: Stagnating growth in young residential workforce and participation](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_3.jpg){width=30%}
 
 </center>
