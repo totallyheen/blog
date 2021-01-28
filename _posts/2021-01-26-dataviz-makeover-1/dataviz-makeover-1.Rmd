@@ -355,7 +355,7 @@ Workforce participation for 25 to 54 year olds is the highest and consistently a
 
 <center>
 
-![Figure 23: Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
+![Figure 23: The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_1.jpg){width=70%}
 
 </center>
 
@@ -365,7 +365,7 @@ The workforce participants in each age group usually account for the majority of
 
 <center>
 
-![Figure 24: The biggest group of workers participate actively in the workforce](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
+![Figure 24: Workforce participation drops significantly after 65 years old.](C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/insights_2.jpg){width=40%}
 
 </center>
 
