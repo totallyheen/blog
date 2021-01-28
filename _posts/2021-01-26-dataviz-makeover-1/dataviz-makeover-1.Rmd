@@ -2,12 +2,11 @@
 title: "DataViz Makeover 1"
 description: |
   Suggesting ways for improving and reworking the original data visualisation. 
-  
-  Highlight what works and what doesn’t. Explain why those things don’t work, and how you can make it better. Use the fields in the data set provided and improve upon the original visualisations. However, if supplementing other data sources helps to tell a better story, go for it!
+
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
-date: 01-26-2021
+date: 01-28-2021
 output:
   distill::distill_article:
     self_contained: false
