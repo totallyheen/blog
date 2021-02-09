@@ -2,7 +2,7 @@
 title: "DataViz Makeover 1"
 description: |
   Suggesting ways for improving and reworking the original data visualisation. 
-
+preview: C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
