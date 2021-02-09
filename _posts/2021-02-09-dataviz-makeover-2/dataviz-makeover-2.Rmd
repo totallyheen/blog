@@ -1,0 +1,39 @@
+---
+title: "DataViz Makeover 2"
+description: |
+  Suggesting ways for improving and reworking the original data visualisation.
+author:
+  - name: Yi Heen, Boey
+    url: https://www.linkedin.com/in/yiheen-boey/
+date: 02-09-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 1 - Critique the visualization
+
+### 1.1 Clarity
+
+| S/N |        Comments                         |   Suggested Improvements                |
+|-----|-----------------------------------------|-----------------------------------------|
+|C1|The neutral values (3) of the likert scale on the diverging stacked chart are not centred on zero. This makes it hard for the users to compare the ratings across different categories and also makes it hard to tell whether the responses were skewed towards agreement or disagreement.|Redo the diverging stacked bar chart with the neutral values of the likert scale (3) centred around zero.|
+|C2|The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.| Sort the categories (rows) of the table by the total proportion of agreeable opinions (Ratings 1, 2 and half of rating 3).|
+|C3|Information is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.|Add in the count of respondents from each country as a data label or as a tooltip or even as the size(thickness) of the bars.|
+
+
+
+### 1.2 Aesthetics
+
+| S/N |        Comments                         |   Suggested Improvements                |
+|-----|-----------------------------------------|-----------------------------------------|
+|A1|Colours on the chart are randomised and do not follow a logical pattern. |Replot the chart with colours on a red-blue spectrum. Red should be on one end of the spectrum to indicate 'Strongly Disagree' and Blue on the other end to indicate 'Strongly Agree'|
+|A2|Scale of the diverging stacked bar chart starts at 0% and ends at 100%. This will not be sufficient to display the full range of responses gathered on vaccination opinions.|Adjust scale of the bar to allow for negative values. This will allow the negative opinions (4 and 5) that show disagreement to be accurately represented. It will also help to answer the question posed by the title:*Which country is more pro-vaccine?*|
+|A3|Legend not properly named and labeled. While readers can infer the feedback when given by the two extreme values of 'Strongly Agree' and 'Strongly Disagree', it would be clearer to properly label each and everyone of them.|Remove the name of the legend as it does not convey any message and specifically label each and everyone of the different colors on the diverging bar chart.|
+|A4|Clear titles on both charts|Follow and recreate a similar aesthetic.|
+

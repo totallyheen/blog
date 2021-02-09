@@ -134,7 +134,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-
 *With population ageing and sustained rise in LFPR of older residents, the share of residents aged 55 & over in the labour force rose 9 percentage points from 16% in 2009 to 25% in 2019. Meanwhile, the share of the resident labour force aged 24 to 54 declined 8 percentage points from 75% to 67% even as their LFPR increased, as the population cohorts moving into these age bands were smaller than those who moved out due to lower birth rates. While the median age of residents in the labour force stayed in the 40-44 year old age group from 2009 to 2019, it is likely that the median age will soon shift up to the 45-49 year old age group as the population ages further.*
 
 
-```{r, fig.align="center",echo=FALSE,layout='l-page', out.width="100%",out.height="100%", fig.cap="The improved data visualization"}
+```{r, fig.align="center",echo=FALSE,layout='l-page', preview=TRUE, out.width="100%",out.height="100%", fig.cap="The improved data visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png")
 ```
 
