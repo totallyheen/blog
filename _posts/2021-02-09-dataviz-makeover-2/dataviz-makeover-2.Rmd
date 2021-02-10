@@ -1,7 +1,7 @@
 ---
 title: "DataViz Makeover 2"
 description: |
-  sss
+  A makeover of the data visualisation on willingness of the public towards COVID-19 vaccinations in selected countries around the world.  
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
@@ -36,4 +36,5 @@ knitr::opts_chunk$set(echo = FALSE)
 |A2|Scale of the diverging stacked bar chart starts at 0% and ends at 100%. This will not be sufficient to display the full range of responses gathered on vaccination opinions.|Adjust scale of the bar to allow for negative values. This will allow the negative opinions (4 and 5) that show disagreement to be accurately represented. It will also help to answer the question posed by the title:*Which country is more pro-vaccine?*|
 |A3|Legend not properly named and labeled. While readers can infer the feedback when given by the two extreme values of 'Strongly Agree' and 'Strongly Disagree', it would be clearer to properly label each and everyone of them.|Remove the name of the legend as it does not convey any message and specifically label each and everyone of the different colors on the diverging bar chart.|
 |A4|Clear titles on both charts|Follow and recreate a similar aesthetic.|
+
 

@@ -2,7 +2,7 @@
   {
     "path": "posts/2021-02-09-dataviz-makeover-2/",
     "title": "DataViz Makeover 2",
-    "description": "sss",
+    "description": "A makeover of the data visualisation on willingness of the public towards COVID-19 vaccinations in selected countries around the world.",
     "author": [
       {
         "name": "Yi Heen, Boey",
@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\n1 - Critique the visualization\r\n1.1 Clarity\r\nS/N\r\nComments\r\nSuggested Improvements\r\nC1\r\nThe neutral values (3) of the likert scale on the diverging stacked chart are not centred on zero. This makes it hard for the users to compare the ratings across different categories and also makes it hard to tell whether the responses were skewed towards agreement or disagreement.\r\nRedo the diverging stacked bar chart with the neutral values of the likert scale (3) centred around zero.\r\nC2\r\nThe categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.\r\nSort the categories (rows) of the table by the total proportion of agreeable opinions (Ratings 1, 2 and half of rating 3).\r\nC3\r\nInformation is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.\r\nAdd in the count of respondents from each country as a data label or as a tooltip or even as the size(thickness) of the bars.\r\n1.2 Aesthetics\r\nS/N\r\nComments\r\nSuggested Improvements\r\nA1\r\nColours on the chart are randomised and do not follow a logical pattern.\r\nReplot the chart with colours on a red-blue spectrum. Red should be on one end of the spectrum to indicate ‘Strongly Disagree’ and Blue on the other end to indicate ‘Strongly Agree’\r\nA2\r\nScale of the diverging stacked bar chart starts at 0% and ends at 100%. This will not be sufficient to display the full range of responses gathered on vaccination opinions.\r\nAdjust scale of the bar to allow for negative values. This will allow the negative opinions (4 and 5) that show disagreement to be accurately represented. It will also help to answer the question posed by the title:Which country is more pro-vaccine?\r\nA3\r\nLegend not properly named and labeled. While readers can infer the feedback when given by the two extreme values of ‘Strongly Agree’ and ‘Strongly Disagree’, it would be clearer to properly label each and everyone of them.\r\nRemove the name of the legend as it does not convey any message and specifically label each and everyone of the different colors on the diverging bar chart.\r\nA4\r\nClear titles on both charts\r\nFollow and recreate a similar aesthetic.\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-02-10T00:55:46+08:00",
+    "last_modified": "2021-02-10T16:02:43+08:00",
     "input_file": "dataviz-makeover-2.utf8.md"
   },
   {
