@@ -1,8 +1,8 @@
 ---
 title: "DataViz Makeover 1"
 description: |
-  Suggesting ways for improving and reworking the original data visualisation. 
-preview: C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/completed.png
+  A makeover of the data visualisation on Resident Labour Force in Singapore.  
+preview: completed.png
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
@@ -13,14 +13,14 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, preview=TRUE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
 # 1 - Critique the visualization
 Identify at least three from each evaluation criterion (Clarity and aesthetics)
 
-```{r, fig.align="center",echo=FALSE,layout='l-page', out.width="100%", fig.cap="The original data visualization"}
+```{r, fig.align="center",echo=FALSE,layout='l-page',out.width="100%", fig.cap="The original data visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-01-26-dataviz-makeover-1/Original_Viz.jpg")
 ```
 
