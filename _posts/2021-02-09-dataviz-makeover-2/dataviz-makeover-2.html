@@ -109,12 +109,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 2"]},{"type":"character","attributes":{},"value":["A makeover of the data visualisations on willingness of the public towards COVID-19 vaccinations in selected countries.  \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Yi Heen, Boey"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/yiheen-boey/"]}]}]},{"type":"character","attributes":{},"value":["02-09-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","preview","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["DataViz Makeover 2"]},{"type":"character","attributes":{},"value":["A makeover of the data visualisations on willingness of the public towards COVID-19 vaccinations in selected countries.  \n"]},{"type":"character","attributes":{},"value":["final.png"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Yi Heen, Boey"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/yiheen-boey/"]}]}]},{"type":"character","attributes":{},"value":["02-09-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[3]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","dprep1.png","dprep2.png","dprep3.png","dprep4.png","dprep5.png","dprep6.png","dprep7.png","dprep8.png","original_viz.png","v1prep1.png","v1prep10.png","v1prep11.png","v1prep12.png","v1prep13.png","v1prep14.png","v1prep2.png","v1prep3.png","v1prep4.png","v1prep5.png","v1prep6.png","v1prep7.png","v1prep8.png","v1prep9.png"]}
+  {"type":"character","attributes":{},"value":["dashboard1.png","dashboard2.png","dashboard3.png","dashboard4.png","dashboard5.png","dashboard6.png","dashboard7.png","dashboard8.png","dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","dprep1.png","dprep2.png","dprep3.png","dprep4.png","dprep5.png","dprep6.png","dprep7.png","dprep8.png","filters1.png","filters2.png","filters3.png","filters4.png","filters5.png","final.png","original_viz.png","v1prep1.png","v1prep10.png","v1prep11.png","v1prep12.png","v1prep13.png","v1prep14.png","v1prep2.png","v1prep3.png","v1prep4.png","v1prep5.png","v1prep6.png","v1prep7.png","v1prep8.png","v1prep9.png","v2prep1.png","v2prep10.png","v2prep11.png","v2prep12.png","v2prep13.png","v2prep14.png","v2prep15.png","v2prep16.png","v2prep2.png","v2prep3.png","v2prep4.png","v2prep5.png","v2prep6.png","v2prep7.png","v2prep8.png","v2prep9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1453,7 +1453,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#the-visualization-process">3 - The Visualization process</a><ul>
 <li><a href="#data-preparation">3.1 Data Preparation</a></li>
 <li><a href="#steps-taken-for-first-visualization">3.2 Steps taken for first Visualization</a></li>
+<li><a href="#steps-taken-for-second-visualization">3.2 Steps taken for second Visualization</a></li>
+<li><a href="#adding-filters">3.4 Adding Filters</a></li>
+<li><a href="#creating-the-dashboard">3.5 Creating the dashboard</a></li>
 </ul></li>
+<li><a href="#the-improved-data-visualization">4 - The improved data visualization</a></li>
+<li><a href="#new-insights">5 - New Insights</a></li>
 </ul>
 </nav>
 </div>
@@ -1489,12 +1494,12 @@ Figure 1: The Original Visualization (with Markups)
 <tr class="even">
 <td>C2</td>
 <td>The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.</td>
-<td>Sort the categories (rows) of the table by the total proportion of agreeable opinions (Ratings 1, 2 and half of rating 3).</td>
+<td>Sort the categories (rows) of the table by the proportion of a chosen responses and synchronize the order across both visualizations.</td>
 </tr>
 <tr class="odd">
 <td>C3</td>
 <td>Information is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.</td>
-<td>Add in the count of respondents from each country as a data label or as a tooltip or even as the size(thickness) of the bars.</td>
+<td>Add in the count of respondents from each country as a tooltip.</td>
 </tr>
 <tr class="even">
 <td>C4</td>
@@ -1505,6 +1510,11 @@ Figure 1: The Original Visualization (with Markups)
 <td>C5</td>
 <td>The second chart on the right shows the proportion of strongly agree responses as a point estimate. That can be misleading as there is often uncertainty associated with such survey data.</td>
 <td>Change the chart to a point estimate with error bars showing the confidence interval of the responses.</td>
+</tr>
+<tr class="even">
+<td>C6</td>
+<td>The survey consists of a lot of questions and the current visualization only shows the responses relating to one question. This undermines the usefulness of the survey.</td>
+<td>Add in options to view the responses of other questions in the survey.</td>
 </tr>
 </tbody>
 </table>
@@ -1546,6 +1556,7 @@ Figure 1: The Original Visualization (with Markups)
 </tbody>
 </table>
 <h1 id="the-suggested-visualization">2 - The suggested visualization</h1>
+<p>The proposed design is as follows.</p>
 <h1 id="the-visualization-process">3 - The Visualization process</h1>
 <p><em>The Data Source used is from the Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub. The files can be found <a href="https://github.com/YouGov-Data/covid-19-tracker">here</a>.</em></p>
 <h2 id="data-preparation">3.1 Data Preparation</h2>
@@ -1799,17 +1810,350 @@ Figure 22: Creating Aliases for the responses
 </p>
 </div>
 </div>
-<ol start="25" type="1">
-<li>Completed view of first visualization
+<h2 id="steps-taken-for-second-visualization">3.2 Steps taken for second Visualization</h2>
+<ol start="26" type="1">
+<li>Create a new parameter showing the response types given by the survey respondents. Match each of the numerical values to the responses given. Expose parameter by clicking on the Show parameter option.</li>
+</ol>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
-<img src="v1prep14.png" alt="Diverging Bar plot for Likert scale data" width="720" />
+<img src="v2prep1.png" alt="Creating a new parameter for the survey responses" width="736" />
 <p class="caption">
-Figure 23: Diverging Bar plot for Likert scale data
+Figure 23: Creating a new parameter for the survey responses
 </p>
-</div></li>
-</ol>
 </div>
+</div>
+<ol start="27" type="1">
+<li>Create calculated fields needed for 95% confidence interval. For starters - Create Z-Value for 95% confidence interval</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<img src="v2prep2.png" alt="Creating a calculated field - 95% Z value" width="506" />
+<p class="caption">
+Figure 24: Creating a calculated field - 95% Z value
+</p>
+</div>
+</div>
+<p>28.Next, create a calculated field ‘Count Response Type’ which counts the number of response of the selected response type given by the parameter ‘Response Type’</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="v2prep3.png" alt="Creating a calculated field - Count Response Type" width="538" />
+<p class="caption">
+Figure 25: Creating a calculated field - Count Response Type
+</p>
+</div>
+</div>
+<ol start="29" type="1">
+<li>Next, create a calculated field ‘Prop’: proportion of response type compared to all the responses received</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<img src="v2prep4.png" alt="Creating a calculated field - Prop" width="536" />
+<p class="caption">
+Figure 26: Creating a calculated field - Prop
+</p>
+</div>
+</div>
+<ol start="30" type="1">
+<li>Next, create a calculated field ‘Prop_SE’ standard error of the proportion</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="v2prep5.png" alt="Creating a calculated field - Prop_SE" width="536" />
+<p class="caption">
+Figure 27: Creating a calculated field - Prop_SE
+</p>
+</div>
+</div>
+<ol start="31" type="1">
+<li>Next, create two calculated fields ‘Prop_Lower Limit 95%’ and ‘Prop_Upper Limit 95%’ to construct the error bars</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="v2prep6.png" alt="Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%" width="846" />
+<p class="caption">
+Figure 28: Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%
+</p>
+</div>
+</div>
+<ol start="32" type="1">
+<li>Drag ‘Country’ and ‘Prop’ onto the canvas to create a table.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<img src="v2prep7.png" alt="Creating a table with Country and Prop" width="192" />
+<p class="caption">
+Figure 29: Creating a table with Country and Prop
+</p>
+</div>
+</div>
+<ol start="33" type="1">
+<li>Change mark type to circle</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
+<img src="v2prep8.png" alt="Changing mark type to circles" width="793" />
+<p class="caption">
+Figure 30: Changing mark type to circles
+</p>
+</div>
+</div>
+<ol start="34" type="1">
+<li>Drag all Measure Values into the Marks Card</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
+<img src="v2prep9.png" alt="Moving Measure Values into Marks" width="354" />
+<p class="caption">
+Figure 31: Moving Measure Values into Marks
+</p>
+</div>
+</div>
+<ol start="35" type="1">
+<li>Drop all other Measure Values from the Marks Card except ‘Prop_Lower Limit 95%’ and ‘Prop_Upper Limit 95%’</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<img src="v2prep10.png" alt="Moving Measure Values into Marks" width="450" />
+<p class="caption">
+Figure 32: Moving Measure Values into Marks
+</p>
+</div>
+</div>
+<ol start="35" type="1">
+<li>Drag Measure Values to columns shelf.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
+<img src="v2prep11.png" alt="Moving Measure Values into columns" width="432" />
+<p class="caption">
+Figure 33: Moving Measure Values into columns
+</p>
+</div>
+</div>
+<ol start="36" type="1">
+<li><p>Change resulting charts into Dual Axis</p></li>
+<li><p>Synchronize both axes</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
+<img src="v2prep12.png" alt="Creating a Dual Axis chartt" width="710" />
+<p class="caption">
+Figure 34: Creating a Dual Axis chartt
+</p>
+</div>
+</div>
+<ol start="38" type="1">
+<li>Change Mark Type to line</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
+<img src="v2prep13.png" alt="Changing Mark type to line" width="716" />
+<p class="caption">
+Figure 35: Changing Mark type to line
+</p>
+</div>
+</div>
+<ol start="39" type="1">
+<li>Drag Measure Names into both colour and Path for the Measure Values Card</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
+<img src="v2prep14.png" alt="Using Measure Names on Colour and Path" width="126" />
+<p class="caption">
+Figure 36: Using Measure Names on Colour and Path
+</p>
+</div>
+</div>
+<ol start="40" type="1">
+<li>Select colours for error bar and circle</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
+<img src="v2prep15.png" alt="Colouring the error bars chart" width="860" />
+<p class="caption">
+Figure 37: Colouring the error bars chart
+</p>
+</div>
+</div>
+<ol start="41" type="1">
+<li>Completed view of second visualization</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
+<img src="v2prep16.png" alt="Proportions with Error Bars" width="684" />
+<p class="caption">
+Figure 38: Proportions with Error Bars
+</p>
+</div>
+</div>
+<h2 id="adding-filters">3.4 Adding Filters</h2>
+<ol start="42" type="1">
+<li>Create a calculated field ‘Age Groups’ by binning the age of respondents into bins of 10 years.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
+<img src="filters1.png" alt="Creating Calculated Field - Age Groups" width="535" />
+<p class="caption">
+Figure 39: Creating Calculated Field - Age Groups
+</p>
+</div>
+</div>
+<ol start="43" type="1">
+<li>Create a calculated field ‘Household Children (Groups)’ by binning the age of respondents into bins of size 2.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-40"></span>
+<img src="filters2.png" alt="Creating Calculated Field - Household Children (Groups)" width="538" />
+<p class="caption">
+Figure 40: Creating Calculated Field - Household Children (Groups)
+</p>
+</div>
+</div>
+<ol start="44" type="1">
+<li>Create a calculated field ‘Household Size (Groups)’ by binning the age of respondents into bins of size 3.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
+<img src="filters3.png" alt="Creating Calculated Field - Household Size (Groups)" width="534" />
+<p class="caption">
+Figure 41: Creating Calculated Field - Household Size (Groups)
+</p>
+</div>
+</div>
+<ol start="45" type="1">
+<li>Add all of the following fields to the filters card:
+<ul>
+<li>‘Age Groups’</li>
+<li>‘Household Children (Groups)’</li>
+<li>‘Household Size (Groups)’</li>
+<li>‘Employment Status’</li>
+<li>‘Gender’</li>
+</ul></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-42"></span>
+<img src="filters4.png" alt="Creating Calculated Field - Household Size (Groups)" width="105" />
+<p class="caption">
+Figure 42: Creating Calculated Field - Household Size (Groups)
+</p>
+</div>
+</div>
+<ol start="46" type="1">
+<li>For all filters, select option to ‘All using related data sources’ to allow filtering across different visuals</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-43"></span>
+<img src="filters5.png" alt="Creating Calculated Field - Household Size (Groups)" width="330" />
+<p class="caption">
+Figure 43: Creating Calculated Field - Household Size (Groups)
+</p>
+</div>
+</div>
+<h2 id="creating-the-dashboard">3.5 Creating the dashboard</h2>
+<ol start="47" type="1">
+<li>For both the visualizations change the sort order to sort by ‘Prop’ so that the sorts will synch for both charts.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-44"></span>
+<img src="dashboard1.png" alt="Changing Sort Orders for both charts" width="182" />
+<p class="caption">
+Figure 44: Changing Sort Orders for both charts
+</p>
+</div>
+</div>
+<ol start="48" type="1">
+<li>Create a new sheet to create a title for the dashboard. This is not done on each individual worksheet because it will otherwise repeat the lengthy question. This allows the selected question to show up on the dashboard title. The title will be “Question: &lt;Parameters.Survey Question&gt;”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-45"></span>
+<img src="dashboard2.png" alt="Creating a title for the dashboard" width="621" />
+<p class="caption">
+Figure 45: Creating a title for the dashboard
+</p>
+</div>
+</div>
+<ol start="49" type="1">
+<li>Change title of first visualization to “Survey Responses by Country”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-46"></span>
+<img src="dashboard3.png" alt="Renaming first visualization" width="288" />
+<p class="caption">
+Figure 46: Renaming first visualization
+</p>
+</div>
+</div>
+<ol start="50" type="1">
+<li>Change title of second visualization to “Proportion &lt;Parameters.Response Type&gt; to:”</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-47"></span>
+<img src="dashboard4.png" alt="Renaming second visualization" width="346" />
+<p class="caption">
+Figure 47: Renaming second visualization
+</p>
+</div>
+</div>
+<ol start="51" type="1">
+<li>Change the size of the dashboad to automatic. This is needed as the dashboard is expected to be wider and this will allow the dashboard to accomodate the two visualizations side by side. The wider visualizations will also show the proportions and error bar more clearly.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
+<img src="dashboard5.png" alt="Changing size of dashboard to automatic" width="176" />
+<p class="caption">
+Figure 48: Changing size of dashboard to automatic
+</p>
+</div>
+</div>
+<ol start="52" type="1">
+<li>Drag the main elements of the dashboard into a side by side arrangement</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-49"></span>
+<img src="dashboard6.png" alt="Initial layout of dashboard" width="793" />
+<p class="caption">
+Figure 49: Initial layout of dashboard
+</p>
+</div>
+</div>
+<ol start="53" type="1">
+<li>Add Reference line at 0 to the diverging bar plot</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-50"></span>
+<img src="dashboard7.png" alt="Adding reference line at 0" width="238" />
+<p class="caption">
+Figure 50: Adding reference line at 0
+</p>
+</div>
+</div>
+<ol start="54" type="1">
+<li>Remove country names from the first visualization as both the visualizations will have the same sort order and can share the labels in the middle.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-51"></span>
+<img src="dashboard8.png" alt="Removing Country Names for more Space" width="391" />
+<p class="caption">
+Figure 51: Removing Country Names for more Space
+</p>
+</div>
+</div>
+<ol start="55" type="1">
+<li><p>Rearrange filters neatly.</p></li>
+<li><p>Dashboard is complete.</p></li>
+</ol>
+<h1 id="the-improved-data-visualization">4 - The improved data visualization</h1>
+<p>The completed visualization is as follows.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-52"></span>
+<img src="final.png" alt="Snapshot of the completed dashboard" width="793" />
+<p class="caption">
+Figure 52: Snapshot of the completed dashboard
+</p>
+</div>
+</div>
+<p>The interactive dashboard is uploaded onto Tableau Public Server and can be found <a href="https://public.tableau.com/views/Covid-19VaccinationOpinions/Dashboard1?:language=en&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link">here</a>.</p>
+<h1 id="new-insights">5 - New Insights</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

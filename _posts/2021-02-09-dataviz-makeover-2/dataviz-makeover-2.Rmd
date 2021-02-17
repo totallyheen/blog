@@ -2,6 +2,7 @@
 title: "DataViz Makeover 2"
 description: |
   A makeover of the data visualisations on willingness of the public towards COVID-19 vaccinations in selected countries.  
+preview: final.png
 author:
   - name: Yi Heen, Boey
     url: https://www.linkedin.com/in/yiheen-boey/
@@ -29,10 +30,11 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 | S/N |        Comments                         |   Suggested Improvements                |
 |-----|-----------------------------------------|-----------------------------------------|
 |C1|The neutral values (3) of the likert scale on the diverging stacked chart are not centred on zero. This makes it hard for the users to compare the ratings across different categories and also makes it hard to tell whether the responses were skewed towards agreement or disagreement.|Redo the diverging stacked bar chart with the neutral values of the likert scale (3) centred around zero.|
-|C2|The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.| Sort the categories (rows) of the table by the total proportion of agreeable opinions (Ratings 1, 2 and half of rating 3).|
-|C3|Information is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.|Add in the count of respondents from each country as a data label or as a tooltip or even as the size(thickness) of the bars.|
+|C2|The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.| Sort the categories (rows) of the table by the proportion of a chosen responses and synchronize the order across both visualizations.|
+|C3|Information is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.|Add in the count of respondents from each country as a tooltip.|
 |C4|The respondents of each country is made up from different social strata. Each group can have different attitudes towards vaccination. By grouping them all by country, we run the risk of over-generalization.|Add in options for users to filter and slice the visualizations. This allows the user to glean more insight. e.g. comparing the willingness of respondents aged over 65 and unemployed in two different countries.|
 |C5|The second chart on the right shows the proportion of strongly agree responses as a point estimate. That can be misleading as there is often uncertainty associated with such survey data.|Change the chart to a point estimate with error bars showing the confidence interval of the responses.|
+|C6|The survey consists of a lot of questions and the current visualization only shows the responses relating to one question. This undermines the usefulness of the survey.|Add in options to view the responses of other questions in the survey.|
 
 
 
@@ -47,6 +49,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 # 2 - The suggested visualization
 
+The proposed design is as follows.
 
 # 3 - The Visualization process
 
@@ -208,7 +211,208 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep13.png")
 ```
 
-25. Completed view of first visualization
-```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Diverging Bar plot for Likert scale data"}
-knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep14.png")
+## 3.2 Steps taken for second Visualization 
+
+26. Create a new parameter showing the response types given by the survey respondents. 
+Match each of the numerical values to the responses given. Expose parameter by clicking on the Show parameter option.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a new parameter for the survey responses"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep1.png")
 ```
+
+27. Create calculated fields needed for 95% confidence interval. For starters - Create Z-Value for 95% confidence interval
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - 95% Z value"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep2.png")
+```
+
+28.Next, create a calculated field 'Count Response Type' which counts the number of response of the selected response type given by the parameter 'Response Type'
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Count Response Type"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep3.png")
+```
+
+29. Next, create a calculated field 'Prop': proportion of response type compared to all the responses received
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep4.png")
+```
+
+30. Next, create a calculated field 'Prop_SE' standard error of the proportion
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop_SE"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep5.png")
+```
+
+31. Next, create two calculated fields 'Prop_Lower Limit 95%' and 'Prop_Upper Limit 95%' to construct the error bars
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep6.png")
+```
+
+32. Drag 'Country' and 'Prop' onto the canvas to create a table.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a table with Country and Prop"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep7.png")
+```
+
+33. Change mark type to circle
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing mark type to circles"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep8.png")
+```
+
+34. Drag all Measure Values into the Marks Card
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into Marks"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep9.png")
+```
+
+35. Drop all other Measure Values from the Marks Card except 'Prop_Lower Limit 95%' and 'Prop_Upper Limit 95%' 
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into Marks"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep10.png")
+```
+
+35. Drag Measure Values to columns shelf.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into columns"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep11.png")
+```
+
+36. Change resulting charts into Dual Axis
+
+37. Synchronize both axes
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a Dual Axis chartt"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep12.png")
+```
+
+38. Change Mark Type to line
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing Mark type to line"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep13.png")
+```
+
+39. Drag Measure Names into both colour and Path for the Measure Values Card
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Using Measure Names on Colour and Path"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep14.png")
+```
+
+40. Select colours for error bar and circle
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Colouring the error bars chart"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep15.png")
+```
+
+41. Completed view of second visualization
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Proportions with Error Bars"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep16.png")
+```
+
+## 3.4 Adding Filters
+
+42. Create a calculated field 'Age Groups' by binning the age of respondents into bins of 10 years.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Age Groups"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters1.png")
+```
+
+43. Create a calculated field 'Household Children (Groups)' by binning the age of respondents into bins of size 2.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Children (Groups)"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters2.png")
+```
+
+44. Create a calculated field 'Household Size (Groups)' by binning the age of respondents into bins of size 3.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Size (Groups)"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters3.png")
+```
+
+45. Add all of the following fields to the filters card:
+    - 'Age Groups'
+    - 'Household Children (Groups)'
+    - 'Household Size (Groups)'
+    - 'Employment Status'
+    - 'Gender'
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Size (Groups)"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters4.png")
+```    
+    
+46. For all filters, select option to 'All using related data sources' to allow filtering across different visuals
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Size (Groups)"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters5.png")
+```   
+
+
+
+## 3.5 Creating the dashboard
+
+47. For both the visualizations change the sort order to sort by 'Prop' so that the sorts will synch for both charts.
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing Sort Orders for both charts"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard1.png")
+```   
+
+48. Create a new sheet to create a title for the dashboard. This is not done on each individual worksheet because it will otherwise repeat the lengthy question. This allows the selected question to show up on the dashboard title. The title will be "Question: <Parameters.Survey Question>"
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a title for the dashboard"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard2.png")
+```   
+
+49. Change title of first visualization to "Survey Responses by Country"
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Renaming first visualization"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard3.png")
+```  
+
+50. Change title of second visualization to "Proportion <Parameters.Response Type> to:"
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Renaming second visualization"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard4.png")
+```  
+
+51. Change the size of the dashboad to automatic. This is needed as the dashboard is expected to be wider and this will allow the dashboard to accomodate the two visualizations side by side. The wider visualizations will also show the proportions and error bar more clearly. 
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing size of dashboard to automatic"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard5.png")
+```  
+
+52. Drag the main elements of the dashboard into a side by side arrangement
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Initial layout of dashboard"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard6.png")
+```  
+
+53. Add Reference line at 0 to the diverging bar plot
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Adding reference line at 0"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard7.png")
+```
+
+54. Remove country names from the first visualization as both the visualizations will have the same sort order and can share the labels in the middle. 
+
+```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Removing Country Names for more Space"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard8.png")
+```
+
+55. Rearrange filters neatly.
+
+56. Dashboard is complete.
+
+# 4 - The improved data visualization
+
+The completed visualization is as follows.
+
+```{r, fig.align="center",layout='l-page', fig.width=100, fig.height=100, echo=FALSE, fig.cap="Snapshot of the completed dashboard"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/final.png")
+```
+The interactive dashboard is uploaded onto Tableau Public Server and can be found [here](https://public.tableau.com/views/Covid-19VaccinationOpinions/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link).
+
+# 5 - New Insights
+
