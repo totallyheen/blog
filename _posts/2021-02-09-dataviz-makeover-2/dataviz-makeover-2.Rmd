@@ -407,7 +407,9 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 56. Add in reference to data source.
 
-57. Dashboard is complete.
+57. Turn on animations for smoother transitions while filtering
+
+58. Dashboard is complete.
 
 # 4 - The improved data visualization
 
