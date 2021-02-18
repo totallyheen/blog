@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dashboard1.png","dashboard2.png","dashboard3.png","dashboard4.png","dashboard5.png","dashboard6.png","dashboard7.png","dashboard8.png","dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","dprep1.png","dprep2.png","dprep3.png","dprep4.png","dprep5.png","dprep6.png","dprep7.png","dprep8.png","filters1.png","filters2.png","filters3.png","filters4.png","filters5.png","final.png","original_viz.png","v1prep1.png","v1prep10.png","v1prep11.png","v1prep12.png","v1prep13.png","v1prep14.png","v1prep2.png","v1prep3.png","v1prep4.png","v1prep5.png","v1prep6.png","v1prep7.png","v1prep8.png","v1prep9.png","v2prep1.png","v2prep10.png","v2prep11.png","v2prep12.png","v2prep13.png","v2prep14.png","v2prep15.png","v2prep16.png","v2prep2.png","v2prep3.png","v2prep4.png","v2prep5.png","v2prep6.png","v2prep7.png","v2prep8.png","v2prep9.png"]}
+  {"type":"character","attributes":{},"value":["dashboard1.png","dashboard2.png","dashboard3.png","dashboard4.png","dashboard5.png","dashboard6.png","dashboard7.png","dashboard8.png","dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","dprep1.png","dprep2.png","dprep3.png","dprep4.png","dprep5.png","dprep6.png","dprep7.png","dprep8.png","filters1.png","filters2.png","filters3.png","filters4.png","filters5.png","final.png","insights1.png","insights2.png","insights3.png","original_viz.png","sketch.png","v1prep1.png","v1prep10.png","v1prep11.png","v1prep12.png","v1prep13.png","v1prep14.png","v1prep2.png","v1prep3.png","v1prep4.png","v1prep5.png","v1prep6.png","v1prep7.png","v1prep8.png","v1prep9.png","v2prep1.png","v2prep10.png","v2prep11.png","v2prep12.png","v2prep13.png","v2prep14.png","v2prep15.png","v2prep16.png","v2prep2.png","v2prep3.png","v2prep4.png","v2prep5.png","v2prep6.png","v2prep7.png","v2prep8.png","v2prep9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2066,7 +2066,11 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#creating-the-dashboard">3.5 Creating the dashboard</a></li>
 </ul></li>
 <li><a href="#the-improved-data-visualization">4 - The improved data visualization</a></li>
-<li><a href="#new-insights">5 - New Insights</a></li>
+<li><a href="#new-insights">5 - New Insights</a><ul>
+<li><a href="#vaccine-avoidance-due-to-side-effects">5.1 Vaccine avoidance due to side effects</a></li>
+<li><a href="#bigger-familes-have-mixed-views-on-vaccines">5.2 Bigger familes have mixed views on vaccines</a></li>
+<li><a href="#many-are-waiting-before-taking-vaccine">5.3 Many are waiting before taking vaccine</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -2165,6 +2169,14 @@ Figure 1: The Original Visualization (with Markups)
 </table>
 <h1 id="the-suggested-visualization">2 - The suggested visualization</h1>
 <p>The proposed design is as follows.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="sketch.png" alt="Sketching the Suggested Visualizations" width="100%" />
+<p class="caption">
+Figure 2: Sketching the Suggested Visualizations
+</p>
+</div>
+</div>
 <h1 id="the-visualization-process">3 - The Visualization process</h1>
 <p><em>The Data Source used is from the Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub. The files can be found <a href="https://github.com/YouGov-Data/covid-19-tracker">here</a>.</em></p>
 <h2 id="data-preparation">3.1 Data Preparation</h2>
@@ -2174,10 +2186,10 @@ Figure 1: The Original Visualization (with Markups)
 <li><p>Join all 14 files in a union using Tableau</p></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="dprep1.png" alt="Creating a union across all files." width="208" />
 <p class="caption">
-Figure 2: Creating a union across all files.
+Figure 3: Creating a union across all files.
 </p>
 </div>
 </div>
@@ -2185,10 +2197,10 @@ Figure 2: Creating a union across all files.
 <li>Create aliases so that the values are ‘country names’ instead of ‘countrynames.csv’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
 <img src="dprep2.png" alt="Aliases for file names" width="622" />
 <p class="caption">
-Figure 3: Aliases for file names
+Figure 4: Aliases for file names
 </p>
 </div>
 </div>
@@ -2201,10 +2213,10 @@ Figure 3: Aliases for file names
 <li>Create a view of the data for export</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
 <img src="dprep3.png" alt="View data" width="724" />
 <p class="caption">
-Figure 4: View data
+Figure 5: View data
 </p>
 </div>
 </div>
@@ -2212,28 +2224,28 @@ Figure 4: View data
 <li>Export <strong>ALL</strong> data to a compiled file</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
 <img src="dprep4.png" alt="Exporting a compiled file" width="725" />
 <p class="caption">
-Figure 5: Exporting a compiled file
+Figure 6: Exporting a compiled file
 </p>
 </div>
 </div>
 <p>8a. In excel replace values for in the fields vac_1, vac_3, Vac2_1, vac2_2, vac2_3, vac2_6. - ‘1 - Strongly Agree’ with ‘2’ - ‘2’ with ‘1’ - ‘3’ with ‘0’ - ‘4’ with ‘-1’ - ‘5 - Strongly Disagree’ with ‘-2’</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
 <img src="dprep5.png" alt="Replacing values in excel" width="731" />
 <p class="caption">
-Figure 6: Replacing values in excel
+Figure 7: Replacing values in excel
 </p>
 </div>
 </div>
 <p>8b. This step can also be done by using aliases in Tableau. But a set of aliases will need to be created for each of the fields.</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
 <img src="dprep6.png" alt="Replacing values in Tableau" width="358" />
 <p class="caption">
-Figure 7: Replacing values in Tableau
+Figure 8: Replacing values in Tableau
 </p>
 </div>
 </div>
@@ -2241,10 +2253,10 @@ Figure 7: Replacing values in Tableau
 <li>Change the data type for all vac columns to whole numbers</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
 <img src="dprep7.png" alt="Changing data types" width="128" />
 <p class="caption">
-Figure 8: Changing data types
+Figure 9: Changing data types
 </p>
 </div>
 </div>
@@ -2252,10 +2264,10 @@ Figure 8: Changing data types
 <li>Rename the field “Table Name” to “Country”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
 <img src="dprep8.png" alt="Renaming to Country" width="193" />
 <p class="caption">
-Figure 9: Renaming to Country
+Figure 10: Renaming to Country
 </p>
 </div>
 </div>
@@ -2265,10 +2277,10 @@ Figure 9: Renaming to Country
 <li><p>Expose the parameter by checking the ‘Show Parameter’ option.</p></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
 <img src="v1prep1.png" alt="Creating a new parameter for the survey questions" width="684" />
 <p class="caption">
-Figure 10: Creating a new parameter for the survey questions
+Figure 11: Creating a new parameter for the survey questions
 </p>
 </div>
 </div>
@@ -2276,10 +2288,10 @@ Figure 10: Creating a new parameter for the survey questions
 <li>Next, create a calculated field ‘Selected’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
 <img src="v1prep2.png" alt="Creating a calculated field - Selected" width="501" />
 <p class="caption">
-Figure 11: Creating a calculated field - Selected
+Figure 12: Creating a calculated field - Selected
 </p>
 </div>
 </div>
@@ -2287,10 +2299,10 @@ Figure 11: Creating a calculated field - Selected
 <li>Next, create a calculated field ‘Number of Records’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
 <img src="v1prep3.png" alt="Creating a calculated field - Number of Records" width="538" />
 <p class="caption">
-Figure 12: Creating a calculated field - Number of Records
+Figure 13: Creating a calculated field - Number of Records
 </p>
 </div>
 </div>
@@ -2298,10 +2310,10 @@ Figure 12: Creating a calculated field - Number of Records
 <li>Next, create a calculated field ‘Total Count’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
 <img src="v1prep4.png" alt="Creating a calculated field - Total Count" width="538" />
 <p class="caption">
-Figure 13: Creating a calculated field - Total Count
+Figure 14: Creating a calculated field - Total Count
 </p>
 </div>
 </div>
@@ -2309,10 +2321,10 @@ Figure 13: Creating a calculated field - Total Count
 <li>Next, create a calculated field ‘Count Negative’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
 <img src="v1prep5.png" alt="Creating a calculated field - Count Negative" width="502" />
 <p class="caption">
-Figure 14: Creating a calculated field - Count Negative
+Figure 15: Creating a calculated field - Count Negative
 </p>
 </div>
 </div>
@@ -2320,10 +2332,10 @@ Figure 14: Creating a calculated field - Count Negative
 <li>Next, create a calculated field ‘Gantt Percent’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
 <img src="v1prep6.png" alt="Creating a calculated field - Gantt Percent" width="502" />
 <p class="caption">
-Figure 15: Creating a calculated field - Gantt Percent
+Figure 16: Creating a calculated field - Gantt Percent
 </p>
 </div>
 </div>
@@ -2331,10 +2343,10 @@ Figure 15: Creating a calculated field - Gantt Percent
 <li>Next, create a calculated field ‘Percentage’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
 <img src="v1prep7.png" alt="Creating a calculated field - Percentage" width="542" />
 <p class="caption">
-Figure 16: Creating a calculated field - Percentage
+Figure 17: Creating a calculated field - Percentage
 </p>
 </div>
 </div>
@@ -2342,10 +2354,10 @@ Figure 16: Creating a calculated field - Percentage
 <li>Drag Gantt Percent and Country in the columns and rows shelves respectively</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
 <img src="v1prep8.png" alt="Populating the columns and rows" width="239" />
 <p class="caption">
-Figure 17: Populating the columns and rows
+Figure 18: Populating the columns and rows
 </p>
 </div>
 </div>
@@ -2360,10 +2372,10 @@ Figure 17: Populating the columns and rows
 <li>change the mark type from automatic to Gantt Bar</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
 <img src="v1prep9.png" alt="Populating the Marks card" width="382" />
 <p class="caption">
-Figure 18: Populating the Marks card
+Figure 19: Populating the Marks card
 </p>
 </div>
 </div>
@@ -2371,10 +2383,10 @@ Figure 18: Populating the Marks card
 <li>Change both ‘Percentage’ and ‘Gantt Percentage’ to compute using ‘Selected’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
 <img src="v1prep10.png" alt="Changing the computation methods" width="520" />
 <p class="caption">
-Figure 19: Changing the computation methods
+Figure 20: Changing the computation methods
 </p>
 </div>
 </div>
@@ -2382,10 +2394,10 @@ Figure 19: Changing the computation methods
 <li>Filter away null responses in ‘Selected’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
 <img src="v1prep11.png" alt="Filtering nulls" width="346" />
 <p class="caption">
-Figure 20: Filtering nulls
+Figure 21: Filtering nulls
 </p>
 </div>
 </div>
@@ -2393,10 +2405,10 @@ Figure 20: Filtering nulls
 <li>Rename legend from ‘Selected’ to ‘Responses’ and assign a more logical colour scheme</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
 <img src="v1prep12.png" alt="Formatting the legend" width="621" />
 <p class="caption">
-Figure 21: Formatting the legend
+Figure 22: Formatting the legend
 </p>
 </div>
 </div>
@@ -2411,10 +2423,10 @@ Figure 21: Formatting the legend
 </ul></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
 <img src="v1prep13.png" alt="Creating Aliases for the responses" width="438" />
 <p class="caption">
-Figure 22: Creating Aliases for the responses
+Figure 23: Creating Aliases for the responses
 </p>
 </div>
 </div>
@@ -2423,10 +2435,10 @@ Figure 22: Creating Aliases for the responses
 <li>Create a new parameter showing the response types given by the survey respondents. Match each of the numerical values to the responses given. Expose parameter by clicking on the Show parameter option.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
 <img src="v2prep1.png" alt="Creating a new parameter for the survey responses" width="736" />
 <p class="caption">
-Figure 23: Creating a new parameter for the survey responses
+Figure 24: Creating a new parameter for the survey responses
 </p>
 </div>
 </div>
@@ -2434,19 +2446,19 @@ Figure 23: Creating a new parameter for the survey responses
 <li>Create calculated fields needed for 95% confidence interval. For starters - Create Z-Value for 95% confidence interval</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
 <img src="v2prep2.png" alt="Creating a calculated field - 95% Z value" width="506" />
 <p class="caption">
-Figure 24: Creating a calculated field - 95% Z value
+Figure 25: Creating a calculated field - 95% Z value
 </p>
 </div>
 </div>
 <p>28.Next, create a calculated field ‘Count Response Type’ which counts the number of response of the selected response type given by the parameter ‘Response Type’</p>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
 <img src="v2prep3.png" alt="Creating a calculated field - Count Response Type" width="538" />
 <p class="caption">
-Figure 25: Creating a calculated field - Count Response Type
+Figure 26: Creating a calculated field - Count Response Type
 </p>
 </div>
 </div>
@@ -2454,10 +2466,10 @@ Figure 25: Creating a calculated field - Count Response Type
 <li>Next, create a calculated field ‘Prop’: proportion of response type compared to all the responses received</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
 <img src="v2prep4.png" alt="Creating a calculated field - Prop" width="536" />
 <p class="caption">
-Figure 26: Creating a calculated field - Prop
+Figure 27: Creating a calculated field - Prop
 </p>
 </div>
 </div>
@@ -2465,10 +2477,10 @@ Figure 26: Creating a calculated field - Prop
 <li>Next, create a calculated field ‘Prop_SE’ standard error of the proportion</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
 <img src="v2prep5.png" alt="Creating a calculated field - Prop_SE" width="536" />
 <p class="caption">
-Figure 27: Creating a calculated field - Prop_SE
+Figure 28: Creating a calculated field - Prop_SE
 </p>
 </div>
 </div>
@@ -2476,10 +2488,10 @@ Figure 27: Creating a calculated field - Prop_SE
 <li>Next, create two calculated fields ‘Prop_Lower Limit 95%’ and ‘Prop_Upper Limit 95%’ to construct the error bars</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
 <img src="v2prep6.png" alt="Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%" width="846" />
 <p class="caption">
-Figure 28: Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%
+Figure 29: Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%
 </p>
 </div>
 </div>
@@ -2487,10 +2499,10 @@ Figure 28: Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 
 <li>Drag ‘Country’ and ‘Prop’ onto the canvas to create a table.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
 <img src="v2prep7.png" alt="Creating a table with Country and Prop" width="192" />
 <p class="caption">
-Figure 29: Creating a table with Country and Prop
+Figure 30: Creating a table with Country and Prop
 </p>
 </div>
 </div>
@@ -2498,10 +2510,10 @@ Figure 29: Creating a table with Country and Prop
 <li>Change mark type to circle</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
 <img src="v2prep8.png" alt="Changing mark type to circles" width="793" />
 <p class="caption">
-Figure 30: Changing mark type to circles
+Figure 31: Changing mark type to circles
 </p>
 </div>
 </div>
@@ -2509,10 +2521,10 @@ Figure 30: Changing mark type to circles
 <li>Drag all Measure Values into the Marks Card</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
 <img src="v2prep9.png" alt="Moving Measure Values into Marks" width="354" />
 <p class="caption">
-Figure 31: Moving Measure Values into Marks
+Figure 32: Moving Measure Values into Marks
 </p>
 </div>
 </div>
@@ -2520,10 +2532,10 @@ Figure 31: Moving Measure Values into Marks
 <li>Drop all other Measure Values from the Marks Card except ‘Prop_Lower Limit 95%’ and ‘Prop_Upper Limit 95%’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
 <img src="v2prep10.png" alt="Moving Measure Values into Marks" width="450" />
 <p class="caption">
-Figure 32: Moving Measure Values into Marks
+Figure 33: Moving Measure Values into Marks
 </p>
 </div>
 </div>
@@ -2531,10 +2543,10 @@ Figure 32: Moving Measure Values into Marks
 <li>Drag Measure Values to columns shelf.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
 <img src="v2prep11.png" alt="Moving Measure Values into columns" width="432" />
 <p class="caption">
-Figure 33: Moving Measure Values into columns
+Figure 34: Moving Measure Values into columns
 </p>
 </div>
 </div>
@@ -2543,10 +2555,10 @@ Figure 33: Moving Measure Values into columns
 <li><p>Synchronize both axes</p></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
 <img src="v2prep12.png" alt="Creating a Dual Axis chartt" width="710" />
 <p class="caption">
-Figure 34: Creating a Dual Axis chartt
+Figure 35: Creating a Dual Axis chartt
 </p>
 </div>
 </div>
@@ -2554,10 +2566,10 @@ Figure 34: Creating a Dual Axis chartt
 <li>Change Mark Type to line</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
 <img src="v2prep13.png" alt="Changing Mark type to line" width="716" />
 <p class="caption">
-Figure 35: Changing Mark type to line
+Figure 36: Changing Mark type to line
 </p>
 </div>
 </div>
@@ -2565,10 +2577,10 @@ Figure 35: Changing Mark type to line
 <li>Drag Measure Names into both colour and Path for the Measure Values Card</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
 <img src="v2prep14.png" alt="Using Measure Names on Colour and Path" width="126" />
 <p class="caption">
-Figure 36: Using Measure Names on Colour and Path
+Figure 37: Using Measure Names on Colour and Path
 </p>
 </div>
 </div>
@@ -2576,10 +2588,10 @@ Figure 36: Using Measure Names on Colour and Path
 <li>Select colours for error bar and circle</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
 <img src="v2prep15.png" alt="Colouring the error bars chart" width="860" />
 <p class="caption">
-Figure 37: Colouring the error bars chart
+Figure 38: Colouring the error bars chart
 </p>
 </div>
 </div>
@@ -2587,10 +2599,10 @@ Figure 37: Colouring the error bars chart
 <li>Completed view of second visualization</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
 <img src="v2prep16.png" alt="Proportions with Error Bars" width="684" />
 <p class="caption">
-Figure 38: Proportions with Error Bars
+Figure 39: Proportions with Error Bars
 </p>
 </div>
 </div>
@@ -2599,10 +2611,10 @@ Figure 38: Proportions with Error Bars
 <li>Create a calculated field ‘Age Groups’ by binning the age of respondents into bins of 10 years.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-40"></span>
 <img src="filters1.png" alt="Creating Calculated Field - Age Groups" width="535" />
 <p class="caption">
-Figure 39: Creating Calculated Field - Age Groups
+Figure 40: Creating Calculated Field - Age Groups
 </p>
 </div>
 </div>
@@ -2610,10 +2622,10 @@ Figure 39: Creating Calculated Field - Age Groups
 <li>Create a calculated field ‘Household Children (Groups)’ by binning the age of respondents into bins of size 2.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-40"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
 <img src="filters2.png" alt="Creating Calculated Field - Household Children (Groups)" width="538" />
 <p class="caption">
-Figure 40: Creating Calculated Field - Household Children (Groups)
+Figure 41: Creating Calculated Field - Household Children (Groups)
 </p>
 </div>
 </div>
@@ -2621,10 +2633,10 @@ Figure 40: Creating Calculated Field - Household Children (Groups)
 <li>Create a calculated field ‘Household Size (Groups)’ by binning the age of respondents into bins of size 3.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-42"></span>
 <img src="filters3.png" alt="Creating Calculated Field - Household Size (Groups)" width="534" />
 <p class="caption">
-Figure 41: Creating Calculated Field - Household Size (Groups)
+Figure 42: Creating Calculated Field - Household Size (Groups)
 </p>
 </div>
 </div>
@@ -2639,10 +2651,10 @@ Figure 41: Creating Calculated Field - Household Size (Groups)
 </ul></li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-42"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-43"></span>
 <img src="filters4.png" alt="Creating Calculated Field - Household Size (Groups)" width="105" />
 <p class="caption">
-Figure 42: Creating Calculated Field - Household Size (Groups)
+Figure 43: Creating Calculated Field - Household Size (Groups)
 </p>
 </div>
 </div>
@@ -2650,10 +2662,10 @@ Figure 42: Creating Calculated Field - Household Size (Groups)
 <li>For all filters, select option to ‘All using related data sources’ to allow filtering across different visuals</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-43"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-44"></span>
 <img src="filters5.png" alt="Creating Calculated Field - Household Size (Groups)" width="330" />
 <p class="caption">
-Figure 43: Creating Calculated Field - Household Size (Groups)
+Figure 44: Creating Calculated Field - Household Size (Groups)
 </p>
 </div>
 </div>
@@ -2662,10 +2674,10 @@ Figure 43: Creating Calculated Field - Household Size (Groups)
 <li>For both the visualizations change the sort order to sort by ‘Prop’ so that the sorts will synch for both charts.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-44"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-45"></span>
 <img src="dashboard1.png" alt="Changing Sort Orders for both charts" width="182" />
 <p class="caption">
-Figure 44: Changing Sort Orders for both charts
+Figure 45: Changing Sort Orders for both charts
 </p>
 </div>
 </div>
@@ -2673,10 +2685,10 @@ Figure 44: Changing Sort Orders for both charts
 <li>Create a new sheet to create a title for the dashboard. This is not done on each individual worksheet because it will otherwise repeat the lengthy question. This allows the selected question to show up on the dashboard title. The title will be “Question: &lt;Parameters.Survey Question&gt;”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-45"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-46"></span>
 <img src="dashboard2.png" alt="Creating a title for the dashboard" width="621" />
 <p class="caption">
-Figure 45: Creating a title for the dashboard
+Figure 46: Creating a title for the dashboard
 </p>
 </div>
 </div>
@@ -2684,10 +2696,10 @@ Figure 45: Creating a title for the dashboard
 <li>Change title of first visualization to “Survey Responses by Country”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-46"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-47"></span>
 <img src="dashboard3.png" alt="Renaming first visualization" width="288" />
 <p class="caption">
-Figure 46: Renaming first visualization
+Figure 47: Renaming first visualization
 </p>
 </div>
 </div>
@@ -2695,10 +2707,10 @@ Figure 46: Renaming first visualization
 <li>Change title of second visualization to “Proportion &lt;Parameters.Response Type&gt; to:”</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-47"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
 <img src="dashboard4.png" alt="Renaming second visualization" width="346" />
 <p class="caption">
-Figure 47: Renaming second visualization
+Figure 48: Renaming second visualization
 </p>
 </div>
 </div>
@@ -2706,10 +2718,10 @@ Figure 47: Renaming second visualization
 <li>Change the size of the dashboad to automatic. This is needed as the dashboard is expected to be wider and this will allow the dashboard to accomodate the two visualizations side by side. The wider visualizations will also show the proportions and error bar more clearly.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-49"></span>
 <img src="dashboard5.png" alt="Changing size of dashboard to automatic" width="176" />
 <p class="caption">
-Figure 48: Changing size of dashboard to automatic
+Figure 49: Changing size of dashboard to automatic
 </p>
 </div>
 </div>
@@ -2717,10 +2729,10 @@ Figure 48: Changing size of dashboard to automatic
 <li>Drag the main elements of the dashboard into a side by side arrangement</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-49"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-50"></span>
 <img src="dashboard6.png" alt="Initial layout of dashboard" width="793" />
 <p class="caption">
-Figure 49: Initial layout of dashboard
+Figure 50: Initial layout of dashboard
 </p>
 </div>
 </div>
@@ -2728,10 +2740,10 @@ Figure 49: Initial layout of dashboard
 <li>Add Reference line at 0 to the diverging bar plot</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-50"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-51"></span>
 <img src="dashboard7.png" alt="Adding reference line at 0" width="238" />
 <p class="caption">
-Figure 50: Adding reference line at 0
+Figure 51: Adding reference line at 0
 </p>
 </div>
 </div>
@@ -2739,10 +2751,10 @@ Figure 50: Adding reference line at 0
 <li>Remove country names from the first visualization as both the visualizations will have the same sort order and can share the labels in the middle.</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-51"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-52"></span>
 <img src="dashboard8.png" alt="Removing Country Names for more Space" width="391" />
 <p class="caption">
-Figure 51: Removing Country Names for more Space
+Figure 52: Removing Country Names for more Space
 </p>
 </div>
 </div>
@@ -2753,15 +2765,48 @@ Figure 51: Removing Country Names for more Space
 <h1 id="the-improved-data-visualization">4 - The improved data visualization</h1>
 <p>The completed visualization is as follows.</p>
 <div class="layout-chunk" data-layout="l-page">
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-52"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-53"></span>
 <img src="final.png" alt="Snapshot of the completed dashboard" width="793" />
 <p class="caption">
-Figure 52: Snapshot of the completed dashboard
+Figure 53: Snapshot of the completed dashboard
 </p>
 </div>
 </div>
 <p>The interactive dashboard is uploaded onto Tableau Public Server and can be found <a href="https://public.tableau.com/views/Covid-19VaccinationOpinions/Dashboard1?:language=en&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link">here</a>.</p>
 <h1 id="new-insights">5 - New Insights</h1>
+<h2 id="vaccine-avoidance-due-to-side-effects">5.1 Vaccine avoidance due to side effects</h2>
+<p>Using the orange boxes - In the survey question: “If a Covid-19 Vaccine were made available to me this week, I would definitely get it.” We can see that a large proportion of the French respondents disagreed strongly (ranked 1st when sorting by proportion ‘Strongly Disagree’). When comparing this against the results of the question: “I am worried about the potential side effects of a Covid-19 vaccine.” The French respondents ranked top by proportion of ‘Strongly Agree’ responses.</p>
+<p>Conversely, using the green boxes, we can see the countries of Netherlands and United Kingdom having correspondingly high levels of vaccine acceptance and low levels of worries about side-effects.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-54"></span>
+<img src="insights1.png" alt="Resistance to vaccine could come from fear" width="1000" />
+<p class="caption">
+Figure 54: Resistance to vaccine could come from fear
+</p>
+</div>
+</div>
+<h2 id="bigger-familes-have-mixed-views-on-vaccines">5.2 Bigger familes have mixed views on vaccines</h2>
+<p>On the same survey question: “If a Covid-19 Vaccine were made available to me this week, I would definitely get it.” You can see a huge standard error in the proportion of ‘Strongly Agree’ responses. This could be due to a couple of reasons. The first could be due to the actual divergence in views in large families. The second is could be due to a smaller sample size, which is the case. (Most of the survey respondents had family sizes of 1-3).</p>
+<p>A takeaway on this is to view the data as a whole without filtering on household size unless the number of survey responses from larger households can be collected.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-55"></span>
+<img src="insights2.png" alt="Increased SE in bigger families" width="1091" />
+<p class="caption">
+Figure 55: Increased SE in bigger families
+</p>
+</div>
+</div>
+<h2 id="many-are-waiting-before-taking-vaccine">5.3 Many are waiting before taking vaccine</h2>
+<p>Following the same line of thought from the previous insight. Vaccine worries tend to ease off with time with better research and testing. The general attitude towards vaccine warms up considerably when vaccines were to be made available in one year instead of one week. This can be seen in lower number of disagreeing responses across the board (orange boxes) and higher number of strongly agree across all countries (green boxes).</p>
+<p>A takeaway for the authorities could be that while aggressively ramping up vaccination capacity, they need to work on converting opinions on vaccine safety as well. Ambitious targets to vaccinate whole populations in months could be futile if the population is resistant towards taking the vaccines.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-56"></span>
+<img src="insights3.png" alt="Vaccine opinions improve over time" width="1000" />
+<p class="caption">
+Figure 56: Vaccine opinions improve over time
+</p>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

@@ -51,6 +51,10 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 The proposed design is as follows.
 
+```{r, fig.align="center",layout='l-page', echo=FALSE, out.width="100%", fig.cap="Sketching the Suggested Visualizations"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/sketch.png")
+```
+
 # 3 - The Visualization process
 
 *The Data Source used is from the Imperial College London YouGov Covid 19 Behaviour Tracker Data Hub. The files can be found [here](https://github.com/YouGov-Data/covid-19-tracker).*
@@ -416,3 +420,34 @@ The interactive dashboard is uploaded onto Tableau Public Server and can be foun
 
 # 5 - New Insights
 
+## 5.1 Vaccine avoidance due to side effects
+
+Using the orange boxes - In the survey question: "If a Covid-19 Vaccine were made available to me this week, I would definitely get it." We can see that a large proportion of the French respondents disagreed strongly (ranked 1st when sorting by proportion 'Strongly Disagree'). When comparing this against the results of the question: "I am worried about the potential side effects of a Covid-19 vaccine." The French respondents ranked top by proportion of 'Strongly Agree' responses. 
+
+Conversely, using the green boxes, we can see the countries of Netherlands and United Kingdom having correspondingly high levels of vaccine acceptance and low levels of worries about side-effects. 
+
+
+```{r, fig.align="center",layout='l-page', fig.width=100, fig.height=100, echo=FALSE, fig.cap="Resistance to vaccine could come from fear"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/insights1.png")
+```
+
+
+## 5.2 Bigger familes have mixed views on vaccines
+
+On the same survey question: "If a Covid-19 Vaccine were made available to me this week, I would definitely get it." You can see a huge standard error in the proportion of 'Strongly Agree' responses. This could be due to a couple of reasons. The first could be due to the actual divergence in views in large families. The second is could be due to a smaller sample size, which is the case. (Most of the survey respondents had family sizes of 1-3). 
+
+A takeaway on this is to view the data as a whole without filtering on household size unless the number of survey responses from larger households can be collected. 
+
+```{r, fig.align="center",layout='l-page', fig.width=100, fig.height=100, echo=FALSE, fig.cap="Increased SE in bigger families"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/insights2.png")
+```
+
+## 5.3 Many are waiting before taking vaccine
+
+Following the same line of thought from the previous insight. Vaccine worries tend to ease off with time with better research and testing. The general attitude towards vaccine warms up considerably when vaccines were to be made available in one year instead of one week. This can be seen in lower number of disagreeing responses across the board (orange boxes) and higher number of strongly agree across all countries (green boxes).
+
+A takeaway for the authorities could be that while aggressively ramping up vaccination capacity, they need to work on converting opinions on vaccine safety as well. Ambitious targets to vaccinate whole populations in months could be futile if the population is resistant towards taking the vaccines.
+
+```{r, fig.align="center",layout='l-page', fig.width=100, fig.height=100, echo=FALSE, fig.cap="Vaccine opinions improve over time"}
+knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/insights3.png")
+```
