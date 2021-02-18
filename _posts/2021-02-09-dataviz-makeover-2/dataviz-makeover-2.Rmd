@@ -29,8 +29,8 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 | S/N |        Comments                         |   Suggested Improvements                |
 |-----|-----------------------------------------|-----------------------------------------|
-|C1|The neutral values (3) of the likert scale on the diverging stacked chart are not centred on zero. This makes it hard for the users to compare the ratings across different categories and also makes it hard to tell whether the responses were skewed towards agreement or disagreement.|Redo the diverging stacked bar chart with the neutral values of the likert scale (3) centred around zero.|
-|C2|The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.| Sort the categories (rows) of the table by the proportion of a chosen responses and synchronize the order across both visualizations.|
+|C1|The neutral values of the likert scale on the diverging stacked chart are not centred on zero. This makes it hard for the users to compare the ratings across different categories and also makes it hard to tell whether the responses were skewed towards agreement or disagreement.|Redo the diverging stacked bar chart with the neutral values of the likert scale centred around zero.|
+|C2|The categories in the current chart is ordered alphabetically. This is not meaningful as there is no analytical findings nor message conveyed through unordered categories such as country names.| Sort the categories (rows) of the table by the proportion of a chosen response type and synchronize the order across both visualizations. This is important in order to compare the visualization across both charts.|
 |C3|Information is missing on how many respondents are there per country. This can be very valuable in providing a context to readers.|Add in the count of respondents from each country as a tooltip.|
 |C4|The respondents of each country is made up from different social strata. Each group can have different attitudes towards vaccination. By grouping them all by country, we run the risk of over-generalization.|Add in options for users to filter and slice the visualizations. This allows the user to glean more insight. e.g. comparing the willingness of respondents aged over 65 and unemployed in two different countries.|
 |C5|The second chart on the right shows the proportion of strongly agree responses as a point estimate. That can be misleading as there is often uncertainty associated with such survey data.|Change the chart to a point estimate with error bars showing the confidence interval of the responses.|
@@ -44,7 +44,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 |-----|-----------------------------------------|-----------------------------------------|
 |A1|Colours on the chart are randomised and do not follow a logical pattern. |Replot the chart with colours on a red-blue spectrum. Red should be on one end of the spectrum to indicate 'Strongly Disagree' and Blue on the other end to indicate 'Strongly Agree'|
 |A2|Scale of the diverging stacked bar chart starts at 0% and ends at 100%. This will not be sufficient to display the full range of responses gathered on vaccination opinions.|Adjust scale of the bar and the values of the responses to allow for negative values. This will allow the negative opinions (4 and 5) that show disagreement to be accurately represented. It will also help to answer the question posed by the title:*Which country is more pro-vaccine?* i.e. Change from the responses from 1 to 5 to -2 to 2.|
-|A3|Legend not properly named and labeled. While readers can infer the feedback when given by the two extreme values of 'Strongly Agree' and 'Strongly Disagree', it would be clearer to properly label each and everyone of them.|Rename the legend and specifically label each and everyone of the different colors on the diverging bar chart.|
+|A3|Legend not properly named and labeled. While readers can infer the feedback when given by the two extreme values of 'Strongly Agree' and 'Strongly Disagree', it would be clearer to properly label each and every one of them.|Rename the legend and specifically label each and every one of the different colors on the diverging bar chart.|
 |A4|Clear titles on both charts|Follow and recreate a similar aesthetic.|
 
 # 2 - The suggested visualization
@@ -71,15 +71,15 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep1.png")
 ```
 
-4. Create aliases so that the values are 'country names' instead of 'countrynames.csv'
+4. Create aliases so that the values are *country names* instead of *countrynames.csv*
 
 ```{r, fig.align="center",fig.width=50, fig.height=60, echo=FALSE, fig.cap="Aliases for file names"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep2.png")
 ```
 
 5. Pull required fields into the rows and column shelves.
-    - Rows    : Table Name, RecordNo
-    - columns : disability, gender, House rooms, Household size, Employment Status, Household Children, Age, vac_1, vac_3, Vac2_1, vac2_2, vac2_3, vac2_6
+    - Rows    : *Table Name, RecordNo*
+    - columns : *disability, gender, House rooms, Household size, Employment Status, Household Children, Age, vac_1, vac_3, Vac2_1, vac2_2, vac2_3, vac2_6*
     
 6. Create a view of the data for export
     
@@ -93,7 +93,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep4.png")
 ```
 
-8a. In excel replace values for in the fields vac_1, vac_3, Vac2_1, vac2_2, vac2_3, vac2_6. 
+8a. In excel replace values for in the fields *'vac_1', 'vac_3', 'Vac2_1', 'vac2_2', 'vac2_3', 'vac2_6'*. 
     - '1 - Strongly Agree' with '2'
     - '2' with '1'
     - '3' with '0'
@@ -110,13 +110,13 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep6.png")
 ```
 
-9. Change the data type for all vac columns to whole numbers
+9. Change the data type for **All** vac columns to whole numbers
 
 ```{r, fig.align="center",fig.width=50, fig.height=60, echo=FALSE, fig.cap="Changing data types"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep7.png")
 ```
 
-10. Rename the field "Table Name" to "Country"
+10. Rename the field *"Table Name"* to *"Country"*
 
 ```{r, fig.align="center",fig.width=50, fig.height=60, echo=FALSE, fig.cap="Renaming to Country"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dprep8.png")
@@ -124,7 +124,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 ## 3.2 Steps taken for first Visualization 
 
-11. Create a new parameter showing the different questions given to the survey respondents. Match each of vac_1, vac_3, Vac2_1, vac2_2, vac2_3, vac2_6 to their respective questions. 
+11. Create a new parameter showing the different questions given to the survey respondents. Match each of *'vac_1', 'vac_3', 'vac2_1', 'vac2_2', 'vac2_3', 'vac2_6'* to their respective questions. 
 
 12. Expose the parameter by checking the 'Show Parameter' option.
 
@@ -132,53 +132,53 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep1.png")
 ```
 
-13. Next, create a calculated field 'Selected'
+13. Next, create a calculated field *'Selected'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Selected"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep2.png")
 ```
 
-14. Next, create a calculated field 'Number of Records'
+14. Next, create a calculated field *'Number of Records'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Number of Records"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep3.png")
 ```
 
-15. Next, create a calculated field 'Total Count'
+15. Next, create a calculated field *'Total Count'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Total Count"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep4.png")
 ```
 
-16. Next, create a calculated field 'Count Negative'
+16. Next, create a calculated field *'Count Negative'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Count Negative"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep5.png")
 ```
 
-17. Next, create a calculated field 'Gantt Percent'
+17. Next, create a calculated field *'Gantt Percent'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Gantt Percent"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep6.png")
 ```
 
-18. Next, create a calculated field 'Percentage'
+18. Next, create a calculated field *'Percentage'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Percentage"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep7.png")
 ```
 
-19. Drag Gantt Percent and Country in the columns and rows shelves respectively 
+19. Drag *'Gantt Percent'* and *'Country'* in the columns and rows shelves respectively 
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Populating the columns and rows"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep8.png")
 ```
 
 20. Drag following fields into the marks card.
-    - 'Selected' to colour and change to Discrete Dimension
-    - 'Percentage' to size
-    - 'Total Count' to tooltip and change to Discrete
-    - 'Selected' to Detail and change to Discrete Dimension
+    - *'Selected'* to colour and change to Discrete Dimension
+    - *'Percentage'* to size
+    - *'Total Count'* to tooltip and change to Discrete
+    - *'Selected'* to Detail and change to Discrete Dimension
     
 21. change the mark type from automatic to Gantt Bar
 
@@ -186,19 +186,19 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep9.png")
 ```
 
-22. Change both 'Percentage' and 'Gantt Percentage' to compute using 'Selected'
+22. Change both *'Percentage'* and *'Gantt Percentage'* to compute using *'Selected'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing the computation methods"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep10.png")
 ```
 
-23. Filter away null responses in 'Selected'
+23. Filter away null responses in *'Selected'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Filtering nulls"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep11.png")
 ```
 
-23. Rename legend from 'Selected' to 'Responses' and assign a more logical colour scheme
+23. Rename legend from *'Selected'* to *'Responses'* and assign a more logical colour scheme
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Formatting the legend"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v1prep12.png")
@@ -217,44 +217,43 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 ## 3.2 Steps taken for second Visualization 
 
-26. Create a new parameter showing the response types given by the survey respondents. 
-Match each of the numerical values to the responses given. Expose parameter by clicking on the Show parameter option.
+26. Create a new parameter showing the response types given by the survey respondents. Match each of the numerical values to the responses given. Expose parameter by clicking on the Show parameter option.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a new parameter for the survey responses"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep1.png")
 ```
 
-27. Create calculated fields needed for 95% confidence interval. For starters - Create Z-Value for 95% confidence interval
+27. Create calculated fields needed for 95% confidence interval. For starters - Create Z-Value for 95% confidence interval, *'Z_95%'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - 95% Z value"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep2.png")
 ```
 
-28.Next, create a calculated field 'Count Response Type' which counts the number of response of the selected response type given by the parameter 'Response Type'
+28.Next, create a calculated field *'Count Response Type'* which counts the number of response of the selected response type given by the parameter *'Response Type'*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Count Response Type"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep3.png")
 ```
 
-29. Next, create a calculated field 'Prop': proportion of response type compared to all the responses received
+29. Next, create a calculated field *'Prop'*: proportion of response type compared to all the responses received
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep4.png")
 ```
 
-30. Next, create a calculated field 'Prop_SE' standard error of the proportion
+30. Next, create a calculated field *'Prop_SE'* standard error of the proportion
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop_SE"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep5.png")
 ```
 
-31. Next, create two calculated fields 'Prop_Lower Limit 95%' and 'Prop_Upper Limit 95%' to construct the error bars
+31. Next, create two calculated fields *'Prop_Lower Limit 95%'* and *'Prop_Upper Limit 95%'* to construct the error bars
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a calculated field - Prop_Lower Limit 95%, Prop_Upper Limit 95%"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep6.png")
 ```
 
-32. Drag 'Country' and 'Prop' onto the canvas to create a table.
+32. Drag *'Country'* and *'Prop'* onto the canvas to create a table.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a table with Country and Prop"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep7.png")
@@ -266,19 +265,19 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep8.png")
 ```
 
-34. Drag all Measure Values into the Marks Card
+34. Drag all *'Measure Values'* into the Marks Card
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into Marks"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep9.png")
 ```
 
-35. Drop all other Measure Values from the Marks Card except 'Prop_Lower Limit 95%' and 'Prop_Upper Limit 95%' 
+35. Drop all other *'Measure Values'* from the Marks Card except *'Prop_Lower Limit 95%'* and *'Prop_Upper Limit 95%'* 
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into Marks"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep10.png")
 ```
 
-35. Drag Measure Values to columns shelf.
+35. Drag *'Measure Values'* to columns shelf.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Moving Measure Values into columns"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep11.png")
@@ -298,7 +297,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep13.png")
 ```
 
-39. Drag Measure Names into both colour and Path for the Measure Values Card
+39. Drag *'Measure Names'* into both colour and Path for the Measure Values Card
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Using Measure Names on Colour and Path"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/v2prep14.png")
@@ -318,19 +317,19 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 ## 3.4 Adding Filters
 
-42. Create a calculated field 'Age Groups' by binning the age of respondents into bins of 10 years.
+42. Create a calculated field *'Age Groups'* by binning the age of respondents into bins of 10 years.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Age Groups"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters1.png")
 ```
 
-43. Create a calculated field 'Household Children (Groups)' by binning the age of respondents into bins of size 2.
+43. Create a calculated field *'Household Children (Groups)'* by binning the age of respondents into bins of size 2.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Children (Groups)"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters2.png")
 ```
 
-44. Create a calculated field 'Household Size (Groups)' by binning the age of respondents into bins of size 3.
+44. Create a calculated field *'Household Size (Groups)'* by binning the age of respondents into bins of size 3.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Size (Groups)"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters3.png")
@@ -347,35 +346,34 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters4.png")
 ```    
     
-46. For all filters, select option to 'All using related data sources' to allow filtering across different visuals
+46. For all filters, select option to **'All using related data sources'** to allow filtering across different visuals
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating Calculated Field - Household Size (Groups)"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/filters5.png")
 ```   
 
 
-
 ## 3.5 Creating the dashboard
 
-47. For both the visualizations change the sort order to sort by 'Prop' so that the sorts will synch for both charts.
+47. For both the visualizations change the sort order to sort by *'Prop'* so that the sorts will synch for both charts.
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Changing Sort Orders for both charts"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard1.png")
 ```   
 
-48. Create a new sheet to create a title for the dashboard. This is not done on each individual worksheet because it will otherwise repeat the lengthy question. This allows the selected question to show up on the dashboard title. The title will be "Question: <Parameters.Survey Question>"
+48. Create a new sheet to create a title for the dashboard. This is not done on each individual worksheet because it will otherwise repeat the lengthy question. This allows the selected question to show up on the dashboard title. The title will be *"Question: <Parameters.Survey Question>"*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Creating a title for the dashboard"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard2.png")
 ```   
 
-49. Change title of first visualization to "Survey Responses by Country"
+49. Change title of first visualization to *"Survey Responses by Country"*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Renaming first visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard3.png")
 ```  
 
-50. Change title of second visualization to "Proportion <Parameters.Response Type> to:"
+50. Change title of second visualization to *"Proportion <Parameters.Response Type> to:"*
 
 ```{r, fig.align="center",fig.width=100, fig.height=100, echo=FALSE, fig.cap="Renaming second visualization"}
 knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-2/dashboard4.png")
@@ -407,7 +405,9 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 55. Rearrange filters neatly.
 
-56. Dashboard is complete.
+56. Add in reference to data source.
+
+57. Dashboard is complete.
 
 # 4 - The improved data visualization
 
@@ -422,7 +422,7 @@ The interactive dashboard is uploaded onto Tableau Public Server and can be foun
 
 ## 5.1 Vaccine avoidance due to side effects
 
-Using the orange boxes - In the survey question: "If a Covid-19 Vaccine were made available to me this week, I would definitely get it." We can see that a large proportion of the French respondents disagreed strongly (ranked 1st when sorting by proportion 'Strongly Disagree'). When comparing this against the results of the question: "I am worried about the potential side effects of a Covid-19 vaccine." The French respondents ranked top by proportion of 'Strongly Agree' responses. 
+Using the orange boxes - In the survey question: *"If a Covid-19 Vaccine were made available to me this week, I would definitely get it."* We can see that a large proportion of the French respondents disagreed strongly (ranked 1st when sorting by proportion 'Strongly Disagree'). When comparing this against the results of the question: *"I am worried about the potential side effects of a Covid-19 vaccine."* The French respondents ranked top by proportion of 'Strongly Agree' responses. 
 
 Conversely, using the green boxes, we can see the countries of Netherlands and United Kingdom having correspondingly high levels of vaccine acceptance and low levels of worries about side-effects. 
 
@@ -434,7 +434,7 @@ knitr::include_graphics("C:/totallyheen/blog/_posts/2021-02-09-dataviz-makeover-
 
 ## 5.2 Bigger familes have mixed views on vaccines
 
-On the same survey question: "If a Covid-19 Vaccine were made available to me this week, I would definitely get it." You can see a huge standard error in the proportion of 'Strongly Agree' responses. This could be due to a couple of reasons. The first could be due to the actual divergence in views in large families. The second is could be due to a smaller sample size, which is the case. (Most of the survey respondents had family sizes of 1-3). 
+On the same survey question: *"If a Covid-19 Vaccine were made available to me this week, I would definitely get it."* You can see a huge standard error in the proportion of *'Strongly Agree'* responses. This could be due to a couple of reasons. The first could be due to the actual divergence in views in large families. The second is could be due to a smaller sample size, which is the case. (Most of the survey respondents had family sizes of 1-3). 
 
 A takeaway on this is to view the data as a whole without filtering on household size unless the number of survey responses from larger households can be collected. 
 
