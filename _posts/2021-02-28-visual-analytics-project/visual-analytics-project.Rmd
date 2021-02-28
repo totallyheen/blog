@@ -31,26 +31,7 @@ Existing financial data websites such as Yahoo Finance do a good job in providin
 
 This project aims to utilise various R packages, mainly tidyverse, TTR and dtwcluster in building an interactive R Shiny application. The R Shiny application (details in section 2) will be an integrated dashboard which allows users to perform different types of analysis while aiding them in making informed decisions in portfolio construction.
 
-# 3.0 The Use-Case
-
-The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are a few ways that our application can help them:
-
-  - Diversification through identifying weakly correlated markets and indices. This allows the user to *‘put their eggs     across different baskets’* and spread out their risk
-  - Forecast what are the likely price movements in the period ahead in order to identify optimal entry points
-  - Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market. 
-
-# 4.0 Application Features
-
-On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.
-
-  - Visualization of time series data of various financial indices
-  - Correlation analysis across all financial indices
-  - Time series forecasting on index prices for the near future
-  - Cluster analysis on selected financial indices
-  - Targeted technical analysis on selected financial assets
-  - Callout of various macro events
-
-# 5.0 Scope
+# 3.0 Scope
 
 **Financial Asset Universe** - The list of assets covered in our application is shown below:
 
@@ -71,25 +52,60 @@ On top of displaying historical price trends, our dashboard will include visuali
 |13|Korea|||
 |14|India|||
 
-# 6.0 Data
+# 4.0 Data
 
 Open, High, Low, Close, Volume
 	
-# 7.0 Methodology / Storyboard
+# 5.0 Methodology / Storyboard
 
-## 7.1 Exploratory Data Analysis
+The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are some of our application features and some ways that our application can help our users:
+
+
+## 5.1 Exploratory Data Analysis
 **Key visualizations and analysis of key financial asset returns metrics**
 
 
-## 7.2 Time-Series Forecasting
+  - Diversification through identifying weakly correlated markets and indices. This allows the user to *‘put their eggs across different baskets’* and spread out their risk
+  - Forecast what are the likely price movements in the period ahead in order to identify optimal entry points
+  - Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market. 
+  
+  
+  
+On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.
+
+  - Visualization of time series data of various financial indices
+  - Correlation analysis across all financial indices
+  - Time series forecasting on index prices for the near future
+  - Cluster analysis on selected financial indices
+  - Targeted technical analysis on selected financial assets
+  - Callout of various macro events
+  
+
+### 5.1.1 Exploratory Data Analysis 
+
+### 5.1.2 Overlay of key events
+
+
+## 5.2 Time-Series Forecasting
 **Predicting financial asset prices using an ARIMA model**
 
 
-## 7.3 Time-Series Clustering
+
+
+## 5.3 Time-Series Clustering
 **Clustering financial assets based on historical returns**
 
+Time series clustering is to partition time series data into groups based on similarity or distance, so that time series in the same cluster are similar. Dynamic Time Warping (DTW) is used as the similarity/distance metric and finds optimal alignment between two time series.
 
-# 8.0 Tools and Packages 
+1. The first step is to work out an appropriate distance/similarity metric (i.e. DTW).
+
+2. The second step, use existing clustering techniques, such as k-means, hierarchical clustering, density-based clustering or subspace clustering, to find clustering structures.
+
+3. The final result will then be presented on the visualization.
+
+*Possible insight - Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.*
+
+# 6.0 Tools and Packages 
 
 1. [tidyverse: https://www.tidyverse.org/](https://www.tidyverse.org/)
 2. [dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
@@ -102,7 +118,7 @@ Open, High, Low, Close, Volume
 9. [tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)
 
 
-# 9.0 References
+# 7.0 References
 
 1. [A benchmark study on time series clustering](https://www.sciencedirect.com/science/article/pii/S2666827020300013)
 

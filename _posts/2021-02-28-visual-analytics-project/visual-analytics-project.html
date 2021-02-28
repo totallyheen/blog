@@ -1483,18 +1483,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <ul>
 <li><a href="#overview">1.0 Overview</a></li>
 <li><a href="#motivation-and-objectives">2.0 Motivation and Objectives</a></li>
-<li><a href="#the-use-case">3.0 The Use-Case</a></li>
-<li><a href="#application-features">4.0 Application Features</a></li>
-<li><a href="#scope">5.0 Scope</a></li>
-<li><a href="#data">6.0 Data</a></li>
-<li><a href="#methodology-storyboard">7.0 Methodology / Storyboard</a>
+<li><a href="#scope">3.0 Scope</a></li>
+<li><a href="#data">4.0 Data</a></li>
+<li><a href="#methodology-storyboard">5.0 Methodology / Storyboard</a>
 <ul>
-<li><a href="#exploratory-data-analysis">7.1 Exploratory Data Analysis</a></li>
-<li><a href="#time-series-forecasting">7.2 Time-Series Forecasting</a></li>
-<li><a href="#time-series-clustering">7.3 Time-Series Clustering</a></li>
+<li><a href="#exploratory-data-analysis">5.1 Exploratory Data Analysis</a></li>
+<li><a href="#time-series-forecasting">5.2 Time-Series Forecasting</a></li>
+<li><a href="#time-series-clustering">5.3 Time-Series Clustering</a></li>
 </ul></li>
-<li><a href="#tools-and-packages">8.0 Tools and Packages</a></li>
-<li><a href="#references">9.0 References</a></li>
+<li><a href="#tools-and-packages">6.0 Tools and Packages</a></li>
+<li><a href="#references">7.0 References</a></li>
 </ul>
 </nav>
 </div>
@@ -1504,24 +1502,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1 id="motivation-and-objectives">2.0 Motivation and Objectives</h1>
 <p>Existing financial data websites such as Yahoo Finance do a good job in providing historical price data and technical indicators, but the beginner investor lacks the knowledge to properly utilise and benefit from these. For example, there is a whole plethora of technical indicators available for use, but whether the investor is able to truly understand and use them properly is questionable. We have also identified a gap in such websites, that they do not provide any form of forecasting or cross-asset analysis to aid in investors’ decisions. In addition, it may be informative for an investor to see how macro events on a global scale may affect assets.</p>
 <p>This project aims to utilise various R packages, mainly tidyverse, TTR and dtwcluster in building an interactive R Shiny application. The R Shiny application (details in section 2) will be an integrated dashboard which allows users to perform different types of analysis while aiding them in making informed decisions in portfolio construction.</p>
-<h1 id="the-use-case">3.0 The Use-Case</h1>
-<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are a few ways that our application can help them:</p>
-<ul>
-<li>Diversification through identifying weakly correlated markets and indices. This allows the user to <em>‘put their eggs across different baskets’</em> and spread out their risk</li>
-<li>Forecast what are the likely price movements in the period ahead in order to identify optimal entry points</li>
-<li>Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market.</li>
-</ul>
-<h1 id="application-features">4.0 Application Features</h1>
-<p>On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.</p>
-<ul>
-<li>Visualization of time series data of various financial indices</li>
-<li>Correlation analysis across all financial indices</li>
-<li>Time series forecasting on index prices for the near future</li>
-<li>Cluster analysis on selected financial indices</li>
-<li>Targeted technical analysis on selected financial assets</li>
-<li>Callout of various macro events</li>
-</ul>
-<h1 id="scope">5.0 Scope</h1>
+<h1 id="scope">3.0 Scope</h1>
 <p><strong>Financial Asset Universe</strong> - The list of assets covered in our application is shown below:</p>
 <table>
 <thead>
@@ -1619,16 +1600,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </tr>
 </tbody>
 </table>
-<h1 id="data">6.0 Data</h1>
+<h1 id="data">4.0 Data</h1>
 <p>Open, High, Low, Close, Volume</p>
-<h1 id="methodology-storyboard">7.0 Methodology / Storyboard</h1>
-<h2 id="exploratory-data-analysis">7.1 Exploratory Data Analysis</h2>
+<h1 id="methodology-storyboard">5.0 Methodology / Storyboard</h1>
+<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are some of our application features and some ways that our application can help our users:</p>
+<h2 id="exploratory-data-analysis">5.1 Exploratory Data Analysis</h2>
 <p><strong>Key visualizations and analysis of key financial asset returns metrics</strong></p>
-<h2 id="time-series-forecasting">7.2 Time-Series Forecasting</h2>
+<ul>
+<li>Diversification through identifying weakly correlated markets and indices. This allows the user to <em>‘put their eggs across different baskets’</em> and spread out their risk</li>
+<li>Forecast what are the likely price movements in the period ahead in order to identify optimal entry points</li>
+<li>Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market.</li>
+</ul>
+<p>On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.</p>
+<ul>
+<li>Visualization of time series data of various financial indices</li>
+<li>Correlation analysis across all financial indices</li>
+<li>Time series forecasting on index prices for the near future</li>
+<li>Cluster analysis on selected financial indices</li>
+<li>Targeted technical analysis on selected financial assets</li>
+<li>Callout of various macro events</li>
+</ul>
+<h3 id="exploratory-data-analysis-1">5.1.1 Exploratory Data Analysis</h3>
+<h3 id="overlay-of-key-events">5.1.2 Overlay of key events</h3>
+<h2 id="time-series-forecasting">5.2 Time-Series Forecasting</h2>
 <p><strong>Predicting financial asset prices using an ARIMA model</strong></p>
-<h2 id="time-series-clustering">7.3 Time-Series Clustering</h2>
+<h2 id="time-series-clustering">5.3 Time-Series Clustering</h2>
 <p><strong>Clustering financial assets based on historical returns</strong></p>
-<h1 id="tools-and-packages">8.0 Tools and Packages</h1>
+<p>Time series clustering is to partition time series data into groups based on similarity or distance, so that time series in the same cluster are similar. Dynamic Time Warping (DTW) is used as the similarity/distance metric and finds optimal alignment between two time series.</p>
+<ol type="1">
+<li><p>The first step is to work out an appropriate distance/similarity metric (i.e. DTW).</p></li>
+<li><p>The second step, use existing clustering techniques, such as k-means, hierarchical clustering, density-based clustering or subspace clustering, to find clustering structures.</p></li>
+<li><p>The final result will then be presented on the visualization.</p></li>
+</ol>
+<p><em>Possible insight - Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.</em></p>
+<h1 id="tools-and-packages">6.0 Tools and Packages</h1>
 <ol type="1">
 <li><a href="https://www.tidyverse.org/">tidyverse: https://www.tidyverse.org/</a></li>
 <li><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8</a></li>
@@ -1640,7 +1645,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6">dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6</a></li>
 <li><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html</a></li>
 </ol>
-<h1 id="references">9.0 References</h1>
+<h1 id="references">7.0 References</h1>
 <ol type="1">
 <li><p><a href="https://www.sciencedirect.com/science/article/pii/S2666827020300013">A benchmark study on time series clustering</a></p></li>
 <li><p><a href="https://robjhyndman.com/papers/wang.pdf">A Scalable Method for Time Series Clustering</a></p></li>
