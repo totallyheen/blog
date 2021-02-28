@@ -54,37 +54,42 @@ This project aims to utilise various R packages, mainly tidyverse, TTR and dtwcl
 
 # 4.0 Data
 
-Open, High, Low, Close
-	
+The data source of our project will be Bloomberg and all data will be extracted in a data-dump through Bloomberg terminal. The data extracted will be from Jan 1 2021 through to present day.
+
+The main attributes extracted will be:
+
+1. Open Price : The Stock at which opens at the start of market
+
+2. High price : The particular stock which made high during that particular day
+
+3. Low Price : The Particular stock which made Low during that particular day
+
+4. Close Price : The stock closing at the end of the Market hours
+
 # 5.0 Application Features
 
 The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users. The application itself is split up into 3 main sections address different parts of the investing process.
 
 
-## 5.1 Exploratory Data Analysis
-**Key visualizations and analysis of key financial asset returns metrics**
+## 5.1 Exploratory Data Analysis (EDA)
+**Base visualizations and analysis of key financial asset returns metrics**
+
+Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. It will be useful for potential investors to have a visual tool to understand various key metrics when analysing financial assets. Some of the key metrics our application aims to help users visualize include:
 
 
-  - Diversification through identifying weakly correlated markets and indices. This allows the user to *‘put their eggs across different baskets’* and spread out their risk
-  - Forecast what are the likely price movements in the period ahead in order to identify optimal entry points
-  - Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market. 
+1. Correlation
+  - Correlation matrix to show correlation between selected assets at different time horizons
   
+2.  Distribution of returns
+  - Histogram showing distribution of returns for different assets will allow users to visualize volatility
   
-  
-On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.
+3. Risk to Reward
+  - Purely looking at gross returns often does not paint the full picture as most high-returns assets come with greater volatility. Metrics such as Sharpe     - Ratio will allow users to get a better sense of the Risk:Reward profile of different assets
+4. Technical indicators
+  - Technical analysis is a trading discipline employed to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity, such as price movement and volume.
+  - Our application will categorize indicators based on their category (trend, momentum or volatility) so as to allow users to know precisely what the indicator is looking at. This is in contrast to many existing websites where users have a whole plethora of indicators at their disposal but not knowing what they are actually evaluating.
 
-  - Visualization of time series data of various financial indices
-  - Correlation analysis across all financial indices
-  - Time series forecasting on index prices for the near future
-  - Cluster analysis on selected financial indices
-  - Targeted technical analysis on selected financial assets
-  - Callout of various macro events
-  
-
-### 5.1.1 Exploratory Data Analysis 
-
-### 5.1.2 Overlay of key events
-
+***Possible insights:*** *Diversification through identifying weakly correlated markets and indices. This allows the user to ‘put their eggs across different baskets’ and spread out their risk.*
 
 ## 5.2 Time-Series Forecasting
 **Predicting financial asset prices using an ARIMA model**
@@ -119,7 +124,7 @@ Time series clustering is to partition time series data into groups based on sim
 
 3. The final result will then be presented on the visualization.
 
-***Possible insights:*** *Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.*
+***Possible insights:*** *Time series in the same cluster are likely to undergo similar cycles and risks.This means that users can expect similar movements across cycles/periods and act accordingly.*
 
 # 6.0 Tools and Packages 
 
@@ -134,11 +139,13 @@ Time series clustering is to partition time series data into groups based on sim
 |7|dtwcluster|[https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1](https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1)|
 |8|dygraphs|[https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6](https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6)|
 |9|tidyquant|[https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)|
+|10|readr|[https://www.rdocumentation.org/packages/readr/versions/1.3.1](https://www.rdocumentation.org/packages/readr/versions/1.3.1)|
+|11|rticles|[https://www.rdocumentation.org/packages/rticles/versions/0.18](https://www.rdocumentation.org/packages/rticles/versions/0.18)|
 
 
 # 7.0 References
 
-1. [A benchmark study on time series clustering](https://www.sciencedirect.com/science/article/pii/S2666827020300013)
+1. [*A benchmark study on time series clustering*](https://www.sciencedirect.com/science/article/pii/S2666827020300013)
 
 2. [A Scalable Method for Time Series Clustering](https://robjhyndman.com/papers/wang.pdf) 
 

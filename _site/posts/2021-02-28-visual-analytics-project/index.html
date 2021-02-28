@@ -2109,7 +2109,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#data">4.0 Data</a></li>
 <li><a href="#application-features">5.0 Application Features</a>
 <ul>
-<li><a href="#exploratory-data-analysis">5.1 Exploratory Data Analysis</a></li>
+<li><a href="#exploratory-data-analysis-eda">5.1 Exploratory Data Analysis (EDA)</a></li>
 <li><a href="#time-series-forecasting">5.2 Time-Series Forecasting</a></li>
 <li><a href="#time-series-clustering">5.3 Time-Series Clustering</a></li>
 </ul></li>
@@ -2223,27 +2223,45 @@ document.addEventListener('DOMContentLoaded', function() {
 </tbody>
 </table>
 <h1 id="data">4.0 Data</h1>
-<p>Open, High, Low, Close</p>
+<p>The data source of our project will be Bloomberg and all data will be extracted in a data-dump through Bloomberg terminal. The data extracted will be from Jan 1 2021 through to present day.</p>
+<p>The main attributes extracted will be:</p>
+<ol type="1">
+<li><p>Open Price : The Stock at which opens at the start of market</p></li>
+<li><p>High price : The particular stock which made high during that particular day</p></li>
+<li><p>Low Price : The Particular stock which made Low during that particular day</p></li>
+<li><p>Close Price : The stock closing at the end of the Market hours</p></li>
+</ol>
 <h1 id="application-features">5.0 Application Features</h1>
 <p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users. The application itself is split up into 3 main sections address different parts of the investing process.</p>
-<h2 id="exploratory-data-analysis">5.1 Exploratory Data Analysis</h2>
-<p><strong>Key visualizations and analysis of key financial asset returns metrics</strong></p>
+<h2 id="exploratory-data-analysis-eda">5.1 Exploratory Data Analysis (EDA)</h2>
+<p><strong>Base visualizations and analysis of key financial asset returns metrics</strong></p>
+<p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. It will be useful for potential investors to have a visual tool to understand various key metrics when analysing financial assets. Some of the key metrics our application aims to help users visualize include:</p>
+<ol type="1">
+<li>Correlation</li>
+</ol>
 <ul>
-<li>Diversification through identifying weakly correlated markets and indices. This allows the user to <em>‘put their eggs across different baskets’</em> and spread out their risk</li>
-<li>Forecast what are the likely price movements in the period ahead in order to identify optimal entry points</li>
-<li>Time series clustering to identify markets that go through similar cyclical movements across different time periods. This will help the user identify potential entry and exit points from the market.</li>
+<li>Correlation matrix to show correlation between selected assets at different time horizons</li>
 </ul>
-<p>On top of displaying historical price trends, our dashboard will include visualizations of Time Series Forecasting, Clustering as well as selected technical indicators for a list of financial assets which is discussed in section 4. These are subject to user preferences in an ‘add/ remove’ manner.</p>
+<ol start="2" type="1">
+<li>Distribution of returns</li>
+</ol>
 <ul>
-<li>Visualization of time series data of various financial indices</li>
-<li>Correlation analysis across all financial indices</li>
-<li>Time series forecasting on index prices for the near future</li>
-<li>Cluster analysis on selected financial indices</li>
-<li>Targeted technical analysis on selected financial assets</li>
-<li>Callout of various macro events</li>
+<li>Histogram showing distribution of returns for different assets will allow users to visualize volatility</li>
 </ul>
-<h3 id="exploratory-data-analysis-1">5.1.1 Exploratory Data Analysis</h3>
-<h3 id="overlay-of-key-events">5.1.2 Overlay of key events</h3>
+<ol start="3" type="1">
+<li>Risk to Reward</li>
+</ol>
+<ul>
+<li>Purely looking at gross returns often does not paint the full picture as most high-returns assets come with greater volatility. Metrics such as Sharpe - Ratio will allow users to get a better sense of the Risk:Reward profile of different assets</li>
+</ul>
+<ol start="4" type="1">
+<li>Technical indicators</li>
+</ol>
+<ul>
+<li>Technical analysis is a trading discipline employed to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity, such as price movement and volume.</li>
+<li>Our application will categorize indicators based on their category (trend, momentum or volatility) so as to allow users to know precisely what the indicator is looking at. This is in contrast to many existing websites where users have a whole plethora of indicators at their disposal but not knowing what they are actually evaluating.</li>
+</ul>
+<p><strong><em>Possible insights:</em></strong> <em>Diversification through identifying weakly correlated markets and indices. This allows the user to ‘put their eggs across different baskets’ and spread out their risk.</em></p>
 <h2 id="time-series-forecasting">5.2 Time-Series Forecasting</h2>
 <p><strong>Predicting financial asset prices using an ARIMA model</strong></p>
 <p>ARIMA is an acronym that stands for AutoRegressive Integrated Moving Average. It is a class of model that captures a suite of different standard temporal structures in time series data.</p>
@@ -2268,7 +2286,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><p>The second step, use existing clustering techniques, such as k-means, hierarchical clustering, density-based clustering or subspace clustering, to find clustering structures.</p></li>
 <li><p>The final result will then be presented on the visualization.</p></li>
 </ol>
-<p><strong><em>Possible insights:</em></strong> <em>Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.</em></p>
+<p><strong><em>Possible insights:</em></strong> <em>Time series in the same cluster are likely to undergo similar cycles and risks.This means that users can expect similar movements across cycles/periods and act accordingly.</em></p>
 <h1 id="tools-and-packages">6.0 Tools and Packages</h1>
 <table>
 <colgroup>
@@ -2329,11 +2347,21 @@ document.addEventListener('DOMContentLoaded', function() {
 <td>tidyquant</td>
 <td><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">https://cran.r-project.org/web/packages/tidyquant/index.html</a></td>
 </tr>
+<tr class="even">
+<td>10</td>
+<td>readr</td>
+<td><a href="https://www.rdocumentation.org/packages/readr/versions/1.3.1">https://www.rdocumentation.org/packages/readr/versions/1.3.1</a></td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>rticles</td>
+<td><a href="https://www.rdocumentation.org/packages/rticles/versions/0.18">https://www.rdocumentation.org/packages/rticles/versions/0.18</a></td>
+</tr>
 </tbody>
 </table>
 <h1 id="references">7.0 References</h1>
 <ol type="1">
-<li><p><a href="https://www.sciencedirect.com/science/article/pii/S2666827020300013">A benchmark study on time series clustering</a></p></li>
+<li><p><a href="https://www.sciencedirect.com/science/article/pii/S2666827020300013"><em>A benchmark study on time series clustering</em></a></p></li>
 <li><p><a href="https://robjhyndman.com/papers/wang.pdf">A Scalable Method for Time Series Clustering</a></p></li>
 <li><p><a href="https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/">Technical Analysis with R</a></p></li>
 <li><p><a href="https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z">Examination of the profitability of technical analysis based on moving average strategies in BRICS</a></p></li>
