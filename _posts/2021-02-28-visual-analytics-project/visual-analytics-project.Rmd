@@ -1,7 +1,7 @@
 ---
-title: "Visual Analytics Project"
+title: "Project Proposal"
 description: |
-  A short description of the post.
+  Investing 101: A visual and predictive guide for the rookie investor
 author:
   - name:  Andre Lee | Boey Yi Heen | Ng Weekien
 date: 02-28-2021
@@ -52,12 +52,7 @@ On top of displaying historical price trends, our dashboard will include visuali
 
 # 5.0 Scope
 
-## 5.1 Data Attributes
-	Open, High, Low, Close, Volume
-
-
-## 5.2 Financial Asset Universe
-The list of assets covered in our application is shown below:
+**Financial Asset Universe** - The list of assets covered in our application is shown below:
 
 |*S/N*|*Stock Market Indices*|*Commodities*|*Bonds*|
 |-----|----------------------|----------------------|----------------------|
@@ -76,4 +71,44 @@ The list of assets covered in our application is shown below:
 |13|Korea|||
 |14|India|||
 
+# 6.0 Data
+
+Open, High, Low, Close, Volume
+	
+# 7.0 Methodology / Storyboard
+
+## 7.1 Exploratory Data Analysis
+**Key visualizations and analysis of key financial asset returns metrics**
+
+
+## 7.2 Time-Series Forecasting
+**Predicting financial asset prices using an ARIMA model**
+
+
+## 7.3 Time-Series Clustering
+**Clustering financial assets based on historical returns**
+
+
+# 8.0 Tools and Packages 
+
+1. [tidyverse: https://www.tidyverse.org/](https://www.tidyverse.org/)
+2. [dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
+3. [TTR: https://cran.r-project.org/web/packages/TTR/index.html](https://cran.r-project.org/web/packages/TTR/index.html)
+4. [plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly](https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly)
+5. [ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3)
+6. [Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0](https://www.rdocumentation.org/packages/shiny/versions/1.6.0)
+7. [dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1](https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1)
+8. [dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6](https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6)
+9. [tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)
+
+
+# 9.0 References
+
+1. [A benchmark study on time series clustering](https://www.sciencedirect.com/science/article/pii/S2666827020300013)
+
+2. [A Scalable Method for Time Series Clustering](https://robjhyndman.com/papers/wang.pdf) 
+
+3. [Technical Analysis with R](https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/)
+
+4. [Examination of the profitability of technical analysis based on moving average strategies in BRICS](https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z)
 
