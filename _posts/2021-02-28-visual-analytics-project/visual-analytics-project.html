@@ -1601,9 +1601,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </tbody>
 </table>
 <h1 id="data">4.0 Data</h1>
-<p>Open, High, Low, Close, Volume</p>
+<p>Open, High, Low, Close</p>
 <h1 id="methodology-storyboard">5.0 Methodology / Storyboard</h1>
-<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are some of our application features and some ways that our application can help our users:</p>
+<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users.</p>
 <h2 id="exploratory-data-analysis">5.1 Exploratory Data Analysis</h2>
 <p><strong>Key visualizations and analysis of key financial asset returns metrics</strong></p>
 <ul>
@@ -1624,6 +1624,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3 id="overlay-of-key-events">5.1.2 Overlay of key events</h3>
 <h2 id="time-series-forecasting">5.2 Time-Series Forecasting</h2>
 <p><strong>Predicting financial asset prices using an ARIMA model</strong></p>
+<p>ARIMA is an acronym that stands for AutoRegressive Integrated Moving Average. It is a class of model that captures a suite of different standard temporal structures in time series data.</p>
+<ul>
+<li><p>AR: Autoregression. A regression model that uses the dependencies between an observation and a number of lagged observations.</p></li>
+<li><p>I: Integrated. To make the time series stationary by measuring the differences of observations at different time.</p></li>
+<li><p>MA: Moving Average. An approach that takes into accounts the dependency between observations and the residual error terms when a moving average model is used to the lagged observations (q).</p></li>
+</ul>
+<p>Along with various parameters to be tuned, an ARIMA model uses purely price action data for forecasting future prices.</p>
+<p>The general form of an ARIMA model is denoted as ARIMA (p, q, d). With seasonal time series data, it is likely that short-run non-seasonal components contribute to the model. ARIMA model is typically represented as ARIMA (p, q, d), where: —</p>
+<ul>
+<li>p is the number of lag observations utilized in training the model (i.e., lag order).</li>
+<li>d is the number of times differencing is applied (i.e. the degree of differencing).</li>
+<li>q is known as the size of the moving average window (i.e., order of moving average).</li>
+</ul>
+<p><strong><em>Possible insights:</em></strong> <em>Forecast what are the likely price movements in the period ahead in order to identify optimal entry points</em></p>
 <h2 id="time-series-clustering">5.3 Time-Series Clustering</h2>
 <p><strong>Clustering financial assets based on historical returns</strong></p>
 <p>Time series clustering is to partition time series data into groups based on similarity or distance, so that time series in the same cluster are similar. Dynamic Time Warping (DTW) is used as the similarity/distance metric and finds optimal alignment between two time series.</p>
@@ -1632,18 +1646,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p>The second step, use existing clustering techniques, such as k-means, hierarchical clustering, density-based clustering or subspace clustering, to find clustering structures.</p></li>
 <li><p>The final result will then be presented on the visualization.</p></li>
 </ol>
-<p><em>Possible insight - Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.</em></p>
+<p><strong><em>Possible insights:</em></strong> <em>Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.</em></p>
 <h1 id="tools-and-packages">6.0 Tools and Packages</h1>
 <ol type="1">
-<li><a href="https://www.tidyverse.org/">tidyverse: https://www.tidyverse.org/</a></li>
-<li><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8</a></li>
-<li><a href="https://cran.r-project.org/web/packages/TTR/index.html">TTR: https://cran.r-project.org/web/packages/TTR/index.html</a></li>
-<li><a href="https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly">plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly</a></li>
-<li><a href="https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3">ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3</a></li>
-<li><a href="https://www.rdocumentation.org/packages/shiny/versions/1.6.0">Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0</a></li>
-<li><a href="https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1">dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1</a></li>
-<li><a href="https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6">dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6</a></li>
-<li><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html</a></li>
+<li><p><a href="https://www.tidyverse.org/">tidyverse: https://www.tidyverse.org/</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8</a></p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/TTR/index.html">TTR: https://cran.r-project.org/web/packages/TTR/index.html</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly">plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3">ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/shiny/versions/1.6.0">Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1">dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1</a></p></li>
+<li><p><a href="https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6">dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6</a></p></li>
+<li><p><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html</a></p></li>
 </ol>
 <h1 id="references">7.0 References</h1>
 <ol type="1">
@@ -1651,6 +1665,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><p><a href="https://robjhyndman.com/papers/wang.pdf">A Scalable Method for Time Series Clustering</a></p></li>
 <li><p><a href="https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/">Technical Analysis with R</a></p></li>
 <li><p><a href="https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z">Examination of the profitability of technical analysis based on moving average strategies in BRICS</a></p></li>
+<li><p><a href="https://ijssst.info/Vol-15/No-4/data/4923a105.pdf">Stock Price Prediction Using the ARIMA Model</a></p></li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

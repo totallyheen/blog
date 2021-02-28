@@ -54,11 +54,11 @@ This project aims to utilise various R packages, mainly tidyverse, TTR and dtwcl
 
 # 4.0 Data
 
-Open, High, Low, Close, Volume
+Open, High, Low, Close
 	
 # 5.0 Methodology / Storyboard
 
-The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. These are some of our application features and some ways that our application can help our users:
+The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users.
 
 
 ## 5.1 Exploratory Data Analysis
@@ -89,7 +89,23 @@ On top of displaying historical price trends, our dashboard will include visuali
 ## 5.2 Time-Series Forecasting
 **Predicting financial asset prices using an ARIMA model**
 
+ARIMA is an acronym that stands for AutoRegressive Integrated Moving Average. It is a class of model that captures a suite of different standard temporal structures in time series data.
 
+  - AR: Autoregression. A regression model that uses the dependencies between an observation and a number of lagged observations.
+
+  - I: Integrated. To make the time series stationary by measuring the differences of observations at different time.
+
+  - MA: Moving Average. An approach that takes into accounts the dependency between observations and the residual error terms when a moving average model is     used to the lagged observations (q).
+
+Along with various parameters to be tuned, an ARIMA model uses purely price action data for forecasting future prices.
+
+The general form of an ARIMA model is denoted as ARIMA (p, q, d). With seasonal time series data, it is likely that short-run non-seasonal components contribute to the model. ARIMA model is typically represented as ARIMA (p, q, d), where: —
+
+  - p is the number of lag observations utilized in training the model (i.e., lag order).
+  - d is the number of times differencing is applied (i.e. the degree of differencing).
+  - q is known as the size of the moving average window (i.e., order of moving average).
+
+***Possible insights:*** *Forecast what are the likely price movements in the period ahead in order to identify optimal entry points*
 
 
 ## 5.3 Time-Series Clustering
@@ -103,18 +119,26 @@ Time series clustering is to partition time series data into groups based on sim
 
 3. The final result will then be presented on the visualization.
 
-*Possible insight - Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.*
+***Possible insights:*** *Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.*
 
 # 6.0 Tools and Packages 
 
 1. [tidyverse: https://www.tidyverse.org/](https://www.tidyverse.org/)
+
 2. [dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
+
 3. [TTR: https://cran.r-project.org/web/packages/TTR/index.html](https://cran.r-project.org/web/packages/TTR/index.html)
+
 4. [plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly](https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly)
+
 5. [ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3)
+
 6. [Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0](https://www.rdocumentation.org/packages/shiny/versions/1.6.0)
+
 7. [dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1](https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1)
+
 8. [dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6](https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6)
+
 9. [tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)
 
 
@@ -127,4 +151,6 @@ Time series clustering is to partition time series data into groups based on sim
 3. [Technical Analysis with R](https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/)
 
 4. [Examination of the profitability of technical analysis based on moving average strategies in BRICS](https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z)
+
+5. [Stock Price Prediction Using the ARIMA Model](https://ijssst.info/Vol-15/No-4/data/4923a105.pdf)
 
