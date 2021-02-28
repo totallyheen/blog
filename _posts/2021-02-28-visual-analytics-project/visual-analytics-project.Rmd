@@ -56,9 +56,9 @@ This project aims to utilise various R packages, mainly tidyverse, TTR and dtwcl
 
 Open, High, Low, Close
 	
-# 5.0 Methodology / Storyboard
+# 5.0 Application Features
 
-The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users.
+The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users. The application itself is split up into 3 main sections address different parts of the investing process.
 
 
 ## 5.1 Exploratory Data Analysis
@@ -123,23 +123,17 @@ Time series clustering is to partition time series data into groups based on sim
 
 # 6.0 Tools and Packages 
 
-1. [tidyverse: https://www.tidyverse.org/](https://www.tidyverse.org/)
-
-2. [dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)
-
-3. [TTR: https://cran.r-project.org/web/packages/TTR/index.html](https://cran.r-project.org/web/packages/TTR/index.html)
-
-4. [plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly](https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly)
-
-5. [ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3)
-
-6. [Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0](https://www.rdocumentation.org/packages/shiny/versions/1.6.0)
-
-7. [dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1](https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1)
-
-8. [dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6](https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6)
-
-9. [tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)
+|*S/N*|*Package*|*Documentation*|
+|-----|-----------------------------------------|-----------------------------------------|
+|1|tidyverse|[https://www.tidyverse.org/](https://www.tidyverse.org/)|
+|2|dplyr|[https://www.rdocumentation.org/packages/dplyr/versions/0.7.8](https://www.rdocumentation.org/packages/dplyr/versions/0.7.8)|
+|3|TTR|[https://cran.r-project.org/web/packages/TTR/index.html](https://cran.r-project.org/web/packages/TTR/index.html)|
+|4|plotly|[https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly](https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly)|
+|5|ggplot2|[https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3](https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3)|
+|6|Shiny|[https://www.rdocumentation.org/packages/shiny/versions/1.6.0](https://www.rdocumentation.org/packages/shiny/versions/1.6.0)|
+|7|dtwcluster|[https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1](https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1)|
+|8|dygraphs|[https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6](https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6)|
+|9|tidyquant|[https://cran.r-project.org/web/packages/tidyquant/index.html](https://cran.r-project.org/web/packages/tidyquant/index.html)|
 
 
 # 7.0 References

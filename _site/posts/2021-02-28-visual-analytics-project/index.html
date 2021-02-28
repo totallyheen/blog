@@ -2107,7 +2107,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#motivation-and-objectives">2.0 Motivation and Objectives</a></li>
 <li><a href="#scope">3.0 Scope</a></li>
 <li><a href="#data">4.0 Data</a></li>
-<li><a href="#methodology-storyboard">5.0 Methodology / Storyboard</a>
+<li><a href="#application-features">5.0 Application Features</a>
 <ul>
 <li><a href="#exploratory-data-analysis">5.1 Exploratory Data Analysis</a></li>
 <li><a href="#time-series-forecasting">5.2 Time-Series Forecasting</a></li>
@@ -2224,8 +2224,8 @@ document.addEventListener('DOMContentLoaded', function() {
 </table>
 <h1 id="data">4.0 Data</h1>
 <p>Open, High, Low, Close</p>
-<h1 id="methodology-storyboard">5.0 Methodology / Storyboard</h1>
-<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users.</p>
+<h1 id="application-features">5.0 Application Features</h1>
+<p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users. The application itself is split up into 3 main sections address different parts of the investing process.</p>
 <h2 id="exploratory-data-analysis">5.1 Exploratory Data Analysis</h2>
 <p><strong>Key visualizations and analysis of key financial asset returns metrics</strong></p>
 <ul>
@@ -2270,17 +2270,67 @@ document.addEventListener('DOMContentLoaded', function() {
 </ol>
 <p><strong><em>Possible insights:</em></strong> <em>Time series in the same cluster are likely to undergo similar cycles and risks, which means that users will be exposed to higher risks if he/she is heavily invested in one cluster.</em></p>
 <h1 id="tools-and-packages">6.0 Tools and Packages</h1>
-<ol type="1">
-<li><p><a href="https://www.tidyverse.org/">tidyverse: https://www.tidyverse.org/</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8">dplyr: https://www.rdocumentation.org/packages/dplyr/versions/0.7.8</a></p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/TTR/index.html">TTR: https://cran.r-project.org/web/packages/TTR/index.html</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly">plotly: https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3">ggplot2: https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/shiny/versions/1.6.0">Shiny: https://www.rdocumentation.org/packages/shiny/versions/1.6.0</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1">dtwcluster: https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6">dygraphs: https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6</a></p></li>
-<li><p><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">tidyquant: https://cran.r-project.org/web/packages/tidyquant/index.html</a></p></li>
-</ol>
+<table>
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 47%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><em>S/N</em></th>
+<th><em>Package</em></th>
+<th><em>Documentation</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>tidyverse</td>
+<td><a href="https://www.tidyverse.org/">https://www.tidyverse.org/</a></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>dplyr</td>
+<td><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.7.8">https://www.rdocumentation.org/packages/dplyr/versions/0.7.8</a></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>TTR</td>
+<td><a href="https://cran.r-project.org/web/packages/TTR/index.html">https://cran.r-project.org/web/packages/TTR/index.html</a></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>plotly</td>
+<td><a href="https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly">https://www.rdocumentation.org/packages/plotly/versions/4.9.3/topics/plot_ly</a></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>ggplot2</td>
+<td><a href="https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3">https://www.rdocumentation.org/packages/ggplot2/versions/3.3.3</a></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Shiny</td>
+<td><a href="https://www.rdocumentation.org/packages/shiny/versions/1.6.0">https://www.rdocumentation.org/packages/shiny/versions/1.6.0</a></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>dtwcluster</td>
+<td><a href="https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1">https://www.rdocumentation.org/packages/dtwclust/versions/3.1.1</a></td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>dygraphs</td>
+<td><a href="https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6">https://www.rdocumentation.org/packages/dygraphs/versions/1.1.1.6</a></td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>tidyquant</td>
+<td><a href="https://cran.r-project.org/web/packages/tidyquant/index.html">https://cran.r-project.org/web/packages/tidyquant/index.html</a></td>
+</tr>
+</tbody>
+</table>
 <h1 id="references">7.0 References</h1>
 <ol type="1">
 <li><p><a href="https://www.sciencedirect.com/science/article/pii/S2666827020300013">A benchmark study on time series clustering</a></p></li>
