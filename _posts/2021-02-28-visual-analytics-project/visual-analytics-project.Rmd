@@ -145,11 +145,11 @@ Time series clustering is to partition time series data into groups based on sim
 
 1. [*A benchmark study on time series clustering*](https://www.sciencedirect.com/science/article/pii/S2666827020300013)
 
-2. [A Scalable Method for Time Series Clustering](https://robjhyndman.com/papers/wang.pdf) 
+2. [*A Scalable Method for Time Series Clustering*](https://robjhyndman.com/papers/wang.pdf) 
 
-3. [Technical Analysis with R](https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/)
+3. [*Technical Analysis with R*](https://bookdown.org/kochiuyu/technical-analysis-with-r-second-edition/)
 
-4. [Examination of the profitability of technical analysis based on moving average strategies in BRICS](https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z)
+4. [*Examination of the profitability of technical analysis based on moving average strategies in BRICS*](https://jfin-swufe.springeropen.com/articles/10.1186/s40854-018-0087-z)
 
-5. [Stock Price Prediction Using the ARIMA Model](https://ijssst.info/Vol-15/No-4/data/4923a105.pdf)
+5. [*Stock Price Prediction Using the ARIMA Model*](https://ijssst.info/Vol-15/No-4/data/4923a105.pdf)
 
