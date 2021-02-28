@@ -50,4 +50,30 @@ On top of displaying historical price trends, our dashboard will include visuali
   - Targeted technical analysis on selected financial assets
   - Callout of various macro events
 
+# 5.0 Scope
+
+## 5.1 Data Attributes
+	Open, High, Low, Close, Volume
+
+
+## 5.2 Financial Asset Universe
+The list of assets covered in our application is shown below:
+
+|*S/N*|*Stock Market Indices*|*Commodities*|*Bonds*|
+|-----|----------------------|----------------------|----------------------|
+|1|US|Gold|Investment Grade|
+|2|UK|Silver|High-Yield|
+|3|Germany|Copper||
+|4|France|Iron||
+|5|Italy|Natural Gas||
+|6|Spain|Crude Oil||
+|7|Brazil|||
+|8|Singapore|||
+|9|Hong Kong|||
+|10|Japan|||
+|11|China|||
+|12|Australia|||
+|13|Korea|||
+|14|India|||
+
 
