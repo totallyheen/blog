@@ -1601,44 +1601,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </tbody>
 </table>
 <h1 id="data">4.0 Data</h1>
-<p>The data source of our project will be Bloomberg and all data will be extracted in a data-dump through Bloomberg terminal. The data extracted will be from Jan 1 2021 through to present day.</p>
-<p>The main attributes extracted will be:</p>
-<ol type="1">
-<li><p>Open Price : The Stock at which opens at the start of market</p></li>
-<li><p>High price : The particular stock which made high during that particular day</p></li>
-<li><p>Low Price : The Particular stock which made Low during that particular day</p></li>
-<li><p>Close Price : The stock closing at the end of the Market hours</p></li>
-</ol>
+<p>We will extract all historical price data from Jan 1 1997 to Dec 31 2020 for our selected assets using Bloomberg Terminal. The fields which we will extract data for include:</p>
+<p>Open Price: The asset’s opening price on a trading day</p>
+<p>High Price: The asset’s highest price on a trading day</p>
+<p>Low Price: The asset’s lowest price on a trading day</p>
+<p>Close Price: The asset’s closing price on a trading day</p>
 <h1 id="application-features">5.0 Application Features</h1>
 <p>The main target audience for our application are prospective investors who are looking for a tool to help them build their portfolio and diversify their holdings. This section explores features of our application and some ways it can help our users. The application itself is split up into 3 main sections address different parts of the investing process.</p>
 <h2 id="exploratory-data-analysis-eda">5.1 Exploratory Data Analysis (EDA)</h2>
 <p><strong>Base visualizations and analysis of key financial asset returns metrics</strong></p>
 <p>Exploratory Data Analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods. It will be useful for potential investors to have a visual tool to understand various key metrics when analysing financial assets. Some of the key metrics our application aims to help users visualize include:</p>
 <ol type="1">
-<li>Correlation</li>
-</ol>
+<li>Correlation
 <ul>
 <li>Correlation matrix to show correlation between selected assets at different time horizons</li>
-</ul>
-<ol start="2" type="1">
-<li>Distribution of returns</li>
-</ol>
+</ul></li>
+<li>Distribution of returns
 <ul>
 <li>Histogram showing distribution of returns for different assets will allow users to visualize volatility</li>
-</ul>
-<ol start="3" type="1">
-<li>Risk to Reward</li>
-</ol>
+</ul></li>
+<li>Risk to Reward
 <ul>
 <li>Purely looking at gross returns often does not paint the full picture as most high-returns assets come with greater volatility. Metrics such as Sharpe - Ratio will allow users to get a better sense of the Risk:Reward profile of different assets</li>
-</ul>
-<ol start="4" type="1">
-<li>Technical indicators</li>
-</ol>
+</ul></li>
+<li>Technical indicators
 <ul>
 <li>Technical analysis is a trading discipline employed to evaluate investments and identify trading opportunities by analyzing statistical trends gathered from trading activity, such as price movement and volume.</li>
 <li>Our application will categorize indicators based on their category (trend, momentum or volatility) so as to allow users to know precisely what the indicator is looking at. This is in contrast to many existing websites where users have a whole plethora of indicators at their disposal but not knowing what they are actually evaluating.</li>
-</ul>
+</ul></li>
+</ol>
 <p><strong><em>Possible insights:</em></strong> <em>Diversification through identifying weakly correlated markets and indices. This allows the user to ‘put their eggs across different baskets’ and spread out their risk.</em></p>
 <h2 id="time-series-forecasting">5.2 Time-Series Forecasting</h2>
 <p><strong>Predicting financial asset prices using an ARIMA model</strong></p>
