@@ -20,26 +20,27 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -48,9 +49,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -115,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","2Dataprep_7.jpg","2Dataprep_8.jpg","3Dataprep_1.jpg","3Dataprep_2.jpg","3Dataprep_3.jpg","3Dataprep_4.jpg","3Dataprep_5.jpg","3Dataprep_6.jpg","completed.png","dashboard_1.jpg","dashboard_2.jpg","dashboard_3.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","Dataprep_9.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","insights_1.jpg","insights_2.jpg","insights_3.jpg","Original_Viz.jpg","sketch.jpg","sketch1.jpg"]}
+  {"type":"character","attributes":{},"value":["2Dataprep_1.jpg","2Dataprep_2.jpg","2Dataprep_3.jpg","2Dataprep_4.jpg","2Dataprep_5.jpg","2Dataprep_6.jpg","2Dataprep_7.jpg","2Dataprep_8.jpg","3Dataprep_1.jpg","3Dataprep_2.jpg","3Dataprep_3.jpg","3Dataprep_4.jpg","3Dataprep_5.jpg","3Dataprep_6.jpg","completed.png","dashboard_1.jpg","dashboard_2.jpg","dashboard_3.jpg","Dataprep_1.jpg","Dataprep_2.jpg","Dataprep_3.jpg","Dataprep_4.jpg","Dataprep_5.jpg","Dataprep_6.jpg","Dataprep_7.jpg","Dataprep_8.jpg","Dataprep_9.jpg","dataviz-makeover-1_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-1_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-1_files/distill-2.2.21/template.v2.js","dataviz-makeover-1_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-1_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-1_files/popper-2.6.0/popper.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-1_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.css","dataviz-makeover-1_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-1_files/webcomponents-2.0.0/webcomponents.js","insights_1.jpg","insights_2.jpg","insights_3.jpg","Original_Viz.jpg","sketch.jpg","sketch1.jpg"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -453,8 +454,15 @@ d-title {
   top: 0;
 }
 
+/* adjust viewport for navbar height */
+/* helps vertically center bootstrap (non-distill) content */
+.min-vh-100 {
+  min-height: calc(100vh - 100px) !important;
+}
+
 </style>
 
+<script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
 <link href="../../site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
 <link href="../../site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
 <script src="../../site_libs/headroom-0.9.4/headroom.min.js"></script>
@@ -562,19 +570,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
           var results = fuse.search(query, searchOptions);
           callback(results
             .map(function(result) { return result.item; })
-            .filter(function(item) { return !!item.description; })
           );
         },
         templates: {
           suggestion: function(suggestion) {
+            var img = suggestion.preview && Object.keys(suggestion.preview).length > 0
+              ? `<img src="${offsetURL(suggestion.preview)}"</img>`
+              : '';
             var html = `
               <div class="search-item">
                 <h3>${suggestion.title}</h3>
                 <div class="search-item-description">
-                  ${suggestion.description}
+                  ${suggestion.description || ''}
                 </div>
                 <div class="search-item-preview">
-                  <img src="${suggestion.preview ? offsetURL(suggestion.preview) : ''}"</img>
+                  ${img}
                 </div>
               </div>
             `;
@@ -597,6 +607,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 
 <style type="text/css">
+
+.nav-search {
+  font-size: x-small;
+}
 
 /* Algolioa Autocomplete */
 
@@ -672,6 +686,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 }
 
 .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .search-item h3 {
+  font-size: 1rem;
   margin-block-start: 0;
   margin-block-end: 5px;
 }
@@ -899,6 +914,11 @@ d-article pre a:hover {
   text-decoration: underline;
 }
 
+d-article details {
+  grid-column: text;
+  margin-bottom: 0.8em;
+}
+
 @media(min-width: 768px) {
 
 d-article pre,
@@ -1053,6 +1073,17 @@ d-article .citation {
 
 div.hanging-indent{
   margin-left: 1em; text-indent: -1em;
+}
+
+/* Citation hover box */
+
+.tippy-box[data-theme~=light-border] {
+  background-color: rgba(250, 250, 250, 0.95);
+}
+
+.tippy-content > p {
+  margin-bottom: 0;
+  padding: 2px;
 }
 
 
@@ -1720,7 +1751,7 @@ function init_distill() {
     var layout = $(this).attr('data-layout');
 
     // apply layout to markdown level block elements
-    var elements = $(this).children().not('div.sourceCode, pre, script');
+    var elements = $(this).children().not('details, div.sourceCode, pre, script');
     elements.each(function(i, el) {
       var layout_div = $('<div class="' + layout + '"></div>');
       if (layout_div.hasClass('shaded')) {
@@ -1835,6 +1866,20 @@ function init_distill() {
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
+
+    // hoverable references
+    $('span.citation[data-cites]').each(function() {
+      var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+      window.tippy(this, {
+        allowHTML: true,
+        content: refHtml,
+        maxWidth: 500,
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'light-border',
+        placement: 'bottom-start'
+      });
+    });
 
     // clear polling timer
     clearInterval(tid);
@@ -1995,7 +2040,12 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!--/radix_placeholder_distill-->
+  <script src="../../site_libs/header-attrs-2.7/header-attrs.js"></script>
   <script src="../../site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <script src="../../site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="../../site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="../../site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="../../site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
   <script src="../../site_libs/anchor-4.2.2/anchor.min.js"></script>
   <script src="../../site_libs/bowser-1.9.3/bowser.min.js"></script>
   <script src="../../site_libs/webcomponents-2.0.0/webcomponents.js"></script>
@@ -2155,7 +2205,7 @@ Figure 3: The improved data visualization
 <h2 id="steps-taken-for-first-visualization">4.2 Steps taken for first Visualization</h2>
 <center>
 <figure>
-<img src="Dataprep_1.jpg" alt="Figure 4: Original (TOTAL) Dataset in table 7" /><figcaption>Figure 4: Original (TOTAL) Dataset in table 7</figcaption>
+<img src="Dataprep_1.jpg" alt="Figure 4: Original (TOTAL) Dataset in table 7" /><figcaption aria-hidden="true">Figure 4: Original (TOTAL) Dataset in table 7</figcaption>
 </figure>
 </center>
 <ol type="1">
@@ -2165,7 +2215,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_2.jpg" alt="Figure 5: Remaining Dataset after trimming" style="width:20.0%" /><figcaption>Figure 5: Remaining Dataset after trimming</figcaption>
+<img src="Dataprep_2.jpg" style="width:20.0%" alt="Figure 5: Remaining Dataset after trimming" /><figcaption aria-hidden="true">Figure 5: Remaining Dataset after trimming</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -2173,7 +2223,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_3.jpg" alt="Figure 6: Data Imported into Tableau and their datatypes" style="width:30.0%" /><figcaption>Figure 6: Data Imported into Tableau and their datatypes</figcaption>
+<img src="Dataprep_3.jpg" style="width:30.0%" alt="Figure 6: Data Imported into Tableau and their datatypes" /><figcaption aria-hidden="true">Figure 6: Data Imported into Tableau and their datatypes</figcaption>
 </figure>
 </center>
 <ol start="5" type="1">
@@ -2182,7 +2232,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_4.jpg" alt="Figure 7: Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Figure 7: Dragging fields into rows and columns</figcaption>
+<img src="Dataprep_4.jpg" style="width:70.0%" alt="Figure 7: Dragging fields into rows and columns" /><figcaption aria-hidden="true">Figure 7: Dragging fields into rows and columns</figcaption>
 </figure>
 </center>
 <ol start="7" type="1">
@@ -2190,7 +2240,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_5.jpg" alt="Figure 8: Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Figure 8: Plotting the data for 2009 and 2019 on the same axes</figcaption>
+<img src="Dataprep_5.jpg" style="width:70.0%" alt="Figure 8: Plotting the data for 2009 and 2019 on the same axes" /><figcaption aria-hidden="true">Figure 8: Plotting the data for 2009 and 2019 on the same axes</figcaption>
 </figure>
 </center>
 <ol start="8" type="1">
@@ -2198,7 +2248,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_6.jpg" alt="Figure 9: Getting your bar chart color coded by year" style="width:70.0%" /><figcaption>Figure 9: Getting your bar chart color coded by year</figcaption>
+<img src="Dataprep_6.jpg" style="width:70.0%" alt="Figure 9: Getting your bar chart color coded by year" /><figcaption aria-hidden="true">Figure 9: Getting your bar chart color coded by year</figcaption>
 </figure>
 </center>
 <ol start="9" type="1">
@@ -2209,7 +2259,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_7.jpg" alt="Figure 10: Adding finishing touches and labels" style="width:70.0%" /><figcaption>Figure 10: Adding finishing touches and labels</figcaption>
+<img src="Dataprep_7.jpg" style="width:70.0%" alt="Figure 10: Adding finishing touches and labels" /><figcaption aria-hidden="true">Figure 10: Adding finishing touches and labels</figcaption>
 </figure>
 </center>
 <ol start="13" type="1">
@@ -2217,7 +2267,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_8.jpg" alt="Figure 11: Renaming the legend" style="width:60.0%" /><figcaption>Figure 11: Renaming the legend</figcaption>
+<img src="Dataprep_8.jpg" style="width:60.0%" alt="Figure 11: Renaming the legend" /><figcaption aria-hidden="true">Figure 11: Renaming the legend</figcaption>
 </figure>
 </center>
 <ol start="14" type="1">
@@ -2225,13 +2275,13 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="Dataprep_9.jpg" alt="Figure 12: Making the bar charts of similar size scales" style="width:60.0%" /><figcaption>Figure 12: Making the bar charts of similar size scales</figcaption>
+<img src="Dataprep_9.jpg" style="width:60.0%" alt="Figure 12: Making the bar charts of similar size scales" /><figcaption aria-hidden="true">Figure 12: Making the bar charts of similar size scales</figcaption>
 </figure>
 </center>
 <h2 id="steps-taken-for-second-visualization">4.3 Steps taken for second Visualization</h2>
 <center>
 <figure>
-<img src="2Dataprep_1.jpg" alt="Figure 13: Original Dataset in table 5" /><figcaption>Figure 13: Original Dataset in table 5</figcaption>
+<img src="2Dataprep_1.jpg" alt="Figure 13: Original Dataset in table 5" /><figcaption aria-hidden="true">Figure 13: Original Dataset in table 5</figcaption>
 </figure>
 </center>
 <ol type="1">
@@ -2241,7 +2291,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_2.jpg" alt="Figure 14: Remaining Dataset of labour force participation rates (%) after trimming" style="width:20.0%" /><figcaption>Figure 14: Remaining Dataset of labour force participation rates (%) after trimming</figcaption>
+<img src="2Dataprep_2.jpg" style="width:20.0%" alt="Figure 14: Remaining Dataset of labour force participation rates (%) after trimming" /><figcaption aria-hidden="true">Figure 14: Remaining Dataset of labour force participation rates (%) after trimming</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -2250,7 +2300,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_3.jpg" alt="Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship" style="width:90.0%" /><figcaption>Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship</figcaption>
+<img src="2Dataprep_3.jpg" style="width:90.0%" alt="Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship" /><figcaption aria-hidden="true">Figure 15: Importing T5_T into the same Tableau Workbook and creating a relationship</figcaption>
 </figure>
 </center>
 <ol start="6" type="1">
@@ -2260,7 +2310,7 @@ Figure 3: The improved data visualization
 <span class="math display">\[Resident Labour Force * Labour Force Participation Rate / 100\]</span>
 <center>
 <figure>
-<img src="2Dataprep_4.jpg" alt="Figure 16: Using calculated fields to find the actual number of people participating in the labour force" style="width:90.0%" /><figcaption>Figure 16: Using calculated fields to find the actual number of people participating in the labour force</figcaption>
+<img src="2Dataprep_4.jpg" style="width:90.0%" alt="Figure 16: Using calculated fields to find the actual number of people participating in the labour force" /><figcaption aria-hidden="true">Figure 16: Using calculated fields to find the actual number of people participating in the labour force</figcaption>
 </figure>
 </center>
 <ol start="8" type="1">
@@ -2268,7 +2318,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_5.jpg" alt="Figure 17: Dragging fields into rows and columns" style="width:70.0%" /><figcaption>Figure 17: Dragging fields into rows and columns</figcaption>
+<img src="2Dataprep_5.jpg" style="width:70.0%" alt="Figure 17: Dragging fields into rows and columns" /><figcaption aria-hidden="true">Figure 17: Dragging fields into rows and columns</figcaption>
 </figure>
 </center>
 <ol start="9" type="1">
@@ -2276,7 +2326,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_6.jpg" alt="Figure 18: Plotting the data for 2009 and 2019 on the same axes" style="width:70.0%" /><figcaption>Figure 18: Plotting the data for 2009 and 2019 on the same axes</figcaption>
+<img src="2Dataprep_6.jpg" style="width:70.0%" alt="Figure 18: Plotting the data for 2009 and 2019 on the same axes" /><figcaption aria-hidden="true">Figure 18: Plotting the data for 2009 and 2019 on the same axes</figcaption>
 </figure>
 </center>
 <ol start="10" type="1">
@@ -2285,7 +2335,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_7.jpg" alt="Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive" style="width:70.0%" /><figcaption>Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive</figcaption>
+<img src="2Dataprep_7.jpg" style="width:70.0%" alt="Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive" /><figcaption aria-hidden="true">Figure 19: Keeping colors consistent across visuals will make cross referencing intuitive</figcaption>
 </figure>
 </center>
 <ol start="12" type="1">
@@ -2296,7 +2346,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="2Dataprep_8.jpg" alt="Figure 20: Making the bar charts of similar size scales" style="width:70.0%" /><figcaption>Figure 20: Making the bar charts of similar size scales</figcaption>
+<img src="2Dataprep_8.jpg" style="width:70.0%" alt="Figure 20: Making the bar charts of similar size scales" /><figcaption aria-hidden="true">Figure 20: Making the bar charts of similar size scales</figcaption>
 </figure>
 </center>
 <h2 id="steps-taken-for-third-visualization">4.4 Steps taken for third visualization</h2>
@@ -2306,7 +2356,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="3Dataprep_1.jpg" alt="Figure 21: Creating a data table with resident labour force size" style="width:40.0%" /><figcaption>Figure 21: Creating a data table with resident labour force size</figcaption>
+<img src="3Dataprep_1.jpg" style="width:40.0%" alt="Figure 21: Creating a data table with resident labour force size" /><figcaption aria-hidden="true">Figure 21: Creating a data table with resident labour force size</figcaption>
 </figure>
 </center>
 <ol start="3" type="1">
@@ -2314,7 +2364,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="3Dataprep_2.jpg" alt="Figure 22: Converting data table to percentages of total" style="width:40.0%" /><figcaption>Figure 22: Converting data table to percentages of total</figcaption>
+<img src="3Dataprep_2.jpg" style="width:40.0%" alt="Figure 22: Converting data table to percentages of total" /><figcaption aria-hidden="true">Figure 22: Converting data table to percentages of total</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -2322,7 +2372,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="3Dataprep_3.jpg" alt="Figure 23: Grouping data together to align with the writeup" style="width:40.0%" /><figcaption>Figure 23: Grouping data together to align with the writeup</figcaption>
+<img src="3Dataprep_3.jpg" style="width:40.0%" alt="Figure 23: Grouping data together to align with the writeup" /><figcaption aria-hidden="true">Figure 23: Grouping data together to align with the writeup</figcaption>
 </figure>
 </center>
 <ol start="5" type="1">
@@ -2330,7 +2380,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="3Dataprep_4.jpg" alt="Figure 24: Renaming the grouped data" style="width:40.0%" /><figcaption>Figure 24: Renaming the grouped data</figcaption>
+<img src="3Dataprep_4.jpg" style="width:40.0%" alt="Figure 24: Renaming the grouped data" /><figcaption aria-hidden="true">Figure 24: Renaming the grouped data</figcaption>
 </figure>
 </center>
 <ol start="6" type="1">
@@ -2338,7 +2388,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="3Dataprep_5.jpg" alt="Figure 25: Renaming the grouped data" style="width:30.0%" /><figcaption>Figure 25: Renaming the grouped data</figcaption>
+<img src="3Dataprep_5.jpg" style="width:30.0%" alt="Figure 25: Renaming the grouped data" /><figcaption aria-hidden="true">Figure 25: Renaming the grouped data</figcaption>
 </figure>
 </center>
 <ol start="7" type="1">
@@ -2353,7 +2403,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="dashboard_1.jpg" alt="Figure 26: Initial Layout of the dashboard with reduced title font sizes" style="width:90.0%" /><figcaption>Figure 26: Initial Layout of the dashboard with reduced title font sizes</figcaption>
+<img src="dashboard_1.jpg" style="width:90.0%" alt="Figure 26: Initial Layout of the dashboard with reduced title font sizes" /><figcaption aria-hidden="true">Figure 26: Initial Layout of the dashboard with reduced title font sizes</figcaption>
 </figure>
 </center>
 <ol start="4" type="1">
@@ -2361,7 +2411,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="dashboard_2.jpg" alt="Figure 27: Removing a redundant legend" style="width:40.0%" /><figcaption>Figure 27: Removing a redundant legend</figcaption>
+<img src="dashboard_2.jpg" style="width:40.0%" alt="Figure 27: Removing a redundant legend" /><figcaption aria-hidden="true">Figure 27: Removing a redundant legend</figcaption>
 </figure>
 </center>
 <ol start="5" type="1">
@@ -2376,7 +2426,7 @@ Figure 3: The improved data visualization
 </ol>
 <center>
 <figure>
-<img src="dashboard_3.jpg" alt="Figure 28: Pulling in the visual on proportions" style="width:100.0%" /><figcaption>Figure 28: Pulling in the visual on proportions</figcaption>
+<img src="dashboard_3.jpg" style="width:100.0%" alt="Figure 28: Pulling in the visual on proportions" /><figcaption aria-hidden="true">Figure 28: Pulling in the visual on proportions</figcaption>
 </figure>
 </center>
 <ol start="7" type="1">
@@ -2388,21 +2438,21 @@ Figure 3: The improved data visualization
 <p>Workforce participation for 25 to 54 year olds is the highest and consistently above 80%. These groups form the biggest part of the residential workforce and also participate the most. This is important for Singapore’s economy as its biggest group of workers are consistently and actively participating in positive economic activity. This is also something to be concerned about, as this group of workers age, their workforce participation is likely to mirror that of the current older age groups. If this group of residents (the largest group) turn older and stop partcipating, it will have grave consequences for Singapore’s economy and signals the need for rejuvenation.</p>
 <center>
 <figure>
-<img src="insights_1.jpg" alt="Figure 29: The biggest group of workers participate actively in the workforce" style="width:70.0%" /><figcaption>Figure 29: The biggest group of workers participate actively in the workforce</figcaption>
+<img src="insights_1.jpg" style="width:70.0%" alt="Figure 29: The biggest group of workers participate actively in the workforce" /><figcaption aria-hidden="true">Figure 29: The biggest group of workers participate actively in the workforce</figcaption>
 </figure>
 </center>
 <h2 id="workforce-participation-changes-significantly-from-65">5.2 Workforce participation changes significantly from 65</h2>
 <p>The workforce participants in each age group usually account for the majority of resident workforce (i.e. &gt;50% as seen by the orange arrows). This is true until the age group of 65-69 (as marked out by the blue arrows). From here on, the work force participation drops significantly and goes below 50%. This is in line with what we can expect from Singapore’s offcial retirement age, currently set at 67 years old. With the retirement age expected to be raised till 70 years old in by 2030, the workforce participation picture is likely to change significantly from what we are seeing now.</p>
 <center>
 <figure>
-<img src="insights_2.jpg" alt="Figure 30: Workforce participation drops significantly after 65 years old." style="width:40.0%" /><figcaption>Figure 30: Workforce participation drops significantly after 65 years old.</figcaption>
+<img src="insights_2.jpg" style="width:40.0%" alt="Figure 30: Workforce participation drops significantly after 65 years old." /><figcaption aria-hidden="true">Figure 30: Workforce participation drops significantly after 65 years old.</figcaption>
 </figure>
 </center>
 <h2 id="insufficient-young-workers-to-replace-old-workers">5.3 Insufficient young workers to replace old workers</h2>
 <p>As can be clearly seen, large numbers of the workforce are growing old and retiring from the workforce. This means that a younger generation has to take over. The numbers of younger workers (15-24 year olds) have been stagnating from 2009 to 2019. This is to be expected from the low birth rates seen in Singapore, which also explains the need for influx of foreign workers to supplant the requirements of the economy.</p>
 <center>
 <figure>
-<img src="insights_3.jpg" alt="Figure 31: Stagnating growth in young residential workforce and participation" style="width:30.0%" /><figcaption>Figure 31: Stagnating growth in young residential workforce and participation</figcaption>
+<img src="insights_3.jpg" style="width:30.0%" alt="Figure 31: Stagnating growth in young residential workforce and participation" /><figcaption aria-hidden="true">Figure 31: Stagnating growth in young residential workforce and participation</figcaption>
 </figure>
 </center>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
