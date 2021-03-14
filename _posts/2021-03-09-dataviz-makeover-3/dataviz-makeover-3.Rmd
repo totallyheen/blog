@@ -1,0 +1,62 @@
+---
+title: "DataViz Makeover 3"
+description: |
+   A makeover of the data visualisations on Armed Conflict in Southeast Asia.  
+preview: 
+author:
+  - name: Yi Heen, Boey
+    url: https://www.linkedin.com/in/yiheen-boey/
+date: 03-09-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 3
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 1 - Critique the visualization
+
+
+
+### 1.1 Clarity
+
+| S/N |        Comments                         |   Suggested Improvements                |
+|-----|-----------------------------------------|-----------------------------------------|
+|C1|Points are plotted all across the map and it can hard to get a sense of severity or the number of incidents in each area. | Scale the points by size (e.g. Number of casualties) and make them transparent so underlying points can be seen. (Proportion Symbol Map). Alternatively, a chloropleth map can be used to show the differences in proportion/severity across regions.|
+|C2|The line-plots all have different vertical scales which can make it hard to compare event counts across different categories. | Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding|
+|C3|Horizontal axis labeled as 'Event Date' but events are plotted on a 'Year' axis.| Change axis label to 'Event Year'|
+
+
+
+
+
+
+### 1.2 Aesthetics
+
+| S/N |        Comments                         |   Suggested Improvements                |
+|-----|-----------------------------------------|-----------------------------------------|
+|A1|No vertical gridlines on line plots. This makes it hard to read the plots when they all share the horizontal axis at the bottom. |Include vertical gridlines to allow users to clearly identify the year in which the points are plotted|
+|A2|Points are only colour coded and hard to tell apart when overlapping and scrunched together. | Points should also be differentiated by shape to convey different categories. (Point Symbol Map) |
+|A3|Colours on the legend are not consistent throughout the dashboard.| For consistency sake, the line plots should have the same colour as the points on the map.|
+
+
+### 1.3 Interactivity
+
+| S/N |        Comments                         |   Suggested Improvements                |
+|-----|-----------------------------------------|-----------------------------------------|
+|I1|The map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.| Change filter to allow multiple selections. Continue the function where map re-centered around the filtered area. |
+|I2|There are a lot of data points that are unused from the dataset that can be plotted on the map such as *'sub-event type'* or *'actors'*| Create a tooltip to incorporate these data points.|
+|I3|There is no way to filter by *'event type'* or *'actors'*, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region. | Add in filtering by *'event type'* or *'actors'*|
+
+# 2 - The suggested visualization
+
+# 3 - The Visualization process
+
+# 4 - The improved data visualization
+
+# 5 - New Insights

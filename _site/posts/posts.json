@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-03-09-dataviz-makeover-3/",
+    "title": "DataViz Makeover 3",
+    "description": "A makeover of the data visualisations on Armed Conflict in Southeast Asia.",
+    "author": [
+      {
+        "name": "Yi Heen, Boey",
+        "url": "https://www.linkedin.com/in/yiheen-boey/"
+      }
+    ],
+    "date": "2021-03-09",
+    "categories": [],
+    "contents": "\r\n\r\nContents\r\n1 - Critique the visualization\r\n1.1 Clarity\r\n1.2 Aesthetics\r\n1.3 Interactivity\r\n\r\n2 - The suggested visualization\r\n3 - The Visualization process\r\n4 - The improved data visualization\r\n5 - New Insights\r\n\r\n1 - Critique the visualization\r\n1.1 Clarity\r\nS/N\r\nComments\r\nSuggested Improvements\r\nC1\r\nPoints are plotted all across the map and it can hard to get a sense of severity or the number of incidents in each area.\r\nScale the points by size (e.g. Number of casualties) and make them transparent so underlying points can be seen. (Proportion Symbol Map). Alternatively, a chloropleth map can be used to show the differences in proportion/severity across regions.\r\nC2\r\nThe line-plots all have different vertical scales which can make it hard to compare event counts across different categories.\r\nExplore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding\r\nC3\r\nHorizontal axis labeled as ‘Event Date’ but events are plotted on a ‘Year’ axis.\r\nChange axis label to ‘Event Year’\r\n1.2 Aesthetics\r\nS/N\r\nComments\r\nSuggested Improvements\r\nA1\r\nNo vertical gridlines on line plots. This makes it hard to read the plots when they all share the horizontal axis at the bottom.\r\nInclude vertical gridlines to allow users to clearly identify the year in which the points are plotted\r\nA2\r\nPoints are only colour coded and hard to tell apart when overlapping and scrunched together.\r\nPoints should also be differentiated by shape to convey different categories. (Point Symbol Map)\r\nA3\r\nColours on the legend are not consistent throughout the dashboard.\r\nFor consistency sake, the line plots should have the same colour as the points on the map.\r\n1.3 Interactivity\r\nS/N\r\nComments\r\nSuggested Improvements\r\nI1\r\nThe map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.\r\nChange filter to allow multiple selections. Continue the function where map re-centered around the filtered area.\r\nI2\r\nThere are a lot of data points that are unused from the dataset that can be plotted on the map such as ‘sub-event type’ or ‘actors’\r\nCreate a tooltip to incorporate these data points.\r\nI3\r\nThere is no way to filter by ‘event type’ or ‘actors’, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region.\r\nAdd in filtering by ‘event type’ or ‘actors’\r\n2 - The suggested visualization\r\n3 - The Visualization process\r\n4 - The improved data visualization\r\n5 - New Insights\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-03-14T16:47:15+08:00",
+    "input_file": "dataviz-makeover-3.utf8.md"
+  },
+  {
     "path": "posts/2021-02-28-visual-analytics-project/",
     "title": "Project Proposal",
     "description": "Investing 101: A visual and predictive guide for the rookie investor",
