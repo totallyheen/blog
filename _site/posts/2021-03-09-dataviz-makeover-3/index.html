@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["critique.png","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2110,13 +2110,26 @@ document.addEventListener('DOMContentLoaded', function() {
 <li><a href="#interactivity">1.3 Interactivity</a></li>
 </ul></li>
 <li><a href="#the-suggested-visualization">2 - The suggested visualization</a></li>
-<li><a href="#the-visualization-process">3 - The Visualization process</a></li>
+<li><a href="#the-visualization-process">3 - The Visualization process</a>
+<ul>
+<li><a href="#steps-taken-for-first-visualization-map">3.1 Steps taken for first visualization (Map)</a></li>
+<li><a href="#steps-taken-for-second-visualization-line-graph">3.2 Steps taken for second visualization (Line Graph)</a></li>
+<li><a href="#steps-taken-for-second-visualization-line-graph-1">3.2 Steps taken for second visualization (Line Graph)</a></li>
+</ul></li>
 <li><a href="#the-improved-data-visualization">4 - The improved data visualization</a></li>
 <li><a href="#new-insights">5 - New Insights</a></li>
 </ul>
 </nav>
 </div>
 <h1 id="critique-the-visualization">1 - Critique the visualization</h1>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<img src="critique.png" alt="The Original Visualization (with Markups)" width="100%" />
+<p class="caption">
+Figure 1: The Original Visualization (with Markups)
+</p>
+</div>
+</div>
 <h3 id="clarity">1.1 Clarity</h3>
 <table>
 <colgroup>
@@ -2140,12 +2153,17 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr class="even">
 <td>C2</td>
 <td>The line-plots all have different vertical scales which can make it hard to compare event counts across different categories.</td>
-<td>Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding</td>
+<td>Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding. This allows users to compare the counts across different event types as well.</td>
 </tr>
 <tr class="odd">
 <td>C3</td>
 <td>Horizontal axis labeled as ‘Event Date’ but events are plotted on a ‘Year’ axis.</td>
 <td>Change axis label to ‘Event Year’</td>
+</tr>
+<tr class="even">
+<td>C4</td>
+<td>The vertical axis label <em>‘Count of Sheet1’</em> does not convey any meaningful message</td>
+<td>Replace the label with <em>‘Event Count’</em></td>
 </tr>
 </tbody>
 </table>
@@ -2199,7 +2217,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <tr class="odd">
 <td>I1</td>
 <td>The map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.</td>
-<td>Change filter to allow multiple selections. Continue the function where map re-centered around the filtered area.</td>
+<td>Change filter to allow multiple selections. Continue using the function where map re-centered around the filtered area.</td>
 </tr>
 <tr class="even">
 <td>I2</td>
@@ -2208,13 +2226,57 @@ document.addEventListener('DOMContentLoaded', function() {
 </tr>
 <tr class="odd">
 <td>I3</td>
-<td>There is no way to filter by <em>‘event type’</em> or <em>‘actors’</em>, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region.</td>
-<td>Add in filtering by <em>‘event type’</em> or <em>‘actors’</em></td>
+<td>There is no way to filter by <em>‘Event type’</em> or <em>‘actors’</em>, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region.</td>
+<td>Add in filtering by <em>‘Event type’</em> or <em>‘actors’</em></td>
+</tr>
+<tr class="even">
+<td>I4</td>
+<td>There is no way to filter by <em>‘Event date’</em> this could be important information to see if events on the map are changing over time.</td>
+<td>Add in filtering by <em>‘event date’</em></td>
 </tr>
 </tbody>
 </table>
 <h1 id="the-suggested-visualization">2 - The suggested visualization</h1>
 <h1 id="the-visualization-process">3 - The Visualization process</h1>
+<p><em>The Data Source used is from the The Armed Conflict Location &amp; Event Data Project (ACLED). The data can be found <a href="https://acleddata.com/#/dashboard">here</a>.</em></p>
+<h3 id="steps-taken-for-first-visualization-map">3.1 Steps taken for first visualization (Map)</h3>
+<ol type="1">
+<li><p>Download data file with an .xlsx file format.</p></li>
+<li><p>Load file into Tableau Desktop</p></li>
+<li><p>Check and ensure that data-types for geographical information are correctly identified.</p></li>
+<li><p>Drag the <em>logtitude</em> and <em>latitude</em> fields on to the column and row shelves respectively.</p></li>
+<li><p>Drag <em>Event Type</em> and <em>Event Id Cnty</em> to the Marks card.</p></li>
+<li><p>Drag <em>Fatalities</em> to the size and make the measure a <em>SUM</em></p></li>
+<li><p>Change the range of the size legend from <em>0 - 243</em> to <em>0 - 250</em> to have consistent ranges.</p></li>
+<li><p>Rename the title of the size legend from <em>SUM(Fatalities)</em> to <em>Number of Fatalities</em></p></li>
+<li><p>Decrease the opacity of the circles in the colour menu from 100% to 40% to allow overlapping points to show.</p></li>
+<li><p>Drag the <em>Event Date</em> on to the filter pane. Select <em>Years</em> as filter method and select all for filtering.</p></li>
+<li><p>Drag <em>Country</em> on to the filter pane. Select all countries for filtering.</p></li>
+<li><p>Drag <em>Event Type</em> on to the filter pane. Select all types for filtering.</p></li>
+<li><p>Drag <em>Sub Event Type</em> on to the filter pane. Select all types for filtering.</p></li>
+<li><p>Drag <em>Admin1</em> on to the filter pane. Select all types for filtering.</p></li>
+<li><p>Show the <em>Country</em>, <em>Admin1</em>, <em>Event Type</em> and <em>Sub Event Type</em> filters . Change filter type to <em>Multiple Values (Dropdown)</em> in order to better manage space in the dashboard.</p></li>
+<li><p>For <em>Admin1</em>, change the display criteria to <em>‘Only Relevant Values’</em>. This will make it only show data points relevant to the selection of other filters. e.g. only show <em>Admin1</em> values relevant to <em>Cambodia</em> when <em>country</em> is filtered by <em>Cambodia</em>.</p></li>
+<li><p>Rename the filter <em>Admin1</em> to <em>State</em></p></li>
+<li><p>Show the <em>YEAR (Event Date)</em> filter.</p></li>
+<li><p>Rename the visualization to <strong>Armed Conflict Location &amp; Event in &lt; Country&gt;, &lt;YEAR(Event Date)&gt;</strong></p></li>
+</ol>
+<h3 id="steps-taken-for-second-visualization-line-graph">3.2 Steps taken for second visualization (Line Graph)</h3>
+<ol start="20" type="1">
+<li><p>Create a new sheet.</p></li>
+<li><p>Drag <em>Sheet1(COUNT)</em> to the rows shelf</p></li>
+<li><p>Drag <em>event type</em> on to colour on the marks card.</p></li>
+<li><p>Drag <em>Year</em> to the columns shelf</p></li>
+<li><p>Rename vertical axis as <em>Number of Events</em></p></li>
+<li><p>Rename chart as <em>Event Count</em></p></li>
+</ol>
+<h3 id="steps-taken-for-second-visualization-line-graph-1">3.2 Steps taken for second visualization (Line Graph)</h3>
+<ol start="26" type="1">
+<li><p>Duplicate the previous sheet for event counts.</p></li>
+<li><p>Replace <em>Sheet1(COUNT)</em> with <em>SUM(Fatalities)</em> on the rows shelf</p></li>
+<li><p>Rename vertical axis as <em>Fatalities’</em></p></li>
+<li><p>Rename chart as <em>Number of Fatalities</em></p></li>
+</ol>
 <h1 id="the-improved-data-visualization">4 - The improved data visualization</h1>
 <h1 id="new-insights">5 - New Insights</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>

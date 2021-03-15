@@ -21,15 +21,18 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # 1 - Critique the visualization
 
-
+```{r, fig.align="center",echo=FALSE, out.width="100%", fig.cap="The Original Visualization (with Markups)"}
+knitr::include_graphics("critique.png")
+```
 
 ### 1.1 Clarity
 
 | S/N |        Comments                         |   Suggested Improvements                |
 |-----|-----------------------------------------|-----------------------------------------|
 |C1|Points are plotted all across the map and it can hard to get a sense of severity or the number of incidents in each area. | Scale the points by size (e.g. Number of casualties) and make them transparent so underlying points can be seen. (Proportion Symbol Map). Alternatively, a chloropleth map can be used to show the differences in proportion/severity across regions.|
-|C2|The line-plots all have different vertical scales which can make it hard to compare event counts across different categories. | Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding|
+|C2|The line-plots all have different vertical scales which can make it hard to compare event counts across different categories. | Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding. This allows users to compare the counts across different event types as well.|
 |C3|Horizontal axis labeled as 'Event Date' but events are plotted on a 'Year' axis.| Change axis label to 'Event Year'|
+|C4|The vertical axis label *'Count of Sheet1'* does not convey any meaningful message| Replace the label with *'Event Count'*|
 
 
 
@@ -49,14 +52,83 @@ knitr::opts_chunk$set(echo = FALSE)
 
 | S/N |        Comments                         |   Suggested Improvements                |
 |-----|-----------------------------------------|-----------------------------------------|
-|I1|The map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.| Change filter to allow multiple selections. Continue the function where map re-centered around the filtered area. |
+|I1|The map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.| Change filter to allow multiple selections. Continue using the function where map re-centered around the filtered area. |
 |I2|There are a lot of data points that are unused from the dataset that can be plotted on the map such as *'sub-event type'* or *'actors'*| Create a tooltip to incorporate these data points.|
-|I3|There is no way to filter by *'event type'* or *'actors'*, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region. | Add in filtering by *'event type'* or *'actors'*|
+|I3|There is no way to filter by *'Event type'* or *'actors'*, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region. | Add in filtering by *'Event type'* or *'actors'*|
+|I4|There is no way to filter by *'Event date'*   this could be important information to see if events on the map are changing over time. | Add in filtering by *'event date'*|
 
 # 2 - The suggested visualization
 
 # 3 - The Visualization process
 
+*The Data Source used is from the The Armed Conflict Location & Event Data Project (ACLED). The data can be found [here](https://acleddata.com/#/dashboard).*
+
+### 3.1 Steps taken for first visualization (Map)
+
+1. Download data file with an .xlsx file format.
+
+2. Load file into Tableau Desktop
+
+3. Check and ensure that data-types for geographical information are correctly identified. 
+
+4. Drag the *logtitude* and *latitude* fields on to the column and row shelves respectively. 
+
+5. Drag *Event Type* and *Event Id Cnty* to the Marks card.
+
+6. Drag *Fatalities* to the size and make the measure a *SUM*
+
+7. Change the range of the size legend from *0 - 243* to *0 - 250* to have consistent ranges.
+
+8. Rename the title of the size legend from *SUM(Fatalities)* to *Number of Fatalities*
+
+9. Decrease the opacity of the circles in the colour menu from 100% to 40% to allow overlapping points to show. 
+
+10. Drag the *Event Date* on to the filter pane. Select *Years* as filter method and select all for filtering. 
+
+11. Drag *Country* on to the filter pane. Select all countries for filtering. 
+
+12. Drag *Event Type* on to the filter pane. Select all types for filtering. 
+
+13. Drag *Sub Event Type* on to the filter pane. Select all types for filtering. 
+
+14. Drag *Admin1* on to the filter pane. Select all types for filtering. 
+
+15. Show the *Country*, *Admin1*, *Event Type* and *Sub Event Type* filters . Change filter type to *Multiple Values (Dropdown)* in order to better manage space in the dashboard.
+
+16. For *Admin1*, change the display criteria to *'Only Relevant Values'*. This will make it only show data points relevant to the selection of other filters. e.g. only show *Admin1* values relevant to *Cambodia* when *country* is filtered by *Cambodia*.
+
+17. Rename the filter *Admin1* to *State*
+
+18. Show the *YEAR (Event Date)* filter. 
+
+19. Rename the visualization to **Armed Conflict Location & Event in < Country>, <YEAR(Event Date)>**
+
+### 3.2 Steps taken for second visualization (Line Graph)
+
+20. Create a new sheet. 
+
+21. Drag *Sheet1(COUNT)* to the rows shelf
+
+22. Drag *event type* on to colour on the marks card.
+
+23. Drag *Year* to the columns shelf
+
+24. Rename vertical axis as *Number of Events*
+
+25. Rename chart as *Event Count*
+
+### 3.2 Steps taken for second visualization (Line Graph)
+
+26. Duplicate the previous sheet for event counts. 
+
+27. Replace *Sheet1(COUNT)* with *SUM(Fatalities)* on the rows shelf
+
+28. Rename vertical axis as *Fatalities'*
+
+29. Rename chart as *Number of Fatalities*
+
 # 4 - The improved data visualization
+
+
 
 # 5 - New Insights
