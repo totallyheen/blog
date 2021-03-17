@@ -1492,7 +1492,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <ul>
 <li><a href="#steps-taken-for-first-visualization-map">3.1 Steps taken for first visualization (Map)</a></li>
 <li><a href="#steps-taken-for-second-visualization-line-graph">3.2 Steps taken for second visualization (Line Graph)</a></li>
-<li><a href="#steps-taken-for-second-visualization-line-graph-1">3.2 Steps taken for second visualization (Line Graph)</a></li>
+<li><a href="#steps-taken-for-third-visualization-line-graph">3.3 Steps taken for third visualization (Line Graph)</a></li>
+<li><a href="#steps-taken-for-fourth-visualization-data-table">3.4 Steps taken for fourth visualization (Data Table)</a></li>
+<li><a href="#steps-taken-to-create-dashboard">3.5 Steps taken to create dashboard</a></li>
 </ul></li>
 <li><a href="#the-improved-data-visualization">4 - The improved data visualization</a></li>
 <li><a href="#new-insights">5 - New Insights</a></li>
@@ -1622,12 +1624,12 @@ Figure 1: The Original Visualization (with Markups)
 <li><p>Download data file with an .xlsx file format.</p></li>
 <li><p>Load file into Tableau Desktop</p></li>
 <li><p>Check and ensure that data-types for geographical information are correctly identified.</p></li>
-<li><p>Drag the <em>logtitude</em> and <em>latitude</em> fields on to the column and row shelves respectively.</p></li>
+<li><p>Drag the <em>longitude</em> and <em>latitude</em> fields on to the column and row shelves respectively.</p></li>
 <li><p>Drag <em>Event Type</em> and <em>Event Id Cnty</em> to the Marks card.</p></li>
-<li><p>Drag <em>Fatalities</em> to the size and make the measure a <em>SUM</em></p></li>
+<li><p>Drag <em>Fatalities</em> to the size and make the measure a <em>SUM</em>. Increase the size of the marks</p></li>
 <li><p>Change the range of the size legend from <em>0 - 243</em> to <em>0 - 250</em> to have consistent ranges.</p></li>
 <li><p>Rename the title of the size legend from <em>SUM(Fatalities)</em> to <em>Number of Fatalities</em></p></li>
-<li><p>Decrease the opacity of the circles in the colour menu from 100% to 40% to allow overlapping points to show.</p></li>
+<li><p>Decrease the opacity of the circles in the colour menu from 100% to 50% to allow overlapping points to show.</p></li>
 <li><p>Drag the <em>Event Date</em> on to the filter pane. Select <em>Years</em> as filter method and select all for filtering.</p></li>
 <li><p>Drag <em>Country</em> on to the filter pane. Select all countries for filtering.</p></li>
 <li><p>Drag <em>Event Type</em> on to the filter pane. Select all types for filtering.</p></li>
@@ -1637,23 +1639,51 @@ Figure 1: The Original Visualization (with Markups)
 <li><p>For <em>Admin1</em>, change the display criteria to <em>‘Only Relevant Values’</em>. This will make it only show data points relevant to the selection of other filters. e.g. only show <em>Admin1</em> values relevant to <em>Cambodia</em> when <em>country</em> is filtered by <em>Cambodia</em>.</p></li>
 <li><p>Rename the filter <em>Admin1</em> to <em>State</em></p></li>
 <li><p>Show the <em>YEAR (Event Date)</em> filter.</p></li>
+<li><p>Include <em>Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2</em> into the tooltips</p></li>
+<li><p>Reformat the tooltip into two distinct parts ‘Event Details’ and ‘Involved Parties’</p></li>
 <li><p>Rename the visualization to <strong>Armed Conflict Location &amp; Event in &lt; Country&gt;, &lt;YEAR(Event Date)&gt;</strong></p></li>
 </ol>
 <h3 id="steps-taken-for-second-visualization-line-graph">3.2 Steps taken for second visualization (Line Graph)</h3>
-<ol start="20" type="1">
+<ol start="22" type="1">
 <li><p>Create a new sheet.</p></li>
 <li><p>Drag <em>Sheet1(COUNT)</em> to the rows shelf</p></li>
 <li><p>Drag <em>event type</em> on to colour on the marks card.</p></li>
 <li><p>Drag <em>Year</em> to the columns shelf</p></li>
 <li><p>Rename vertical axis as <em>Number of Events</em></p></li>
+<li><p>Create a new sheet <em>Event Count Tooltip</em></p></li>
+<li><p>Drag <em>Sheet1(COUNT)</em> to the columns shelf and the marks card.</p></li>
+<li><p>Drag <em>Country</em> to the rows shelf</p></li>
+<li><p>Rename the horizontal axis as <em>Number of Events</em></p></li>
+<li><p>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of event counts by country for each given event type.</p></li>
 <li><p>Rename chart as <em>Event Count</em></p></li>
 </ol>
-<h3 id="steps-taken-for-second-visualization-line-graph-1">3.2 Steps taken for second visualization (Line Graph)</h3>
-<ol start="26" type="1">
+<h3 id="steps-taken-for-third-visualization-line-graph">3.3 Steps taken for third visualization (Line Graph)</h3>
+<ol start="33" type="1">
 <li><p>Duplicate the previous sheet for event counts.</p></li>
 <li><p>Replace <em>Sheet1(COUNT)</em> with <em>SUM(Fatalities)</em> on the rows shelf</p></li>
 <li><p>Rename vertical axis as <em>Fatalities’</em></p></li>
+<li><p>Drag <em>Fatalities</em> to the columns shelf and the marks card.</p></li>
+<li><p>Drag <em>Country</em> to the rows shelf</p></li>
+<li><p>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of fatalities by country for each given event type.</p></li>
 <li><p>Rename chart as <em>Number of Fatalities</em></p></li>
+</ol>
+<h3 id="steps-taken-for-fourth-visualization-data-table">3.4 Steps taken for fourth visualization (Data Table)</h3>
+<ol start="40" type="1">
+<li><p>Drag <em>Sheet1(COUNT)</em> to text on the marks card</p></li>
+<li><p>Drag <em>country</em> to the rows shelf</p></li>
+<li><p>Rename visualization to <em>Events by Country</em></p></li>
+<li><p>Hide field labels for rows</p></li>
+</ol>
+<h3 id="steps-taken-to-create-dashboard">3.5 Steps taken to create dashboard</h3>
+<ol start="44" type="1">
+<li><p>Create new dashboard tab</p></li>
+<li><p>Change the size of the dashboard from fixed to automatic</p></li>
+<li><p>Drag the map on to the dashboard</p></li>
+<li><p>Drag the event count visualization to the right of the map</p></li>
+<li><p>Place the fatalities visualization to the bottom of the event count visualization</p></li>
+<li><p>Drag the events by country data table to the bottom right corner.</p></li>
+<li><p>Synchronize filters to apply across all visualizations</p></li>
+<li><p>Dashboard is complete.</p></li>
 </ol>
 <h1 id="the-improved-data-visualization">4 - The improved data visualization</h1>
 <h1 id="new-insights">5 - New Insights</h1>
