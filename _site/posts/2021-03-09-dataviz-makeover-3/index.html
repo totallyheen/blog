@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["critique.png","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["critique.png","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","final.png","final1.png","final2.png","step1.png","step10.png","step11.png","step12.png","step13.png","step14.png","step15.png","step16.png","step17.png","step18.png","step19.png","step2.png","step20.png","step21.png","step22.png","step23.png","step24.png","step25.png","step26.png","step27.png","step28.png","step29.png","step3.png","step30.png","step31.png","step32.png","step33.png","step34.png","step35.png","step36.png","step37.png","step38.png","step4.png","step5.png","step6.png","step7.png","step8.png","step9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2150,12 +2150,12 @@ Figure 1: The Original Visualization (with Markups)
 <tr class="odd">
 <td>C1</td>
 <td>Points are plotted all across the map and it can hard to get a sense of severity or the number of incidents in each area.</td>
-<td>Scale the points by size (e.g. Number of casualties) and make them transparent so underlying points can be seen. (Proportion Symbol Map). Alternatively, a chloropleth map can be used to show the differences in proportion/severity across regions.</td>
+<td>Scale the points by size (e.g. Number of casualties) and make them transparent so underlying points can be seen. (Proportion Symbol Map).</td>
 </tr>
 <tr class="even">
 <td>C2</td>
 <td>The line-plots all have different vertical scales which can make it hard to compare event counts across different categories.</td>
-<td>Explore plotting them all on one graph on the same axis but converted to a logarithmic scale and with color coding. This allows users to compare the counts across different event types as well.</td>
+<td>Explore plotting them all on one graph on the same axis with color coding. This allows users to compare the counts across different event types as well. Doing this will free up space to add another chart. Fatalities by event type, but converted to a logarithmic scale</td>
 </tr>
 <tr class="odd">
 <td>C3</td>
@@ -2192,7 +2192,7 @@ Figure 1: The Original Visualization (with Markups)
 <tr class="even">
 <td>A2</td>
 <td>Points are only colour coded and hard to tell apart when overlapping and scrunched together.</td>
-<td>Points should also be differentiated by shape to convey different categories. (Point Symbol Map)</td>
+<td>Points should also be scaled by size and translucent so that overlapping points are not lost</td>
 </tr>
 <tr class="odd">
 <td>A3</td>
@@ -2219,7 +2219,7 @@ Figure 1: The Original Visualization (with Markups)
 <tr class="odd">
 <td>I1</td>
 <td>The map visualization is re-centered whenever the dashboard is filtered by another country. This allows the user to quickly focus on events and locations in said country. However, it can be hard to identify events that spill-over from neighbouring countries or along borders.</td>
-<td>Change filter to allow multiple selections. Continue using the function where map re-centered around the filtered area.</td>
+<td>Change filter to allow multiple selections. Continue using the function where map re-centers around the filtered area.</td>
 </tr>
 <tr class="even">
 <td>I2</td>
@@ -2228,11 +2228,6 @@ Figure 1: The Original Visualization (with Markups)
 </tr>
 <tr class="odd">
 <td>I3</td>
-<td>There is no way to filter by <em>‘Event type’</em> or <em>‘actors’</em>, this could be important information to see if certain groups are spilling over into different regions or if their activities are contained within a specific geographic region.</td>
-<td>Add in filtering by <em>‘Event type’</em> or <em>‘actors’</em></td>
-</tr>
-<tr class="even">
-<td>I4</td>
 <td>There is no way to filter by <em>‘Event date’</em> this could be important information to see if events on the map are changing over time.</td>
 <td>Add in filtering by <em>‘event date’</em></td>
 </tr>
@@ -2246,68 +2241,456 @@ Figure 1: The Original Visualization (with Markups)
 <li><p>Download data file with an .xlsx file format.</p></li>
 <li><p>Load file into Tableau Desktop</p></li>
 <li><p>Check and ensure that data-types for geographical information are correctly identified.</p></li>
-<li><p>Drag the <em>longitude</em> and <em>latitude</em> fields on to the column and row shelves respectively.</p></li>
-<li><p>Drag <em>Event Type</em> and <em>Event Id Cnty</em> to the Marks card.</p></li>
-<li><p>Drag <em>Fatalities</em> to the size and make the measure a <em>SUM</em>. Increase the size of the marks</p></li>
-<li><p>Change the range of the size legend from <em>0 - 243</em> to <em>0 - 250</em> to have consistent ranges.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="step1.png" alt="Ensuring Lat/Long attributes have geographical roles)" width="174" />
+<p class="caption">
+Figure 2: Ensuring Lat/Long attributes have geographical roles)
+</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Drag the <em>longitude</em> and <em>latitude</em> fields on to the column and row shelves respectively.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="step2.png" alt="Creating the map" width="100%" />
+<p class="caption">
+Figure 3: Creating the map
+</p>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Drag <em>Event Type</em> and <em>Event Id Cnty</em> to the Marks card.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="step3.png" alt="Plotting the points" width="100%" />
+<p class="caption">
+Figure 4: Plotting the points
+</p>
+</div>
+</div>
+<ol start="6" type="1">
+<li>Drag <em>Fatalities</em> to the size and make the measure a <em>SUM</em>. Increase the size of the marks</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="step4.png" alt="Scaling the size of points by fatalities" width="100%" />
+<p class="caption">
+Figure 5: Scaling the size of points by fatalities
+</p>
+</div>
+</div>
+<ol start="7" type="1">
+<li>Change the range of the size legend from <em>0 - 243</em> to <em>0 - 250</em> to have consistent ranges.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="step5.png" alt="Creating a consistent legend" width="100%" />
+<p class="caption">
+Figure 6: Creating a consistent legend
+</p>
+</div>
+</div>
+<ol start="8" type="1">
 <li><p>Rename the title of the size legend from <em>SUM(Fatalities)</em> to <em>Number of Fatalities</em></p></li>
 <li><p>Decrease the opacity of the circles in the colour menu from 100% to 50% to allow overlapping points to show.</p></li>
-<li><p>Drag the <em>Event Date</em> on to the filter pane. Select <em>Years</em> as filter method and select all for filtering.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="step6.png" alt="Making the circles partially transparent" width="127" />
+<p class="caption">
+Figure 7: Making the circles partially transparent
+</p>
+</div>
+</div>
+<ol start="10" type="1">
+<li>Drag the <em>Event Date</em> on to the filter pane. Select <em>Years</em> as filter method and select all for filtering.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="step7.png" alt="Creating a Year filter for events" width="542" />
+<p class="caption">
+Figure 8: Creating a Year filter for events
+</p>
+</div>
+</div>
+<ol start="11" type="1">
 <li><p>Drag <em>Country</em> on to the filter pane. Select all countries for filtering.</p></li>
 <li><p>Drag <em>Event Type</em> on to the filter pane. Select all types for filtering.</p></li>
 <li><p>Drag <em>Sub Event Type</em> on to the filter pane. Select all types for filtering.</p></li>
 <li><p>Drag <em>Admin1</em> on to the filter pane. Select all types for filtering.</p></li>
-<li><p>Show the <em>Country</em>, <em>Admin1</em>, <em>Event Type</em> and <em>Sub Event Type</em> filters . Change filter type to <em>Multiple Values (Dropdown)</em> in order to better manage space in the dashboard.</p></li>
-<li><p>For <em>Admin1</em>, change the display criteria to <em>‘Only Relevant Values’</em>. This will make it only show data points relevant to the selection of other filters. e.g. only show <em>Admin1</em> values relevant to <em>Cambodia</em> when <em>country</em> is filtered by <em>Cambodia</em>.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="step8.png" alt="Adding all the other filters" width="100%" />
+<p class="caption">
+Figure 9: Adding all the other filters
+</p>
+</div>
+</div>
+<ol start="15" type="1">
+<li>Show the <em>Country</em>, <em>Admin1</em>, <em>Event Type</em> and <em>Sub Event Type</em> filters . Change filter type to <em>Multiple Values (Dropdown)</em> in order to better manage space in the dashboard.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<img src="step9.png" alt="Showing and decluttering the filters created" width="100%" />
+<p class="caption">
+Figure 10: Showing and decluttering the filters created
+</p>
+</div>
+</div>
+<ol start="16" type="1">
+<li>For <em>Admin1</em>, change the display criteria to <em>‘Only Relevant Values’</em>. This will make it only show data points relevant to the selection of other filters. e.g. only show <em>Admin1</em> values relevant to <em>Cambodia</em> when <em>country</em> is filtered by <em>Cambodia</em>.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="step10.png" alt="Adding the State filter and only showing values to selected country" width="100%" />
+<p class="caption">
+Figure 11: Adding the State filter and only showing values to selected country
+</p>
+</div>
+</div>
+<ol start="17" type="1">
 <li><p>Rename the filter <em>Admin1</em> to <em>State</em></p></li>
 <li><p>Show the <em>YEAR (Event Date)</em> filter.</p></li>
-<li><p>Include <em>Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2</em> into the tooltips</p></li>
-<li><p>Reformat the tooltip into two distinct parts ‘Event Details’ and ‘Involved Parties’</p></li>
-<li><p>Rename the visualization to <strong>Armed Conflict Location &amp; Event in &lt; Country&gt;, &lt;YEAR(Event Date)&gt;</strong></p></li>
 </ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<img src="step11.png" alt="Exposing filters to users" width="165" />
+<p class="caption">
+Figure 12: Exposing filters to users
+</p>
+</div>
+</div>
+<ol start="19" type="1">
+<li>Include <em>Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2</em> into the tooltips</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
+<img src="step12.png" alt="Adding more information into tooltips" width="163" />
+<p class="caption">
+Figure 13: Adding more information into tooltips
+</p>
+</div>
+</div>
+<ol start="20" type="1">
+<li>Reformat the tooltip into two distinct parts ‘Event Details’ and ‘Involved Parties’</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
+<img src="step13.png" alt="Reformatting the tooltips" width="100%" />
+<p class="caption">
+Figure 14: Reformatting the tooltips
+</p>
+</div>
+</div>
+<ol start="21" type="1">
+<li>Rename the visualization to <em>Armed Conflict Location &amp; Event in &lt; Country&gt;, &lt;YEAR(Event Date)&gt;</em></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-15"></span>
+<img src="step14.png" alt="Renaming the visualization" width="100%" />
+<p class="caption">
+Figure 15: Renaming the visualization
+</p>
+</div>
+</div>
 <h3 id="steps-taken-for-second-visualization-line-graph">3.2 Steps taken for second visualization (Line Graph)</h3>
 <ol start="22" type="1">
 <li><p>Create a new sheet.</p></li>
 <li><p>Drag <em>Sheet1(COUNT)</em> to the rows shelf</p></li>
-<li><p>Drag <em>event type</em> on to colour on the marks card.</p></li>
-<li><p>Drag <em>Year</em> to the columns shelf</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-16"></span>
+<img src="step15.png" alt="Populating the graph" width="100%" />
+<p class="caption">
+Figure 16: Populating the graph
+</p>
+</div>
+</div>
+<ol start="24" type="1">
+<li>Drag <em>event type</em> on to colour on the marks card.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-17"></span>
+<img src="step16.png" alt="Color coding the graph" width="100%" />
+<p class="caption">
+Figure 17: Color coding the graph
+</p>
+</div>
+</div>
+<ol start="25" type="1">
+<li>Drag <em>Year</em> to the columns shelf</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-18"></span>
+<img src="step17.png" alt="Plotting the line plots against year" width="100%" />
+<p class="caption">
+Figure 18: Plotting the line plots against year
+</p>
+</div>
+</div>
+<ol start="26" type="1">
 <li><p>Rename vertical axis as <em>Number of Events</em></p></li>
 <li><p>Create a new sheet <em>Event Count Tooltip</em></p></li>
 <li><p>Drag <em>Sheet1(COUNT)</em> to the columns shelf and the marks card.</p></li>
 <li><p>Drag <em>Country</em> to the rows shelf</p></li>
-<li><p>Rename the horizontal axis as <em>Number of Events</em></p></li>
-<li><p>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of event counts by country for each given event type.</p></li>
-<li><p>Rename chart as <em>Event Count</em></p></li>
 </ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-19"></span>
+<img src="step18.png" alt="Populating the data points for the tooltip" width="100%" />
+<p class="caption">
+Figure 19: Populating the data points for the tooltip
+</p>
+</div>
+</div>
+<ol start="30" type="1">
+<li>Rename the horizontal axis as <em>Number of Events</em></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-20"></span>
+<img src="step19.png" alt="Renaming the axis" width="285" />
+<p class="caption">
+Figure 20: Renaming the axis
+</p>
+</div>
+</div>
+<ol start="31" type="1">
+<li>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of event counts by country for each given event type.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-21"></span>
+<img src="step20.png" alt="How the tooltip and formatting looks like" width="100%" />
+<p class="caption">
+Figure 21: How the tooltip and formatting looks like
+</p>
+</div>
+</div>
+<ol start="32" type="1">
+<li>Rename chart as <em>Event Count</em></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-22"></span>
+<img src="step21.png" alt="Renaming the chart" width="100%" />
+<p class="caption">
+Figure 22: Renaming the chart
+</p>
+</div>
+</div>
 <h3 id="steps-taken-for-third-visualization-line-graph">3.3 Steps taken for third visualization (Line Graph)</h3>
 <ol start="33" type="1">
-<li><p>Duplicate the previous sheet for event counts.</p></li>
-<li><p>Replace <em>Sheet1(COUNT)</em> with <em>SUM(Fatalities)</em> on the rows shelf</p></li>
-<li><p>Rename vertical axis as <em>Fatalities’</em></p></li>
-<li><p>Drag <em>Fatalities</em> to the columns shelf and the marks card.</p></li>
-<li><p>Drag <em>Country</em> to the rows shelf</p></li>
-<li><p>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of fatalities by country for each given event type.</p></li>
-<li><p>Rename chart as <em>Number of Fatalities</em></p></li>
+<li>Duplicate the previous sheet for event counts.</li>
 </ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-23"></span>
+<img src="step22.png" alt="Duplicating the previous visualization" width="169" />
+<p class="caption">
+Figure 23: Duplicating the previous visualization
+</p>
+</div>
+</div>
+<ol start="34" type="1">
+<li>Replace <em>Sheet1(COUNT)</em> with <em>SUM(Fatalities)</em> on the rows shelf</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-24"></span>
+<img src="step23.png" alt="Replacing attributes: Count of events with sum of fatalities" width="100%" />
+<p class="caption">
+Figure 24: Replacing attributes: Count of events with sum of fatalities
+</p>
+</div>
+</div>
+<ol start="35" type="1">
+<li>Rename vertical axis as <em>Fatalities’</em> and change to logarithmic to prevent the graph from being distorted</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-25"></span>
+<img src="step24.png" alt="Renaming the axis and changing the scale to log" width="417" />
+<p class="caption">
+Figure 25: Renaming the axis and changing the scale to log
+</p>
+</div>
+</div>
+<ol start="36" type="1">
+<li><p>Create a new sheet.</p></li>
+<li><p>Drag <em>Fatalities</em> to the columns shelf and the marks card and Drag <em>Country</em> to the rows shelf</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-26"></span>
+<img src="step25.png" alt="Creating a second visual tooltip" width="100%" />
+<p class="caption">
+Figure 26: Creating a second visual tooltip
+</p>
+</div>
+</div>
+<ol start="38" type="1">
+<li>Add in sheet as tooltip in the original visualization. Tooltip will show breakdown of fatalities by country for each given event type.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-27"></span>
+<img src="step26.png" alt="How the tooltip and formatting looks like" width="100%" />
+<p class="caption">
+Figure 27: How the tooltip and formatting looks like
+</p>
+</div>
+</div>
+<ol start="39" type="1">
+<li>Rename chart as <em>Number of Fatalities</em></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-28"></span>
+<img src="step27.png" alt="Renaming the chart" width="100%" />
+<p class="caption">
+Figure 28: Renaming the chart
+</p>
+</div>
+</div>
 <h3 id="steps-taken-for-fourth-visualization-data-table">3.4 Steps taken for fourth visualization (Data Table)</h3>
 <ol start="40" type="1">
-<li><p>Drag <em>Sheet1(COUNT)</em> to text on the marks card</p></li>
-<li><p>Drag <em>country</em> to the rows shelf</p></li>
-<li><p>Rename visualization to <em>Events by Country</em></p></li>
-<li><p>Hide field labels for rows</p></li>
+<li>Drag <em>Sheet1(COUNT)</em> to text on the marks card</li>
 </ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-29"></span>
+<img src="step28.png" alt="Creating a data table" width="100%" />
+<p class="caption">
+Figure 29: Creating a data table
+</p>
+</div>
+</div>
+<ol start="41" type="1">
+<li>Drag <em>country</em> to the rows shelf</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-30"></span>
+<img src="step29.png" alt="Breaking down the data table by country" width="100%" />
+<p class="caption">
+Figure 30: Breaking down the data table by country
+</p>
+</div>
+</div>
+<ol start="42" type="1">
+<li>Rename visualization to <em>Events by Country</em></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-31"></span>
+<img src="step30.png" alt="Renaming the chart" width="100%" />
+<p class="caption">
+Figure 31: Renaming the chart
+</p>
+</div>
+</div>
+<ol start="43" type="1">
+<li>Hide field labels for rows</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-32"></span>
+<img src="step31.png" alt="Removing redundant field label" width="163" />
+<p class="caption">
+Figure 32: Removing redundant field label
+</p>
+</div>
+</div>
 <h3 id="steps-taken-to-create-dashboard">3.5 Steps taken to create dashboard</h3>
 <ol start="44" type="1">
 <li><p>Create new dashboard tab</p></li>
 <li><p>Change the size of the dashboard from fixed to automatic</p></li>
-<li><p>Drag the map on to the dashboard</p></li>
-<li><p>Drag the event count visualization to the right of the map</p></li>
-<li><p>Place the fatalities visualization to the bottom of the event count visualization</p></li>
-<li><p>Drag the events by country data table to the bottom right corner.</p></li>
-<li><p>Synchronize filters to apply across all visualizations</p></li>
-<li><p>Dashboard is complete.</p></li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-33"></span>
+<img src="step32.png" alt="Changing dashboard size setting" width="181" />
+<p class="caption">
+Figure 33: Changing dashboard size setting
+</p>
+</div>
+</div>
+<ol start="46" type="1">
+<li>Drag the map on to the dashboard</li>
+</ol>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-34"></span>
+<img src="step33.png" alt="Putting the map visual on the dashboard" width="100%" />
+<p class="caption">
+Figure 34: Putting the map visual on the dashboard
+</p>
+</div>
+</div>
+<ol start="47" type="1">
+<li>Drag the event count visualization to the right of the map</li>
+</ol>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-35"></span>
+<img src="step34.png" alt="Putting the event count visual on the dashboard" width="100%" />
+<p class="caption">
+Figure 35: Putting the event count visual on the dashboard
+</p>
+</div>
+</div>
+<ol start="48" type="1">
+<li>Place the fatalities visualization to the bottom of the event count visualization</li>
+</ol>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-36"></span>
+<img src="step35.png" alt="Putting the fatalities visual on the dashboard" width="100%" />
+<p class="caption">
+Figure 36: Putting the fatalities visual on the dashboard
+</p>
+</div>
+</div>
+<ol start="49" type="1">
+<li>Drag the events by country data table to the bottom right corner.</li>
+</ol>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-37"></span>
+<img src="step36.png" alt="Putting the event count data table on the dashboard" width="100%" />
+<p class="caption">
+Figure 37: Putting the event count data table on the dashboard
+</p>
+</div>
+</div>
+<ol start="50" type="1">
+<li>Synchronize filters to apply across all visualizations</li>
+</ol>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-38"></span>
+<img src="step37.png" alt="Changing filters to apply across all visuals" width="286" />
+<p class="caption">
+Figure 38: Changing filters to apply across all visuals
+</p>
+</div>
+</div>
+<ol start="51" type="1">
+<li>Dashboard is complete.</li>
 </ol>
 <h1 id="the-improved-data-visualization">4 - The improved data visualization</h1>
+<p>The completed visualization is as follows.</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-39"></span>
+<img src="final.png" alt="The Completed dashboard" width="100%" />
+<p class="caption">
+Figure 39: The Completed dashboard
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-40"></span>
+<img src="final1.png" alt="The Completed dashboard with a visual tooltip on fatalities displayed" width="100%" />
+<p class="caption">
+Figure 40: The Completed dashboard with a visual tooltip on fatalities displayed
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-41"></span>
+<img src="final2.png" alt="The Completed dashboard with a visual tooltip on event count displayed" width="100%" />
+<p class="caption">
+Figure 41: The Completed dashboard with a visual tooltip on event count displayed
+</p>
+</div>
+</div>
+<p>The interactive dashboard is uploaded onto Tableau Public Server and can be found <a href="https://public.tableau.com/views/ArmedConflictLocationandEventDashboard/Dashboard?:language=en&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link">here</a>.</p>
 <h1 id="new-insights">5 - New Insights</h1>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
