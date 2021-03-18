@@ -146,13 +146,13 @@ knitr::include_graphics("step10.png")
 knitr::include_graphics("step11.png")
 ```
 
-19. Include *Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2* into the tooltips
+19. Include *Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2, Event Date, Country, Admin1* into the tooltips
 
 ```{r, fig.align="center",echo=FALSE, fig.width=60, fig.height=100, fig.cap="Adding more information into tooltips"}
 knitr::include_graphics("step12.png")
 ```
 
-20. Reformat the tooltip into two distinct parts 'Event Details' and 'Involved Parties'
+20. Reformat the tooltip into three distinct parts 'Event Details', 'Event Location' and 'Involved Parties'
 
 ```{r, fig.align="center",echo=FALSE, out.width="100%", fig.cap="Reformatting the tooltips"}
 knitr::include_graphics("step13.png")
@@ -345,12 +345,62 @@ The interactive dashboard is uploaded onto Tableau Public Server and can be foun
 
 # 5 - New Insights
 
-## 5.1 asd
+## 5.1 Myanmar, Philipines and Thailand are the deadliest countries
 
-## 5.2 asd
+```{r, fig.align="center",layout='l-page',echo=FALSE, out.width="100%", fig.cap="Location of the most deadly events"}
+knitr::include_graphics("insight1.png")
+```
 
-## 5.3 asda
+As seen by the diagram, Myanmar, Philipines and Thailand are indicated by the blue arrows. These are areas in which there are the highest concentration of circles and more importantly - big circles. This means that events in these countries usually result in a huge loss of life. 
 
-## 5.4 asf
+Comparatively, countries like Vietnam have relatively minor events compared to these countries. 
 
-## 5.5 dfaa
+## 5.2 The single deadliest event happened in Myanmar
+
+```{r, fig.align="center",layout='l-page',echo=FALSE, out.width="100%", fig.cap="The deadliest event"}
+knitr::include_graphics("insight2.png")
+```
+
+The single deadliest event happened in the Rakhine state in on 28 August 2017. On that day 243 people died in a clash between the Myanmar military and the Rohingya muslims. The violence against the Rohingya muslims are well known and commonplace. In fact, almost all of the violence against civilian events in the Rakhine state were carried out against the Rohingya civilian muslims. 
+
+## 5.3 Indonesia: Many protests but protests are barely fatal. 
+
+```{r, fig.align="center",layout='l-page',echo=FALSE, out.width="100%", fig.cap="Indonesia's Events over the years and locations"}
+knitr::include_graphics("insight3.png")
+```
+
+As can be seen in the event counts line graph: Protests are by far the most common events in Indonesia and the number of protests have grown considerably in the second half of the decade and even surpassing 1000 in 2020 (as seen by the orange arrows). Deaths associated with protest events however are always considerably rare. The deadliest year of protests only resulted in 5 deaths (2015). On good years, protests have resulted in zero deaths - including the peak year of 2020. 
+
+From the map, we can also observe an intersting sign - Kalimantan has least events and fatalities (blue arrow). Compared to the rest of the states like Papua, Java, Aceh and Sulawesi (red arrows), Kalimantan rarely has armed conflicts (as seen by the relatively fewer number of circles) and even if there are events, they usually do not result in massive loss of lives (circles present in Kalimantan are small).
+
+## 5.4 WMD are used only in a few countries
+
+As identified in 5.1, Thailand, Mynamar and Philipines are the countries where most deaths occur. This could be partly due to the use of explosives/remote violence in these events. Looking at the sub-event types (called out in the dropdown list), these events usually involve weapons that can harm many people at once and can be termed as what we call weapons of mass destruction (WMD).
+
+```{r, fig.align="center",layout='l-page',echo=FALSE, out.width="100%", fig.cap="Indonesia's Events over the years and locations"}
+knitr::include_graphics("insight4.png")
+```
+
+These events are usually conducted by 2 main actors. 
+
+1. The state against civilians. The listed countries generally do not have any qualms against using military grade equipment such as air or artillery strikes against civilians. These usually results in huge loss of lives as civilians barely have any power to retaliate. 
+
+2. Armed militia groups or terror groups. There are groups within these countries with access to sophisticated weaponry (think lax gun control laws). Such groups can range from Abu Sayyaf in the Philippines to the JAD in Indonesia to the Malay Muslim Separatist in the Thai border near Malaysia. 
+
+## 5.5 Spike in 2016 deaths and events caused by data from Philipines 
+
+```{r, fig.align="center",layout='l-page',echo=FALSE, out.width="100%", fig.cap="Indonesia's Events over the years and locations"}
+knitr::include_graphics("insight5.png")
+```
+
+```{r, fig.align="center",echo=FALSE, out.width="100%", fig.cap="Indonesia's Events over the years and locations"}
+knitr::include_graphics("insight6.png")
+```
+
+Data from Phillipines was not made available until 2016. It was also that year where Philipines almost singlehandedly contributed to the entire death count caused by violence to civilians and battles. This could be attributed to President Duerte taking office in June 2016 and declaring a drug war. The violence to civilians could be collateral damage and battles could be with drug gangs resisting against the crackdown. 
+
+This could mean that the number of events and fatalities before 2016 could be even higher had data from Philippines been made available. Following the addition of Phillipines to the dataset, deaths due to violence towards civilians and battles from Phillipines remained the highest until 2019 where the conflict between the Rohingya muslims and the Myanmar government intensified in the Rakhine state.
+
+```{r, fig.align="center",echo=FALSE, out.width="100%", fig.cap="Numerous deadly events in Rakhine in 2019"}
+knitr::include_graphics("insight7.png")
+```

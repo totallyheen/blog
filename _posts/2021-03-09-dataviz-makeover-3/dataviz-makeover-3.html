@@ -115,7 +115,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["critique.png","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","final.png","final1.png","final2.png","step1.png","step10.png","step11.png","step12.png","step13.png","step14.png","step15.png","step16.png","step17.png","step18.png","step19.png","step2.png","step20.png","step21.png","step22.png","step23.png","step24.png","step25.png","step26.png","step27.png","step28.png","step29.png","step3.png","step30.png","step31.png","step32.png","step33.png","step34.png","step35.png","step36.png","step37.png","step38.png","step4.png","step5.png","step6.png","step7.png","step8.png","step9.png"]}
+  {"type":"character","attributes":{},"value":["critique.png","dataviz-makeover-3_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-3_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-3_files/distill-2.2.21/template.v2.js","dataviz-makeover-3_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-3_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-3_files/popper-2.6.0/popper.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-3_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.css","dataviz-makeover-3_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-3_files/webcomponents-2.0.0/webcomponents.js","final.png","final1.png","final2.png","insight1.png","insight2.png","insight3.png","insight4.png","insight5.png","insight6.png","insight7.png","step1.png","step10.png","step11.png","step12.png","step13.png","step14.png","step15.png","step16.png","step17.png","step18.png","step19.png","step2.png","step20.png","step21.png","step22.png","step23.png","step24.png","step25.png","step26.png","step27.png","step28.png","step29.png","step3.png","step30.png","step31.png","step32.png","step33.png","step34.png","step35.png","step36.png","step37.png","step38.png","step4.png","step5.png","step6.png","step7.png","step8.png","step9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1497,7 +1497,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <li><a href="#steps-taken-to-create-dashboard">3.5 Steps taken to create dashboard</a></li>
 </ul></li>
 <li><a href="#the-improved-data-visualization">4 - The improved data visualization</a></li>
-<li><a href="#new-insights">5 - New Insights</a></li>
+<li><a href="#new-insights">5 - New Insights</a>
+<ul>
+<li><a href="#myanmar-philipines-and-thailand-are-the-deadliest-countries">5.1 Myanmar, Philipines and Thailand are the deadliest countries</a></li>
+<li><a href="#the-single-deadliest-event-happened-in-myanmar">5.2 The single deadliest event happened in Myanmar</a></li>
+<li><a href="#indonesia-many-protests-but-protests-are-barely-fatal.">5.3 Indonesia: Many protests but protests are barely fatal.</a></li>
+<li><a href="#wmd-are-used-only-in-a-few-countries">5.4 WMD are used only in a few countries</a></li>
+<li><a href="#spike-in-2016-deaths-and-events-caused-by-data-from-philipines">5.5 Spike in 2016 deaths and events caused by data from Philipines</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -1612,6 +1619,7 @@ Figure 1: The Original Visualization (with Markups)
 </tbody>
 </table>
 <h1 id="the-suggested-visualization">2 - The suggested visualization</h1>
+<p>The proposed design is as follows.</p>
 <h1 id="the-visualization-process">3 - The Visualization process</h1>
 <p><em>The Data Source used is from the The Armed Conflict Location &amp; Event Data Project (ACLED). The data can be found <a href="https://acleddata.com/#/dashboard">here</a>.</em></p>
 <h3 id="steps-taken-for-first-visualization-map">3.1 Steps taken for first visualization (Map)</h3>
@@ -1744,18 +1752,18 @@ Figure 12: Exposing filters to users
 </div>
 </div>
 <ol start="19" type="1">
-<li>Include <em>Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2</em> into the tooltips</li>
+<li>Include <em>Sub Event Type, Actor 1, Assoc Actor 1, Actor 2, Assoc Actor 2, Event Date, Country, Admin1</em> into the tooltips</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
-<img src="step12.png" alt="Adding more information into tooltips" width="163" />
+<img src="step12.png" alt="Adding more information into tooltips" width="162" />
 <p class="caption">
 Figure 13: Adding more information into tooltips
 </p>
 </div>
 </div>
 <ol start="20" type="1">
-<li>Reformat the tooltip into two distinct parts ‘Event Details’ and ‘Involved Parties’</li>
+<li>Reformat the tooltip into three distinct parts ‘Event Details’, ‘Event Location’ and ‘Involved Parties’</li>
 </ol>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-14"></span>
@@ -2070,6 +2078,80 @@ Figure 41: The Completed dashboard with a visual tooltip on event count displaye
 </div>
 <p>The interactive dashboard is uploaded onto Tableau Public Server and can be found <a href="https://public.tableau.com/views/ArmedConflictLocationandEventDashboard/Dashboard?:language=en&amp;:display_count=y&amp;publish=yes&amp;:origin=viz_share_link">here</a>.</p>
 <h1 id="new-insights">5 - New Insights</h1>
+<h2 id="myanmar-philipines-and-thailand-are-the-deadliest-countries">5.1 Myanmar, Philipines and Thailand are the deadliest countries</h2>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-42"></span>
+<img src="insight1.png" alt="Location of the most deadly events" width="100%" />
+<p class="caption">
+Figure 42: Location of the most deadly events
+</p>
+</div>
+</div>
+<p>As seen by the diagram, Myanmar, Philipines and Thailand are indicated by the blue arrows. These are areas in which there are the highest concentration of circles and more importantly - big circles. This means that events in these countries usually result in a huge loss of life.</p>
+<p>Comparatively, countries like Vietnam have relatively minor events compared to these countries.</p>
+<h2 id="the-single-deadliest-event-happened-in-myanmar">5.2 The single deadliest event happened in Myanmar</h2>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-43"></span>
+<img src="insight2.png" alt="The deadliest event" width="100%" />
+<p class="caption">
+Figure 43: The deadliest event
+</p>
+</div>
+</div>
+<p>The single deadliest event happened in the Rakhine state in on 28 August 2017. On that day 243 people died in a clash between the Myanmar military and the Rohingya muslims. The violence against the Rohingya muslims are well known and commonplace. In fact, almost all of the violence against civilian events in the Rakhine state were carried out against the Rohingya civilian muslims.</p>
+<h2 id="indonesia-many-protests-but-protests-are-barely-fatal.">5.3 Indonesia: Many protests but protests are barely fatal.</h2>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-44"></span>
+<img src="insight3.png" alt="Indonesia's Events over the years and locations" width="100%" />
+<p class="caption">
+Figure 44: Indonesia’s Events over the years and locations
+</p>
+</div>
+</div>
+<p>As can be seen in the event counts line graph: Protests are by far the most common events in Indonesia and the number of protests have grown considerably in the second half of the decade and even surpassing 1000 in 2020 (as seen by the orange arrows). Deaths associated with protest events however are always considerably rare. The deadliest year of protests only resulted in 5 deaths (2015). On good years, protests have resulted in zero deaths - including the peak year of 2020.</p>
+<p>From the map, we can also observe an intersting sign - Kalimantan has least events and fatalities (blue arrow). Compared to the rest of the states like Papua, Java, Aceh and Sulawesi (red arrows), Kalimantan rarely has armed conflicts (as seen by the relatively fewer number of circles) and even if there are events, they usually do not result in massive loss of lives (circles present in Kalimantan are small).</p>
+<h2 id="wmd-are-used-only-in-a-few-countries">5.4 WMD are used only in a few countries</h2>
+<p>As identified in 5.1, Thailand, Mynamar and Philipines are the countries where most deaths occur. This could be partly due to the use of explosives/remote violence in these events. Looking at the sub-event types (called out in the dropdown list), these events usually involve weapons that can harm many people at once and can be termed as what we call weapons of mass destruction (WMD).</p>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-45"></span>
+<img src="insight4.png" alt="Indonesia's Events over the years and locations" width="100%" />
+<p class="caption">
+Figure 45: Indonesia’s Events over the years and locations
+</p>
+</div>
+</div>
+<p>These events are usually conducted by 2 main actors.</p>
+<ol type="1">
+<li><p>The state against civilians. The listed countries generally do not have any qualms against using military grade equipment such as air or artillery strikes against civilians. These usually results in huge loss of lives as civilians barely have any power to retaliate.</p></li>
+<li><p>Armed militia groups or terror groups. There are groups within these countries with access to sophisticated weaponry (think lax gun control laws). Such groups can range from Abu Sayyaf in the Philippines to the JAD in Indonesia to the Malay Muslim Separatist in the Thai border near Malaysia.</p></li>
+</ol>
+<h2 id="spike-in-2016-deaths-and-events-caused-by-data-from-philipines">5.5 Spike in 2016 deaths and events caused by data from Philipines</h2>
+<div class="layout-chunk" data-layout="l-page">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-46"></span>
+<img src="insight5.png" alt="Indonesia's Events over the years and locations" width="100%" />
+<p class="caption">
+Figure 46: Indonesia’s Events over the years and locations
+</p>
+</div>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-47"></span>
+<img src="insight6.png" alt="Indonesia's Events over the years and locations" width="100%" />
+<p class="caption">
+Figure 47: Indonesia’s Events over the years and locations
+</p>
+</div>
+</div>
+<p>Data from Phillipines was not made available until 2016. It was also that year where Philipines almost singlehandedly contributed to the entire death count caused by violence to civilians and battles. This could be attributed to President Duerte taking office in June 2016 and declaring a drug war. The violence to civilians could be collateral damage and battles could be with drug gangs resisting against the crackdown.</p>
+<p>This could mean that the number of events and fatalities before 2016 could be even higher had data from Philippines been made available. Following the addition of Phillipines to the dataset, deaths due to violence towards civilians and battles from Phillipines remained the highest until 2019 where the conflict between the Rohingya muslims and the Myanmar government intensified in the Rakhine state.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-48"></span>
+<img src="insight7.png" alt="Numerous deadly events in Rakhine in 2019" width="100%" />
+<p class="caption">
+Figure 48: Numerous deadly events in Rakhine in 2019
+</p>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
