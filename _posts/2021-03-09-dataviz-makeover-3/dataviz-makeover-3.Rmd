@@ -57,13 +57,13 @@ knitr::include_graphics("critique.png")
 
 The proposed design is as follows.
 
-# 3 - The Visualization process
-
-*The Data Source used is from the The Armed Conflict Location & Event Data Project (ACLED). The data can be found [here](https://acleddata.com/#/dashboard).*
-
 ```{r, fig.align="center",layout='l-page', echo=FALSE, fig.width=50, fig.height=100, fig.cap="The proposed data visualization with improvements)"}
 knitr::include_graphics("proposed.png")
 ```
+
+# 3 - The Visualization process
+
+*The Data Source used is from the The Armed Conflict Location & Event Data Project (ACLED). The data can be found [here](https://acleddata.com/#/dashboard).*
 
 ### 3.1 Steps taken for first visualization (Map)
 
